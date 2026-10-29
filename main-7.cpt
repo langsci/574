@@ -1,0 +1,7 @@
+Correspondence Analysis for the data in Table
+    \ref{tab:PropTable}. The CA was created with the package
+    \verb+ca+ for \verb+R+ \citep{ca-package}. For the
+    visualization we used the package \verb+factoextra+
+    \citep{factoextra-package}. The plot shows a `row analysis', with
+    row points in principal coordinates and column vectors in standard
+    coordinates.^^E^^L 

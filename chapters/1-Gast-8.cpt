@@ -1,0 +1,4 @@
+Squared Chi-squared distances (left) and squared
+    Dimension 1 coordinates (right). The plot was generated with the
+    packages \verb+ggplot2+ and \verb+ggrepel+ for \verb+R+
+    \citep{ggplot2-package,ggrepel-package}.^^E^^L 

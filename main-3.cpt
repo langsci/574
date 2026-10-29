@@ -1,0 +1,8 @@
+Feature-Combination Frequency Grid (FCFG)
+    representing the frequencies as well as degrees of over-
+    or underrepresentation for three French \pradv s relative
+    to the variables \textsc{Illocutionary force} and
+    \textsc{Intentionality} (see Fig. \ref{fig:2D} for the
+    levels). The visualization was created using the package
+    \verb+rgl+ for R; cf. the script
+    \verb+01_proportional_visualizations.R+.^^E^^L 

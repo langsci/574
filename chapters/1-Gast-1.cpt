@@ -1,0 +1,8 @@
+Contingency table (top) and mosaic plot (bottom)
+    representing the frequencies as well as degrees of over- or
+    underrepresentation for three French \pradv-adverbials relative to
+    the variable \textsc{reference point} (\textit{chron}:
+    chronological, \textit{deic}: deictic). The plot was created with
+    the package \verb+vcd+ for \verb+R+ (\citealt{vcd-package});
+    cf. the script \verb+01_proportional_visualizations.R+ in the
+    Supplementary Materials.^^E^^L 

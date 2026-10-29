@@ -1,0 +1,6 @@
+Multiple Correspondence Analysis for the variables
+    \textsc{Illocutionary force}, \textsc{Agent} and \textsc{\ipadv}
+    (German translations of French \ipadv s). The MCA was fitted with
+    the package \verb+FactoMineR+ for \verb+R+
+    \citep{FactoMineR-package}, the plot was generated using the
+    package \verb+factoextra+ \citep{factoextra-package}.^^E^^L 

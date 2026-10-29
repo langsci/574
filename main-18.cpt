@@ -1,0 +1,8 @@
+Context-Conditional Translation Graph showing French
+    translation choices for German \textit{gleich} and
+    \textit{sofort}, given specific context clusters. The (solid) blue
+    edge indicates translation in Context 1, the (long-dashed) red
+    line represents translations in Context 2, and the (short-dashed)
+    green line corresponds to Context 3. The graph was generated with
+    the package \verb+graph_tool+ for \verb+Python+
+    (https://graph-tool.skewed.de/static/doc/); see the script \verb+IpNetwork.py+ in the Supplementary Materials.^^E^^L 

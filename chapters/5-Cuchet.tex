@@ -1,0 +1,543 @@
+\documentclass[output=paper]{langscibook}
+\ChapterDOI{10.5281/zenodo.22796681}
+\author{Cécile Cuchet\orcid{}\affiliation{Université Lumière Lyon2, CeRLA, Centre de Recherche en Linguistique Appliquée} and Pascaline Dury\orcid{}\affiliation{Université Lumière Lyon2, CeRLA, Centre de Recherche en Linguistique Appliquée}}
+\title{ {{Using}  {diachronic}  {corpora}  {to}  {translate}  {emerging}  {or}  {new}  {specialized}  {fields}}}
+\abstract{This chapter discusses the use of short diachronic corpora to provide translators with conceptual and terminological information considered useful when translating documents dealing with emerging or new medical specialties. While the link between specialized translation and corpora is now well established, the use of diachronic corpora, and in particular short diachronic corpora (i.e. covering only a few years) for translation purposes remains largely uncharted territory. The work presented in this chapter is based on the assumption that the use of diachronic information will provide translators with the cognitive and terminological information needed to understand the conceptual organization of complex specialized fields, particularly when it comes to reporting scientific advances or innovations through translation.  The chapter is based on the study of a specialized corpus, covering a short period of time (24 years, from 1993 to 2017), in the field of nanomedicine applied to cancer treatment. This corpus-based study serves as a starting point for assessing which types of diachronic information are most useful and which are not, from a translation point of view. The final part of the chapter will be devoted to a discussion of the advantages and limitations of such an approach and how it can be implemented in the context of translator training.
+\keywords{diachronic corpora, short diachrony, specialized translation, emerging field, medical translation, knowledge-rich information}
+}
+\IfFileExists{../localcommands.tex}{
+  \addbibresource{../localbibliography.bib}
+  \input{../localpackages}
+  \input{../localcommands}
+  \input{../localhyphenation}
+  \togglepaper[1]%%chapternumber
+}{}
+
+\begin{document}
+\maketitle
+%\shorttitlerunninghead{}%%use this for an abridged title in the page headers
+
+\section{Diachronic corpora and specialized translation: A new path to be invented}
+
+The link between corpus linguistics and specialized translation has been extensively documented both in empirical research and in professional practice, and the value of using corpora for specialized translation is well established. Over the last twenty years or so, numerous studies (including those published by \citealt{Aston1999}; \citealt{Baker1999}; \citealt{Varantola2002}; \citealt{KüblerAston2010}; \citealt{Kübler2011} or \citealt{Loock2016}) have demonstrated the benefits of using electronic corpora to improve the quality of translations from all points of view. Despite the difficulties associated with creating and exploring ad hoc corpora for translators working under constant time pressure, the use of corpora nonetheless enables translators to make more accurate choices of translation equivalents, to adapt the phraseology they use and to choose the appropriate syntax and style. Other studies have also highlighted the benefits of using electronic corpora for translator training (\citealt{Bowker2003};  \citealt{Rodrígues-InésHurtadoAlbir2012}; or \citealt{KüblerEtAl2018}). For Bordet:
+\begin{quote}
+La réflexion sur l’interaction entre constitution de corpus et décision de traduction est par conséquent un terrain de recherche crucial pour la formation de traducteurs aptes à développer et à défendre le métier de traducteur spécialisé.\footnote{Reflecting on the interaction between corpus building and translation decisions is therefore a crucial area of research for training translators capable of developing and defending the profession of specialized translator. \citep[13]{Bordet2014}} \citep[13]{Bordet2014}
+\end{quote}
+
+However, in the vast majority of cases, the possible benefits of using translation corpora have only been explored from a synchronic perspective; very few studies consider the possibility of using diachronic corpora to help translators better understand highly specialized concepts and domains. Only two articles, published in 1999 and 2006 respectively, explore the use of diachronic information in the translation of medical texts and assess the benefits that translators can derive from the diachronic perspective. In the first article, \citet{Vandaele1999} carried out a diachronic study of the meaning of the English terms ‘hypnosis’ and ‘narcosis’ in the field of pharmacology, and showed how the very complex semantic evolution that characterizes these two terms is a source of numerous translation errors in French. In the introduction to her article, she notes that:
+
+\begin{quote}
+Il faut parfois, pour comprendre, retracer l’histoire d’un domaine et s’aper\-ce\-voir que derrière l’imprécision terminologique se cachent problématiques de recherche, controverses, évolution de connaissances.\footnote{In order to understand, it is sometimes necessary to retrace the history of a field and realize that behind the imprecision of terminology lie research problems, controversies and the evolution of knowledge. \citep[315]{Vandaele1999}} \citep[315]{Vandaele1999}
+\end{quote}
+
+\citet{Gentile2006}, a professional translator and a teacher, also stresses, in the context of translating specialized texts in the field of psychoanalysis, that the diachronic dimension is an essential vector of knowledge for the translator:
+
+\begin{quote}
+Le point de vue diachronique est essentiel […] non seulement pour la recherche de l’équivalent en traduction, mais pour la compréhension des concepts d’une discipline.\footnote{The diachronic point of view is essential [...] not only for finding the equivalent in translation, but also for understanding the concepts of a discipline. \citep[128]{Gentile2006}} \citep[128]{Gentile2006}
+\end{quote}
+
+Other research works show the value of using diachronic corpora for pedagogical purposes, but they are mainly concerned with the teaching of language history: this is the case, for example, of the various contributions that make up the work by  \citet{KawagachiEtAl2011}, which emphazises the use of electronic corpora to raise students’ awareness of the grammatical, lexicological and syntactic features of ancient language states. In the context of learning the history of English, \citet{HeremansCuyckens2012} have developed a series of exercises (together these exercises form a working method called ‘Diachronex’) using large diachronic corpora of general English, in order to gradually familiarize students with the syntactic, grammatical, lexical but also semantic changes that have occurred in English over time. However, no research work has yet investigated the benefits of using corpus-based diachronic information for translating highly specialized texts and documents.
+
+Moreover, the research work cited above is overwhelmingly based on the observation of linguistic phenomena occurring over a long period of time which might be described as ‘historical’ (spanning many centuries). This chapter, on the other hand, builds on Picton’s work (2011) on diachronic terminology and explores the possibility of extracting useful information from changes that occur over a short period of time (referred to as ‘short diachrony’), i.e. over just a few decades, a methodological choice that allows for the minute understanding and description of changes linked to scientific progress and innovation. These changes which are linked to the emergence of new knowledge in a field can be a source of difficulty for translators, especially when they occur in highly scientific fields, with highly technical terminology, such as medicine.
+
+\subsection{Medical translation, an ideal field of observation for the diachronic dimension}\label{sec:cuchet:1.1}
+
+Medical translation is a subject of particular interest, having given rise to a substantial corpus of research literature, in which reference is often made to its ‘specificity’ (for example \citealt{Popineau2016}: 78). For \citet{Lee-Jahnke2005}, medical translation represents a distinctive exercise given that it conveys scientific content directly related to human beings, and because, historically, the medical field was one of the very first fields in which texts were translated:
+\begin{quote}
+Medicine has always held a special position because it deals with human beings, i.e., with persons – their personality, their body and their life. This is probably the reason why medical translation belongs to one of the oldest fields of translation. \citep[81]{Lee-Jahnke2005}
+\end{quote}
+
+Lee-Jahnke also claims that the large number of texts and documents from diverse medical specialties that require translation means that this area occupies a major place in the professional translation market:
+\begin{quote}
+Medical translation has always been of major importance within the field of translation, because a large number of texts are translated and hence this area represents a large share of the market. \citep[81]{Lee-Jahnke2005}
+\end{quote}
+
+For \citet{Jammal1999}, the specificity of medical translation is rather due to the complexity and technicality of the concepts described:
+\begin{quote}
+Pour notre part, nous croyons que la traduction médicale diffère des autres champs de traduction sous certains aspects. Ainsi, prenons la phase de décodage. […] Il nous semble que, de tous les domaines, le domaine médical est peut-être celui qui est le plus difficile à appréhender. On conviendra, par exemple, qu’il est plus facile de comprendre les tenants et aboutissants du traité de Maastricht, ou la relation existant entre l’inflation et le chômage, que ce qui se passe au cours de la biosynthèse du cholestérol et des troubles qui peuvent causer l’hypercholestérolémie\footnote{For our part, we believe that medical translation differs from other fields of translation in certain respects. Let’s take the decoding phase. [...] It seems to us that, of all fields, the medical field is perhaps the most difficult to understand. We would agree, for example, that it is easier to understand the ins and outs of the Maastricht Treaty, or the relationship between inflation and unemployment, than what happens during the biosynthesis of cholesterol and the disorders that can cause hypercholesterolaemia. \citep[217]{Jammal1999}}. \citep[217]{Jammal1999}
+\end{quote}
+The complexity of medical concepts is also accompanied by a well-known and well-documented lexical complexity, with the presence of a large number of terms based on Greek and/or Latin formants (e.g. ‘column chromatography’, ‘cytotoxicity’, etc.) for instance, and the frequent use of eponymous terms. For \citet{Rouleau2003}, there are also the numerous cases of synonymy (e.g. ‘motor apraxia’ and ‘kinetic apraxia’, in the field of motor disorders), and the many obstacles posed by what he calls affixal \textit{faux amis} (e.g. medical adjectives ending in -al in English, which do not always translate into an -al/-ale adjective in French, such as ‘dental’ / ‘dentaire’ or ‘carpal’ / ‘carpien’).
+
+The most frequently described difficulties in medical translation also include the different types of variation that occur in medical texts, whether morphological (‘lipocomplex’ / ‘lipoplex’), graphic (‘nanovesicle’ / ‘nano-vesicle’) or lexical (‘small interference RNA’ / ‘small interfering RNA’).
+
+At the lexical level, translation pitfalls also arise from the large number of technical, often compound terms, that may be unfamiliar to the translator (‘supercritically dried insulin-loaded microparticles’, ‘immunotherapy based on immune checkpoint blockade’, ‘CTL-mediated apoptosis’, etc.). In the medical field, Maniez has studied complex noun groups (in particular adjectival nouns in \citeyear{Maniez2001} and nominal premodification in \citeyear{Maniez2007}), and collocations (\citeyear{Maniez2002}). In his 2007 article, Maniez stresses the need to focus on complex lexical patterns in translator training, as this type of structure is very common in medical  English (2007: 9), and that decoding them frequently presents challenges for the translator. Using a corpus of medical English in cardiology, he shows that complex lexical patterns (such as adjective + noun 1 + noun 2) can pose decoding problems, as is the case with the terms ‘atrial septal defect’ (a defect of the atrial septum), or ‘jugular venous pressure’ (pressure of the jugular veins). The potential for misunderstanding is heightened in the case of complex coordinated structures such as in the term ‘increased nucleic acid and protein synthesis and glycolysis’, since the combination of nominal premodification and coordination can be very ambiguous for the translator to understand (does ‘nucleic’ qualify ‘acid’, both ‘acid’ and ‘protein’, or ‘synthesis’?)
+
+Finally, the frequent use of non-transparent, technical acronyms by experts, as shown in the context below extracted from the corpus, represents another salient feature of the medical language\footnote{A number of medical experts point out that the abundance of non-transparent acronyms in the medical field creates major communication problems, including for experts in the field. For example, in an editorial of the journal \textit{Diagnostic and Interventional Imaging}, \citet[590]{Soyer2018} claims that “too many acronyms/initialisms make the reading difficult and annoying”.} and is among one of the most challenging for translators to navigate:
+
+\ea%1
+    \label{ex:key:1}
+          EMA has been required the full physicochemical characterization data of NMc in terms of zeta potential, particle size, size distribution, spectroscopic investigation (NMR, FTIR, UV, LC-MS), degradation products, impurity profiling, and solid-state characterization by DSC, DTA, TGA, solid state NMR and XRD.~[2015]\footnote{Contexts are followed, in square brackets, by the year from which they are taken in the corpus.}
+\z
+
+\subsection{Translating innovation: An additional difficulty}\label{sec:cuchet:1.2}
+
+In addition to the obstacles mentioned above, medical translators face specific difficulties when translating texts that contain new concepts or deal with emerging specialties.
+
+Following \citet{Kuhn1970}, we consider that innovative or emerging specialties refer to previously unknown scientific fields (such as xenotransplantation in medicine, for example) or to fields that already exist, but which are undergoing a significant period of scientific progress and innovation, such as in pharmacology with the development of nanodrugs.
+
+Our assumption here is that translating the terminology of emerging specialties poses a number of specific problems because the translator has to deal with terms that may not be fully stabilized in the lexicon, and that may evolve in a very short period of time as the new concept they denote is discussed, clarified or negotiated by experts (a phenomenon of instability already described by Guilbert, for aviation, in \citeyear{Guilbert1965}). In addition, new specialties that emerge are often characterized by accelerated hybridization, which means that scientists increasingly use concepts, practices and tools from a wide range of sometimes very different fields (for example, in the medical field, the new concept of augmented medicine is based on robotics, artificial intelligence and 3D printing).
+
+The development of nanomedicine for cancer treatment also reflects this growing hybridization of medicine and science in general, as nanodrugs have been developed using engineering techniques, indicating a shift away from the more traditional fields with which pharmacology was previously associated, such as chemistry and anatomy. A comparison of the keywords extracted from the earliest articles in the corpus (1993–1995) with those extracted from the most recent articles (2015–2017) clearly reflects this estrangement from pharmacology’s traditional scientific base. Terms from chemistry such as ‘sodium carboxymethylcellulose’ or ‘neoglycoproteins’, for instance, which were prevalently used by authors in the first part of the corpus, are no longer present in the most recent articles. Instead, terms such as ‘regenerative engineering’ or ‘Interpenetrative Network, IPN’ have emerged.
+
+\largerpage
+This hybridization can lead to increased complexity for translators, who have to be able to understand and translate scientific terminology from a diverse range of disciplines. They are seldom helped in this by the lexicographical resources and terminology databases available online, which, apart from the fact that there are few of them dealing with such highly specialized subjects, are also often ill-suited to the task of translating novelty: the information they provide is often not updated quickly enough to accurately reflect the emergence of new terms, forcing translators to turn to other types of resources.
+
+We therefore believe that diachronic corpora and the information they contain represent an alternative source of information for translators, and that they are not only likely to provide useful information about new terms, but can also be a means of providing them with minimal cognitive knowledge that is particularly useful for understanding how and why terms are formed in the context of scientific emergence.
+
+\section{The use of corpus-based diachronic information in translation}
+
+\subsection{Providing translators with minimal cognitive knowledge}\label{sec:cuchet:2.1}
+
+Various methodological approaches have been proposed to train students to deal with medical translation issues. These approaches can be based directly on the translation task itself: \citet{Popineau2016}, for example, inspired by Nord’s functionalist theory, uses the central notion of functions to help translation students. The translation task is divided into several functions (referential function, expressive function, etc.), each of which represents a precise stage that the translator must complete when moving from one language to another.
+
+Other authors suggest intervening upstream of the translation task, in particular through targeted documentary research, the aim of which is to provide translators with a conceptual knowledge base that they can continue to enrich as the translation progresses. \citet{Jammal1999} for instance, proposes a documentary research method based on what he calls a ‘sequential order’ which for the translator consists in searching for information according to a medical logic. For example, in the context of translating documents relating to a particular pathology, it would be appropriate to look first for information on the anatomy or part of the anatomy concerned, then on the physiology of the cells, organ or organs affected, then on the clinical manifestations of this pathology, then on the pharmacological aspect of possible treatments, etc. This method, which enables the trainee translator to acquire essential knowledge that he or she will later use in translating, does however require a prior knowledge of medical logic and the basic principles that underpin it in terms of semiology, cell biology and pharmacology, which perhaps not all medical translators may possess.
+
+\citet{Vandaele2001}, aware of the conceptual complexity that characterizes the medical field and of the difficulties that translators may encounter in grasping this conceptual complexity, goes a little further upstream from the documentary stage and suggests translators be provided with a minimum of cognitive knowledge that will enable them to carry out an appropriate documentary search and to target the selected information more effectively. This approach is based on the observation that:
+
+\begin{quote}
+Un spécialiste, pour mettre à jour ses connaissances […] rattache les nouveaux concepts à un bagage cognitif déjà organisé. Il en est de même, d’ailleurs, pour un traducteur d’expérience spécialisé dans un domaine particulier. Qu’en est-il lorsqu’un apprenti-traducteur ou un traducteur a devant lui un texte traitant d’un domaine de connaissance qui lui est étranger ? […] Faute d’\textit{ancrage} à un bagage cognitif minimal préexistant, le sujet éprouve la plus grande difficulté à saisir le fil logique qui pourrait lui permettre de répondre efficacement aux questions qu’il se pose sur le texte.\footnote{Specialists, in order to update their knowledge [...] attach new concepts to an already organized cognitive baggage. The same applies, moreover, to an experienced translator specializing in a particular field. But what happens when a translator or an apprentice translator is faced with a text dealing with an unfamiliar area of knowledge? [...] Without being anchored to a pre-existing minimal cognitive baggage, the subject finds it extremely difficult to grasp the logical thread that might enable him or her to effectively answer the questions he or she has about the text. (\citealt{Vandaele2001}: 16–17)} (\citealt{Vandaele2001}: 16–17)
+\end{quote}
+
+
+In the same vein, \citet{Sager1990} claims that it is 'important to realise that terms can only be used if the user already possesses the configuration of knowledge which determines the role of the term in a structured system'. \citep[75]{Sager1990}
+
+Providing the translator with a minimal configuration of knowledge seems to us particularly relevant in the context of scientific progress and emergence, and in increasingly hybrid scientific fields such as nanotechnologies applied to cancer treatment.
+
+\subsection{‘Knowledge-rich’ diachronic information}\label{sec:cuchet:2.2}
+
+Our research assumption, that knowledge-rich diachronic information provides translators with the cognitive knowledge and information needed to translate emerging medical fields was tested using a diachronic corpus, covering a short period of time (24 years, between 1993 and 2017).\footnote{The results presented in this chapter are all drawn from a unilingual corpus of medical English, in the field of nanomedicine. A diachronic corpus of comparable size and nature in medical French has also been compiled for a larger research project, but it is not used in this chapter.} The corpus of approximately 1,650,000 words contains scientific articles, book chapters and doctoral theses written in English by experts in the field of nanomedicine. Over the 24 years of the corpus, research published by 256 different authors has been collected.
+
+\begin{table}
+\begin{tabularx}{\textwidth}{lYY}
+\lsptoprule
+{{{Time period}}} & {{{Number of texts}}} & {{{Number of words}}}\\
+\midrule
+{ 1993–1994}    & { 20}                   &    { 127,154}    \\
+{ 1995–1997}    & { 25}                   &    { 144,540}    \\
+{ 1998–2000}    & { 27}                   &    { 171,549}    \\
+{ 2001–2003}    & { 24}                   &    { 131,816}    \\
+{ 2004–2006}    & { 33}                   &    { 213,163}    \\
+{ 2007–2009}    & { 24}                   &    { 131,695}    \\
+{ 2010–2012}    & { 33}                   &    { 211,102}    \\
+{ 2013–2015}    & { 35}                   &    { 236,690}    \\
+{ 2016–2017}    & { 35}                   &    { 285,947}    \\
+\midrule
+  {total} &     {476}         &      {1,653,656}\\
+\lspbottomrule
+\end{tabularx}
+
+\caption{Number of texts and words per chronologic segment.}
+\label{tab:key:1}
+\end{table}
+
+The corpus was analyzed using two free software packages, Termostat web 3.0\footnote{\url{http://termostat.ling.umontreal.ca}} (an automatic term acquisition tool) and Lancsbox\footnote{\url{http://corpora.lancs.ac.uk/lancsbox}} (a new-generation software package for analysing linguistic and corpus data). The analyses carried out on the corpus were deliberately kept simple (based on statistical comparisons, extraction of contexts and definitions, study of changes in term constructions, etc.) in order to be easily reproducible by translators, who very often do not have the time or training to carry out complex and technical corpus-based studies.
+
+Our exploration of the corpus focused on the extraction of diachronic information, which is likely to provide translators with elements of knowledge about new terms, as well as about the evolution of emerging concepts, thus equipping them with a minimal cognitive knowledge, as mentioned by \citet{Vandaele2001}.
+
+We will refer to this useful diachronic information as ‘knowledge-rich’ information, using and adapting the concept of ‘knowledge-rich contexts’ described first by Meier in 2001 and then by Barrière in 2004. Knowledge-rich contexts are defined as sets of sentences that, more than others, contain knowledge-bearing information that can be organized in databases:
+
+In large text corpora, Knowledge-Rich Contexts (KRCs) are a subset of sentences containing information that would be useful to a human for building a knowledge base. \citep[188]{Barrière2004}
+
+Knowledge-rich information is therefore considered to contain diachronic information that is useful to the translator for understanding and translating emerging specialties.
+
+\section{Benefits derived from the diachronic perspective}
+
+A certain amount of lexical information, when studied in the light of diachrony, is likely to constitute knowledge-rich information for the translator. This includes the study of term variations, of changes in the construction of complex terms, and the study of terminological and metaphorical families. Knowledge-rich information is also provided through the study of terms that are part of generational renewal.
+
+\subsection{Term variation}\label{sec:cuchet:3.1}
+
+The first type of knowledge-rich diachronic information that we have extracted from the corpus relates to the variation in the form of terms over time. Indeed, describing these different variations in the corpus is a useful way of showing the translator how the new terms in the domain have been formed. In our case, corpus exploration provides valuable information about the form of some of the terms ending in -plex, extracted from the later part of the corpus (2010 and later). For example, the data (see table below) show that the terms ‘polycomplex’, ‘lipocomplex’ and ‘nanocomplex’ have been reduced over time to ‘polyplex’, ‘lipoplex’ and ‘nanoplex’. These observations are consistent with Humbley’s study \citeyear{Humbley2008} of specialized terms in the field of e-commerce, in which he shows that some new terms are rapidly truncated either as initialisms or as blends.
+
+\begin{table}
+\small
+\begin{tabularx}{\textwidth}{X rr r@{}rrrr}
+\lsptoprule
+Sub-corpus & \multicolumn{2}{c}{P1}  & \multicolumn{2}{c}{P2}    \\
+& \multicolumn{2}{c}{(2001–2009)} & \multicolumn{2}{c}{(2010–2017)}   \\
+\cmidrule(lr){2-3}   \cmidrule(lr){4-5}
+size (No of words) & \multicolumn{2}{c}{476,674} & \multicolumn{2}{c}{733,739} & \\
+Frequency &  abs.fq &  {ipm} &  abs.fq &  {ipm} &  DIN & RR & 95\% CI\\
+\midrule
+Polycomplex/es &  521 &  {1,092.99} &  85 &  {115.85} &  {}-80.83 &   2.18 & 2.115--2.256\\
+Polyplex/es &  106 &  {222.37} &  590 &  {804.10} &  56.67 &  0.39 & 0.324--0.461\\
+Lipocomplex/es &  464 &  {973.41} &  22 &  {29.98} &   {}-94.02 &   2.43 & 2.379--2.473\\
+Lipoplex/es &  3 &  {6.29} &  304 &  {414.32} &   97.01 &   0.03 & 0.008--0.076\\
+Nanocomplex/es &  188 &  {394.40} &  5 &   {6.81} &   {}-96.60 &  2.47 & 2.418--2.532 \\
+Nanoplex/es &  0 &  {0,00} &  431 &  {587.40} &  100 &   0 & 0.0--{NaN}\\
+\lspbottomrule
+\end{tabularx}
+\caption{Changes in observed frequencies in two time periods (P1 and P2) of the corpus for three terms ending in ‘-plex/es’.}
+{DIN = difference index (see \citealt{FidlerCvrček2015}), RR = risk ratio,\\
+CI = confidence interval at p < 0.05.}
+\label{tab:key:2}
+\end{table}
+
+The data extracted from the corpus also shows a certain amount of synonymic variation around new terms that emerge in the corpus. For example, the acronym ‘siRNA’ may lack transparency for translators, so studying the variations of its extended form over the 24 years of the corpus can help translators to better understand the term and how it was formed. Depending on the author, the term ‘siRNA’ in the first part of the corpus corresponds to either ‘small interfering RNA’ or ‘small interference RNA’, as shown in the extracts below.
+
+\ea%2
+    \label{ex:key:2}
+         Using the amine groups of CMCS, polyethylene glycol (PEG) residues were coupled to form a protective structure that entrapped a CaP core containing \textit{small interfering (si)RNAs}. [2008]
+\z
+
+\ea%3
+    \label{ex:key:3}
+         Especially in the field of DNA-based and \textit{small interference RNA (siRNA)-}based therapeutic attempts such as gene therapy, viral vectors were considered the ideal targeting shell. [2010]
+\z
+
+\ea%4
+    \label{ex:key:4}
+         In several studies, \textit{small interfering RNA (siRNA)} has been shown to allow specific gene silencing in human cells. [2011]
+\z
+
+However, over time, and especially since 2010 in the corpus, the extended form ‘small interfering RNA’, which may seem less explicit and transparent from a scientific point of view than ‘small interference RNA’ has become the dominant term used by experts, as \tabref{tab:key:3} shows.
+
+\begin{table}
+\fittable{
+\begin{tabular}{l@{} rr rrrrr}
+\lsptoprule
+Sub-corpus & \multicolumn{2}{c}{P1 (2001–2009)} & \multicolumn{3}{c}{P2 (2010–2017)} & ~ & ~\\
+\cmidrule(lr){2-3}   \cmidrule(lr){4-5}
+No of words & \multicolumn{2}{c}{ 476,674} & \multicolumn{2}{c}{ 733,739} &  &  & \\
+                       & abs.fq &  {ipm}  & abs.fq  &  {ipm} & DIN & RR & CI\\
+\midrule
+Small-interference RNA &  231 &   {484.61} &  35 &  47.70   & -82.08 & 2.21 & 2.105–2.312\\
+Small-interfering RNA  &  102 &   {213.98} &  519 &  707.34 &  53.55 & 0.42 & 0.349--0.498\\
+\lspbottomrule
+\end{tabular}
+}
+\caption{Changes in observed frequencies for the two variants ‘small-interference RNA’ and ‘small-interfering RNA’.}
+{DIN = difference index (see \citealt{FidlerCvrček2015}), RR = risk ratio,\\ CI = confidence interval at p < 0.05.}
+\label{tab:key:3}
+\end{table}
+
+\subsection{Premodified constructions} %3.2. /
+
+Another point of interest is the observation of changes in the construction of some key terms in the corpus. The number of doubly premodifed constructions such as ‘-loaded’, ‘-based’ and ‘-laden’ increases in the data from 2009 onwards (with a few sporadic occurrences, however, between 2006 and 2009) in connection with terms such as ‘liposome’ or ‘gel’:
+
+\ea%5
+    \label{ex:key:5}
+         For more widely therapeutic application of these \textit{protein-loaded} \textit{gels}, injectable dosage or new pharmaceutical forms are required. [2009]
+\z
+
+\ea%6
+    \label{ex:key:6}
+         The purpose of this study is to evaluate the retinal toxic response induced by \textit{ganciclovir (GCV)-loaded gel} in Wistar rats’ eyes. [2013]
+\z
+
+\ea%7
+    \label{ex:key:7}
+         The mechanical and rheological properties of \textit{poloxamer-based} \textit{gels} are closely correlated and directly affect the gel retention time within the eye. [2015]
+\z
+
+\ea%8
+    \label{ex:key:8}
+         In vitro studies of that preparation exhibited that \textit{Span 60-based} \textit{gels} can improve the ocular bioavailability of diclofenac sodium for the prolonged period of time and there were no ocular irritation effects. [2013]
+\z
+
+\ea%9
+    \label{ex:key:9}
+         These experiments were performed to determine the equilibrium release time for the \textit{microemulsion-laden gels}. [2011]
+\z
+
+\ea%10
+    \label{ex:key:10}
+         Results also show that the transport of CyA through the \textit{surfactant-laden gels} is controlled by diffusion through the gel. [2012]
+\z
+
+The total number of doubly premodified terms increases sharply in the corpus, with 19 occurrences of such constructions in the period 1993–2000 and 893 in the period 2010–2017.
+
+\begin{table}
+\small
+\begin{tabularx}{\textwidth}{Q@{}rr rrrrr}
+\lsptoprule
+Sub-corpus & \multicolumn{2}{c}{P1 (1993–2000)} & \multicolumn{2}{c}{P2 (2010–2017)}  \\
+No of words & \multicolumn{2}{c}{ 443,243} & \multicolumn{2}{c}{ 733,739} &  &  & \\
+\cmidrule(lr){2-3}   \cmidrule(lr){4-5}
+~ & abs.fq &  {ipm} & abs.fq &  {ipm} & DIN & RR & 95\% CI\\
+\midrule
+Doubly premodified terms &  19 &   {42.87} &  893 &   {1,217.05} &  93.20 & 0.06 & 0.035–0.086\\
+\lspbottomrule
+\end{tabularx}
+
+\caption{Changes in observed frequencies for doubly premodified terms, between the very first and the very last time period of the corpus.}
+{DIN = difference index (see \citealt{FidlerCvrček2015}), RR = risk ratio,\\
+CI = confidence interval at p < 0.05.}
+\label{tab:key:4}
+\end{table}
+
+It is important that translators are made aware of the increase in this type of premodified complex matrices, as they are difficult to understand and translate. The use of diachronic information here is useful in informing translators about the progress that has been achieved in the field over time: gels in the corpus data appear to have moved from simple, often bioadhesive gels to more complex, drug-loaded, more effective gel formulations. Similarly, liposomes have moved from simple bilayer liposomes to substance-loaded or coated liposomes in the space of 24 years.
+
+\ea%11
+    \label{ex:key:11}
+         \textit{Stable liposomes} were rendered pH-sensitive by complexation to a polymer that undergoes marked temperature-and pH-dependent water solubility changes. [1993]
+\z
+
+\ea%12
+    \label{ex:key:12}
+         TBS buffered solutions with 4, 2, 1 and 0.5 mg ml\textsuperscript{$-$1} empty \textit{bilayer liposomes}, 3.5 μm diameter, and 35, 70, 150, 200, 250 ppm CHT were prepared. [1995]
+\z
+
+\ea%13
+    \label{ex:key:13}
+         \textit{Biopolymer-coated liposomes} (3~mM and 6~mM) were prepared by the thin film method and hydrated with phosphate buffer (PB) or glycerol phosphate buffer (G-PB). [2016]
+\z
+
+\ea%14
+    \label{ex:key:14}
+         \textit{Chondroitin sulfate (CS)-stabilized liposomes} are effective carriers of kartogenin. [2017]
+\z
+
+\ea%15
+    \label{ex:key:15}
+         We investigated the interactions of empty liposomes and \textit{KGN-loaded liposomes} with both CS derivatives using various physicochemical techniques. [2017]
+\z
+
+The contexts extracted from the corpus show that the increasing pre-mod\-i\-fi\-ca\-tion of the term ‘liposome’ over the course of 24 years is also accompanied by an increase in the use of the adjectives ‘conventional’, ‘traditional’ and ‘classic’ in contexts where the two generations of liposomes are compared: liposomes become ‘conventional’ or ‘classic’ when they are replaced by the next generation.
+
+\ea%16
+    \label{ex:key:16}
+         Thus a single or several breaches of lipid membranes will not lead to a total drug release from the internal aqueous contents, which is not like \textit{conventional liposomes.} [2007]
+\z
+
+\ea%17
+    \label{ex:key:17}
+         Therefore, results of these experiments pointed out a higher deformability of PEVs than the \textit{conventional liposomes} as shown by \tabref{tab:key:3} where deformability index (DI) for the studied formulations is also reported. [2010]
+\z
+
+\ea%18
+    \label{ex:key:18}
+         For instance, fluorescently-labeled bacitracin, a polypeptide antibiotic, was delivered from ethosomes to a depth of 200 µm in dermatomed human cadaver skin, whereas its delivery from \textit{classic liposomes} was negligible [2013]
+\z
+
+The analysis of the changes that occur in complex noun groups, especially in premodified groups, therefore fits perfectly into the network of diachronic information described in this work, which is likely to be useful to the translator.
+
+\subsection{Terminological families}\label{sec:cuchet:3.3}
+
+Observing terminological families (e.g. families of specialized terms which share the same form) and how they evolve over time can prove useful in increasing the translator’s cognitive knowledge and provide important elements of understanding of the field.
+
+For example, translators may be surprized to find that in texts on nanomedicine, some of the terms they need to translate are actually based on the prefix ‘micro’, which refers to a completely different scale and a completely different generation of drugs as explained in the context below: nanodrugs are part of a new generation of drugs that are smaller than one nanometer in size and represent a scientific breakthrough compared to the microscopic formulations used previously.
+
+\ea%19
+    \label{ex:key:19}
+         Three distinct but overlapping eras of increasing complexity can be defined: The first one, starting as early as in the mid-1960s, was termed the MACRO era where polymers were used to form macroscopic devices such as slabs, films, rods, rings or spheres etc. to accommodate drugs for controlled release. […] A second era in the history of drug delivery, beginning in the early 1970s, is the MICRO era, closely linked to the use of biodegradable polymers, e.g., to manufacture drug loaded microparticles. […] The NANO era, finally, is the third and currently still the most dynamic era within the development of polymeric delivery systems. [2010]
+\z
+
+From a linguistic point of view, we would therefore expect to find more terms based on ‘nano’ in the most recent part of the corpus. In fact, if the frequency of the prefix ‘nano’ indeed increases in the corpus data, as shown in the \tabref{tab:key:5}, the number of terms based on the prefix ‘micro’ does not decrease, which is much more unexpected.
+
+\begin{table}
+\small
+\begin{tabularx}{\textwidth}{l Yr Yrrrr}
+\lsptoprule
+Sub-corpus & \multicolumn{2}{c}{P1 (1993–2000)} & \multicolumn{2}{c}{P2 (2010–2017)} & ~ & ~ & ~\\
+No of words & 443,243 &  & 733,739 &  &  &  & \\
+\cmidrule(lr){2-3}   \cmidrule(lr){4-5}
+~ &  abs.fq &   {ipm} &  abs.fq &   {ipm} & DIN & RR & 95\% CI\\
+\midrule
+ micro &  516 &   {1,164.15} &  2,108 &   {2,872.96} &  42.33 & 0.52 & 0.483–0.564\\
+ nano &  168 &   {379.02} &  3,722 &   {5,072.65} &  86.10 & 0.11 & 0.099–0.133\\
+\lspbottomrule
+\end{tabularx}
+
+\caption{Changes in observed frequencies for terms based on \textit{micro} and \textit{nano}, with or without hyphen, between the very first and the very last time period of the corpus}
+{DIN = difference index (see \citealt{FidlerCvrček2015}), RR = risk ratio,\\
+CI = confidence interval at p < 0.05.}
+\label{tab:key:5}
+\end{table}
+
+Taking a closer look at the contexts extracted from the corpus we can see that a new family of terms, based on ‘micro’, appears in the last part of the data, together with the new concept of regenerative medicine.\footnote{According to Altyar et al., “With the evolution of interdisciplinary medical sciences in the last decades, a new branch of medicine occurred, namely regenerative medicine (RM). It applies engineering and life sciences principles to heal or replace damaged tissues, promote organ renewal, restore lost functions, and continually bridge permanently emerging damages”. (\citealt{AltyarEtAl2023}: 114)}
+
+\ea%20
+    \label{ex:key:20}
+         […] the Tian group from Boston University recently investigated how physical and chemical signals affect vascularization of directly seeded capillary-scale channels to apply those signals to create \textit{microvessels} that mimic human capillaries in size and function. [2015–2017]
+\z
+
+\ea%21
+    \label{ex:key:21}
+         Such inflammatory \textit{microenvironments} can drastically limit the integration of biomaterials with surrounding native tissue. [2015–2017]
+\z
+
+This new field of regenerative medicine implies that micro-assemblages or ensembles are built in micro-environments. This is the reason why the number of occurrences of terms in ‘micro’ increases, rather than decreases in the second part of the corpus. In fact, it is a new conceptual and terminological family of terms that is based on ‘micro’. The diachronic perspective could therefore help the translator to understand that there are in fact two families of terms based on ‘micro’ in the corpus; a first generation of terms describing drugs that are gradually being replaced by nano-sized formulations, and a second generation of terms which are newly created in relation to the emerging concept of regenerative medicine.
+
+\subsection{Metaphorical families}\label{sec:cuchet:3.4}
+
+Another type of families, metaphorical families, are worth studying from a diachronic perspective, as it is evident in our corpus that new terms tend to be organized into sets of well-identified metaphors. As \citet{Fries2016} points out in her book, the terms describing nanotechnologies in their various application areas often have a metaphorical basis and most of them, more specifically, are organized around the metaphor of civil engineering (‘quantum well’, ‘tunneling effect’).
+
+The data extracted from the second half of our corpus also confirms the emergence of two major metaphorical families organized around the notions of ‘network’ and ‘complex assembly’.
+
+\begin{table}
+\begin{tabularx}{.8\textwidth}{X}
+\lsptoprule
+{{{Network} }}\\
+IPN (interpenetrating network)
+
+microfluidic network
+
+functional vessel network\\
+\lspbottomrule
+\end{tabularx}
+\caption{A first metaphorical family organized around the notion of ‘network’.}
+\label{tab:key:6}
+\end{table}
+
+\begin{table}
+\begin{tabularx}{.8\textwidth}{X}
+\lsptoprule
+{{{Complex assembly}}}\\
+siRNA transfection complex plasmid DNA polyplex
+
+DNA duplex
+
+self-limiting platform
+
+fibrin scaffold
+
+tissue-like architecture\\
+\lspbottomrule
+\end{tabularx}
+\caption{A second metaphorical family organized around the notion of ‘complex assembly’.}
+\label{tab:key:7}
+\end{table}
+
+This type of diachronic information could help the translator to understand that it is useful to identify the appearance of these sets of new metaphorical terms, in order to translate them as part of a coherent whole rather than as isolated elements.
+
+\subsection{Terminological generations}\label{sec:cuchet:3.5}
+
+Finally, to conclude this section on the benefits of using knowledge-rich diachronic information for translation, we would like to show that studying a corpus over time also makes it possible to identify generational families, i.e. families of terms that are specific to one scientific stage and that are replaced by others as experts move on to another stage. This is the case for the terms based on ‘nano’ and ‘micro’ already mentioned, but it is also the case for other terms whose replacement in the lexicon is much more rapid, sometimes within the space of a year, which can be a source of difficulty for the translator.
+
+For instance, as shown in the table below, the term ‘solid lipid nanoparticle’ is gradually replaced in the corpus, by the term ‘nanostructured lipid carrier’, which refers to a more efficient and more complex generation of lipid carriers. Similarly, the first ‘carbon nanotube’ which is mentioned for the first time in the 2005–2008 period of the corpus, is replaced by a new generation of ‘single-walled carbon nanotubes’ (2009–2012), then by another new generation of ‘multi-walled carbon nanotubes’ (2013–2017), and finally by the latest generation of ‘f-engineered carbon nanotubes’, mentioned in the last year of the corpus.
+
+\begin{table}
+\begin{tabularx}{\textwidth}{Qrrrrr}
+\lsptoprule
+                                            & {{1993–2000}} & {{2001–2004}} & {{2005–2008}} & {{2009–2012}} & {{2013–2017}}\\
+\midrule
+solid lipid \mbox{nanoparticle}             & 344           &   547         &   512         &  275          &   31\\
+\tablevspace
+\multicolumn{3}{l}{nanostructured lipid carrier}                            & 52            &   425         &   1,502\\
+\tablevspace
+\multicolumn{3}{l}{carbon nanotube}                                         & 7             &  57           &   43\\
+\tablevspace
+\multicolumn{3}{l}{single-walled carbon nanotube}                           &               &5              &   67\\
+\tablevspace
+\multicolumn{3}{l}{multi-walled carbon nanotube}                            &               &               &  38 \\
+\tablevspace
+\multicolumn{4}{l}{{ {[year 2017}:]} f-engineered carbon nanotube}                            &               &   12\\
+\lspbottomrule
+\end{tabularx}
+\caption{Two examples of generational changes.}
+\label{tab:key:8}
+\end{table}
+
+While some of the results extracted from the corpus form part of a knowledge-rich information network, other diachronic results seem to be less useful for the translator, either because they do not really provide ‘valuable’ terminological and/or cognitive information, or because they do not allow for an adequate solution to some of the difficulties that are typical of medical translation, such as for instance spelling variations, or the presence of opaque acronyms.
+
+
+\section{Limitations of the diachronic perspective}
+
+\subsection{Definitions}\label{sec:cuchet:4.1}
+
+Definitions fall into this category of diachronic information that is not essential for specialized translation. The way in which the structure of the definitions evolves over time in the corpus is very interesting, because, as can be seen from the examples below, most of them are based on a comparison between what is scientifically new and what is considered ‘old’, thus showing the transition from one generation of particles to another.
+
+\ea%22
+    \label{ex:key:22}
+         Suitable small particle systems include microspheres and microcapsules as well as nanoparticles and nanocapsules. \textit{Microparticles and microcapsules have a particle size above 1 µm.} Microspheres are monolithic particles possessing a porous or solid polymer matrix, whereas microcapsules consist of a polymeric membrane surrounding a solid or liquid drug reservoir. \textit{Nanoparticles have a particle size in the nanometer size range below 1 µm [4]}. [1995–1996]
+\z
+
+\begin{enumerate}
+\item   This information, although very interesting, does not seem to be sufficiently valuable or ‘knowledge-rich’ for the translator. Moreover, it would clearly take too much time for the translator to extract a relevant number of definitions from different chronological periods of the corpus and to read them in detail in order to find useful information about the succession of generations in the field.
+\end{enumerate}
+
+\subsection{Spelling variations}\label{sec:cuchet:4.2}
+
+Similarly, no diachronic information extracted from the corpus seems to be sufficiently useful to help the translator understand and translate appropriately the spelling variations of terms constructed with ‘nano’ (for example, the term ‘nanovesicle’ can also be spelled ‘nano-vesicle’ or ‘nano vesicle’), as the three variants are used very irregularly in the corpus data and do not seem to follow any clear trend over time.
+
+\begin{table}
+\fittable{
+\begin{tabular}{l@{} rr rr@{~~}r rr@{~~}r rr}
+\lsptoprule
+Sub-corpus & \multicolumn{2}{c}{P1 (2001–2003)} & \multicolumn{3}{c}{P2 (2007–2009)} & \multicolumn{3}{c}{P3 (2013–2017)}  \\
+No of words & \multicolumn{2}{c}{131,816}        & \multicolumn{3}{c}{ 131,695}      & \multicolumn{3}{c}{522,637} \\
+\cmidrule(lr){2-3}\cmidrule(lr){4-6}\cmidrule(lr){7-9}
+& abs.fq &   {ipm} & abs.fq &   {ipm} & DIN (P1-P2) & abs.fq &  {ipm} & DIN (P2-P3) & RR & 95\% CI\\
+\midrule
+%\hhline%%replace by cmidrule{~----------}
+Nanovesicle &  272 &   {2,063.48} &  362 &   {2,748.78} &  14.24 &  321 &   {614.19} & {}-63.47 & 2.64 & 2.485--2.831\\
+Nano-vesicle &  26 &   {197.24} &  198 &   {1,503.47} &  76.81 &  206 &   {394.16} & {}-58.46 & 2.44 & 2.206--2.692\\
+Nano vesicle &  89 &   {675.18} &  61 &   {463.19} &   {}-18.62 &  191 &   {365.45} & {}-11.80 & 1.20 & 0.967--1.497\\
+\lspbottomrule
+\end{tabular}
+}
+\caption{Changes in spelling variation of the term ‘nanovesicle’ over three~time periods of the corpus.}
+{DIN = difference index (see \citealt{FidlerCvrček2015}), RR = risk ratio,\\
+CI = confidence interval at p < 0.05.}
+\label{tab:key:9}
+\end{table}
+
+\subsection{Acronyms}\label{sec:cuchet:4.3}
+
+The very irregular use of acronyms over time in the corpus is not easy to organise into useful information for the translator; the only real information that can be extracted from the data is that, in the second part of the corpus, acronyms are increasingly used in matrices where they are attached to other acronyms,\footnote{As this extract from the corpus shows: “P(MAA-g PEG-co MMA) underwent the largest size increase upon increasing pH, while P(MMA-g-PEG-co-TBMA) underwent the smallest size increase”. [2017]} thus increasing the number of complex and opaque terms, that diachronic information fails to explain.
+
+Again, the use of diachronic information is not sufficiently relevant to help the translator better understand the terminological specificities of a specialized field such as nanomedicine.
+
+\section{Future perspectives: The use of diachronic corpora in translator training}
+
+The aim of this chapter has been to highlight the use of diachrony in the translation of specialized fields that are subject to constant scientific progress, such as nanomedicine. We believe that the diachronic perspective offers a highly productive means of enabling professional translators to grasp newly emerging concepts and their terminology. By studying a specialized corpus spanning 24 years, we have been able to show that a certain amount of diachronic information is indeed likely to help translators better understand recent developments in a field. We have called this type of information ‘knowledge-rich information’. In our corpus, knowledge-rich information can be found when looking at changes in the structure of complex terms over time (especially in doubly premodified terms, but also in terms based on -plex/plexes which are shortened over time). It can also be found in changes in families of terms and metaphors over time.
+
+In our opinion, the advantages of using the diachronic dimension in translation are real, but the compilation and exploration of a diachronic corpus is a time-consuming solution for a professional translator, even for a corpus covering a short period of time, as we have seen here, and even if the queries for exploring the corpus are kept simple.
+
+A possible future perspective therefore is to integrate the diachronic perspective into translation training, especially at Master’s level, when students specialize in translating much more technical documents that require minimal cognitive knowledge in order to be correctly understood and handled. To this end, we propose to enrich the research presented here by designing practical exercises (see Appendix to the chapter) following the work of    \citeapo{HeremansCuyckens2012} work on Diachronex. The aim of these exercises would be to use corpus-based information to help trainee translators understand as quickly as possible how the field is organized, what the main concepts and terms are and how they have evolved over time.
+
+A further advantage of such exercises would be to give trainee translators a more general knowledge of the dynamics of language evolution and to make them aware of the fact that specialized lexicon evolves, sometimes in a short or even a very short space of time when they go through periods of innovation. These exercises would thus contribute to the development of an integrated and more comprehensive approach to translation training.
+
+\begin{paperappendix}
+\section{Appendix}
+
+Here are two examples of possible exercises based on the use of a pilot diachronic corpus designed for classroom use:
+
+\textit{Exercise 1 – Finding evidence of changes in the corpus, for example by looking at changes in a list of frequently associated terms.}
+
+\textit{The terms below are listed in decreasing order for each time period, with the term at the top of the list being the term most frequently used in association with “release”. How has the release of an active substance evolved over the last five years?}
+
+One answer, according to the following table, would be that the position of the adjectives ‘controlled’ and ‘slow’ changes over time, and that their downgrading towards the end of the list in the period 2009–2017 indicates that they are less used, unlike terms such as ‘faster’ or ‘burst’, whose position moves towards the top of the list, indicating that drug release systems have become faster, for example.
+
+\noindent
+\begin{tabularx}{\textwidth}{QQl}
+\lsptoprule
+{{{1993–2000}}} & {{{2001–2008}}} & {{{2009–2017}}}\\
+\midrule
+drug & drug & drug \\
+\textbf{controlled} & pulsatile & \textbf{\textit{burst}} \\
+\textbf{slow} & \textbf{controlled}  & sustained \\
+linear & sustained & \textbf{faster} \\
+continuous & \textbf{\textit{burst}}  & localized \\
+zero-order & on-off & \textbf{controlled} \\
+in vitro & \textbf{slow}  & triggered \\
+pulsatile & transient & quick \\
+immediate & in vitro & controllable \\
+prolonged & \textbf{faster} & \textbf{slow} \\
+\lspbottomrule
+\end{tabularx}
+
+\textit{Exercise 2 – Finding out information about changes in the structure of complex terms over time.}
+
+\textit{Identify changes in the structure of the term ‘drug delivery system’ in the following list of contexts, from oldest to most recent.}
+
+One answer might be that the structure of the terms becomes more complex over time, perhaps indicating that drug delivery systems become more complex over time. It is also worth noting that the full term is increasingly used in conjunction with its acronym and that in two recent examples, only the acronym is used to refer to drug delivery systems.
+
+\begin{itemize}
+\item A new technique for the production of this material, based on the foaming of suspensions and in situ polymerization (gelcasting method), resulted in a material whose characteristics are likely to make it useful as an \textit{implantable drug delivery system.} [period 2000–2002]
+\item A conceptually novel \textit{periodontal drug delivery system (DDS)} is described that is intended for treatment of microbial infections associated with periodontitis. [period 2000–2002]
+\item Chitin/PLGA blend microspheres as a \textit{biodegradable drug-delivery system}: phase-separation, degradation and release behavior. [period 2000–2002]
+\item The global aim of this research project was to develop a \textit{self-nanoemulsifying drug delivery system (SNEDDS)} for non-invasive delivery of protein drugs. [period 2008–2010]
+\item To overcome low oral bioavailability of poorly water-soluble drugs, \textit{self-emulsifying drug delivery systems (SEDDS)} have been noted as a promising strategy. [period 2008–2010]
+\item polypeptide-block-poly(vinylpyrrolidone) as prospective \textit{self-assembled drug-delivery systems} have attracted growing interest because of their unique morphological properties. [period 2008–2010]
+\item \textit{Supersaturatable self-emulsifying drug delivery systems (S-SEDDS}) were explored to improve the oral absorption of AMG 517, a poorly water-soluble drug candidate. [period 2008–2010]
+\item \textit{Carboxymethyl cellulose (CMC)-loaded Co-Cu doped manganese ferrite drug delivery systems (DDSs)} as a new dual-modal simultaneous contrast agent for magnetic resonance imaging. [Period 2015–2017]
+\item The new \textit{supramolecular organic frameworks (SOF) drug delivery systems (sof-DDSs)} can adsorb dianionic pemetrexed (PMX), a clinically used chemotherapeutic agent instantaneously upon dissolving in water, which is driven by both electrostatic attraction and hydrophobicity. [Period 2015–2017]
+\item Three \textit{silica encapsulated lipid-based drug delivery systems (LBDDSs)} were developed and investigated: (a) \textit{a self-nanoemulsifying drug delivery system (SNEDDS)}, (b) a solid \textit{SNEDDS formulation}, and (c) silica–lipid hybrid (SLH) microparticles. [Period 2015–2017]
+\item To finish, the field of encapsulation in nanoparticles is broached in order to put forward recent advances in innovative \textit{skin drug delivery systems (ISDDSs)} of antipsoriatic active agents for a better efficacy, safety and compliance. [Period 2015–2017]
+\item Ideally, a community of \textit{biohybrid bacteria-based DDS} can be engineered that are wirelessly controlled, a strategy that holds promise for increasing the efficiency and reducing the operational cost for targeted drug delivery. [Period 2015–2017]
+\item Herein, we developed a novel formulation, \textit{non-aqueous self-double-emulsi\-fying DDS (SDEDDS)} by formulating mixtures of hydrophilic surfactants and oil-in-oil (O/O) emulsions, which could improve \emph{trans}{}-resveratrol solubility through formulations optimization. [Period 2015–2017]
+\end{itemize}
+\end{paperappendix}
+\sloppy\printbibliography[heading=subbibliography,notkeyword=this]
+\end{document}

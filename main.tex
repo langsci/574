@@ -1,0 +1,91 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%     Language Science Press Master File       %%%
+%%%              edited volumes                  %%%
+%%%         follow the instructions below        %%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% Everything following a % is ignored
+% Some lines start with %. Remove the % to include them
+
+\documentclass[output=book,collection%,chinesefont
+%             ,arabicfont
+%             ,colorlinks, citecolor=brown
+            % ,draft
+%            ,draftmode
+		  ]{langscibook}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% put all additional commands you need in the
+% following files. If you do not know what this might
+% mean, you can safely ignore this section
+
+\input{localmetadata.tex}
+\input{localpackages.tex}
+\input{localhyphenation.tex}
+\input{localcommands.tex}
+\addbibresource{localbibliography.bib}
+\addbibresource{new_translatology.bib}
+\addbibresource{gast.bib}
+
+\newfontfamily\cn
+	  [
+	    Scale=MatchLowercase,
+	    BoldFont=SourceHanSerif-Bold.otf
+      ]
+      {SourceHanSerif-Regular.otf}
+    \AdditionalFontImprint{Source Han Serif ZH}
+	\XeTeXlinebreaklocale 'zh'
+	\XeTeXlinebreakskip = 0pt plus 1pt
+
+
+\newfontfamily\arabicfont[Script=Arabic,ItalicFont=*,Scale=1.4]{ScheherazadeRegOT_Jazm.ttf}
+    \AdditionalFontImprint{Arabtype}
+    \usepackage{langsci-bidi}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%             Frontmatter                      %%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%\includeonly{chapters/4-Mala}
+
+\begin{document}
+\maketitle
+\frontmatter
+% %% uncomment if you have preface and/or acknowledgements
+
+\currentpdfbookmark{Contents}{name} % adds a PDF bookmark
+{\sloppy\tableofcontents}
+
+%% sections without authors
+% \include{chapters/preface}
+% \include{chapters/acknowledgments}
+
+\mainmatter
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%             Chapters                         %%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+\renewcommand{\lsChapterFooterSize}{\scriptsize}
+\includepaper{chapters/0-Intro}
+\renewcommand{\lsChapterFooterSize}{\footnotesize}
+\includepaper{chapters/1-Gast}
+\renewcommand{\lsChapterFooterSize}{\scriptsize}
+\includepaper{chapters/2-Saeedi}
+\renewcommand{\lsChapterFooterSize}{\footnotesize}
+\includepaper{chapters/3-Resi}
+\includepaper{chapters/4-Mala}
+\includepaper{chapters/5-Cuchet}
+\includepaper{chapters/6-Giampieri}
+\includepaper{chapters/7-Ray}
+\includepaper{chapters/8-Kamenicka}
+\renewcommand{\lsChapterFooterSize}{\scriptsize}
+\includepaper{chapters/9-Kloudova}
+% copy the lines above and adapt as necessary
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%             Backmatter                       %%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% There is normally no need to change the backmatter section
+\input{backmatter.tex}
+\end{document}

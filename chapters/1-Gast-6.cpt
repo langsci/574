@@ -1,0 +1,4 @@
+Visualizing the standardized residuals as shown on
+    the right-hand side of Table \ref{tab:PropTable}.  The plot was
+    generated with the package \verb+rgl+ for \verb+R+
+    (\citealt{rgl-package}).^^E^^L 

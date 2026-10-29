@@ -1,0 +1,79 @@
+
+\section{Introduction}\label{sec:Introduction}
+
+The availability of large amounts of multilingual corpus data has
+opened up new possibilities for empirical approaches to contrastive
+linguistics and translation and interpreting studies.
+For example, we can empirically determine the contexts in which
+comparable linguistic expressions from different languages are used
+(e.g.
+\citealt{Atayan2021a,Gast2015,Gast2017So,Gast2017Even,Gast2019,Gast2022}),
+and we can investigate the conditions under which specific expressions
+are translated in a specific way,
+(e.g. \citealt{marco_2018,Cribleetal2019,DefrancqMagnifico2020,Defrancq2021,Atayan2021b,Yungetal2023}). These
+possibilities come with new challenges, however. From the perspective
+of the researcher, it is sometimes hard to filter out more relevant
+from less relevant information, to understand the interplay of the
+variables used in a study, and to interpret the results in a
+theoretically meaningful way, beyond statements of the type ``variable
+$x$ has a significant effect on variable $y$''.
+
+While inferential statistics are indispensable in the comparative
+analysis of corpora, it is important for researchers (and readers) to
+also develop an intuitive understanding of the data (cf. also
+\citealt{Griesetal2020}). Visualizations are a useful tool for this
+purpose. In this chapter we discuss the use of specific tools for
+visualizing bilingual data commonly encountered in contrastive
+linguistics and translation studies (cf. also
+\citealt{SoenningSchuetzler2023} on the visualization of corpus data
+in general).
+
+An obvious particularity of contrastive studies based on translation
+corpora is the relational nature of the data, which often consists of
+pairs of an original sentences and its translation or
+interpretation. While the original sentence is an instance of
+monolingual production, the translated sentence is determined both by
+the co(n)text\footnote{`Cotext' is often used for the textual
+  surrounding of a sentence and `context' for the extralinguistic
+  circumstances of production. We will use `context' as a cover term
+  for `cotext' and `context' narrowly defined in the following.}  and
+the input from the source language. We thus distinguish between three
+ways of analyzing frequency distributions. First, before carrying out
+a comparative study we need to understand language-specific
+distributions, using common tools of corpus linguistics; second, we
+can compare distributions from different languages in a symmetric way
+(`undirected comparison'); and third, we can study the choices made in
+one language under the influence of another language,
+e.g. translations of a given source language expression in a target
+language (`directed comparison').
+
+For illustration we use data analysed in previous studies by us
+(\citealt{Atayanetal2019,GastAtayan2019,Gastetal2019,Atayan2021b,Atayan2021a})
+on what we call adverbials of `immediate' or `proximal posteriority'. These
+adverbials are introduced in Section \ref{sec:Background}, where we
+also provide a brief description of the data.
+%
+In Section \ref{sec:LanguageSpecific}, we introduce techniques
+commonly used for categorical (count) data in monolingual studies,
+presenting some extensions for higher-dimensional data.
+%
+These techniques can also be used for undirected comparative data, as
+is illustrated in Section \ref{sec:ComparativeUndirected}.
+%
+In Section \ref{sec:ComparativeDirected}, we demonstrate ways of
+visualizing translation data. Sankey diagrams are useful for this
+purpose, but have certain limitations. We therefore propose a new
+type of visualization, Context-Conditional Translation Graphs, which
+visualize translation choices made under specific contextual
+conditions.
+%
+Section \ref{sec:ComparativeDirected} moreover contains some comments
+on Bayesian networks, which can be used to factorize joint probability
+distributions, and to visualize these factorizations, enabling
+researchers to test models of bilingual language production. Section
+\ref{sec:Conclusions} contains the conclusions.
+
+%%% Local Variables:
+%%% mode: latex
+%%% TeX-master: "main"
+%%% End:

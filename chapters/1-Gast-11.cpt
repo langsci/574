@@ -1,0 +1,6 @@
+MCA for the variables \textsc{Illocutionary force}
+    and \textsc{Agent}, with \textsc{\ipadv} as a supplementary
+    variable (German translations of French \ipadv s).)  The MCA was
+    fitted with the package \verb+FactoMineR+ for \verb+R+
+    \citep{FactoMineR-package}, the plot was generated using the package
+    \verb+factoextra+ \citep{factoextra-package}.^^E^^L 

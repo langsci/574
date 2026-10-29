@@ -1,0 +1,3 @@
+Directed acyclic graph for IP-adverbials
+     (comparative/directional, with clustered observations). The graph
+     was created with the package \verb+bnlearn+ for \verb+R+ \citep{bnlearn-package}.^^E^^L 

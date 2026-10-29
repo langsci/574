@@ -1,0 +1,5 @@
+Clusters based on MCA-coordinates, using
+    Partitioning around medoids with three (left) and six (right)
+    clusters, using the package \verb+cluster+ for \verb+R+
+    \citep{cluster-package}. The plots were generated with the package
+    \verb+factoextra+ for R \citep{factoextra-package}.^^E^^L 

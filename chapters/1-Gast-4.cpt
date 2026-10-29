@@ -1,0 +1,7 @@
+Context-conditional correlation graph; the graph
+    visualizes the distribution of German \pradv s relative to four
+    variables (\textsc{Intentionality}, \textsc{Agent}, \textsc{Reference point} and
+    \textsc{Illocutionary force}; see Note \ref{FigNote1} for the levels). It
+    was created with the package \verb+qgraph+ for R
+    \citep{qgraph-package}; cf. the script \verb+02_CCCG.R+ in the
+    Supplementary Materials.^^E^^L 

@@ -1,0 +1,9 @@
+MCA with IP-adverbial as supplementary variable
+    (German and originals), relative to the variables
+    `intentionality', `agent', `illocutionary force' and `reference
+    point'. The CA was created with the package \verb+FactoMineR+ for
+    \verb+R+ \citep{FactoMineR-package}, for the visualization we used
+    the package \verb+factoextra+ \citep{factoextra-package}. The
+    adjusted percentages of explained inertia as returned by the
+    package \verb+ca+ for \verb+R+ \citep{ca-package} are 48.5\% (Axis
+    1) and 15.0\% (Axis 2).^^E^^L 

@@ -1,0 +1,50 @@
+\documentclass[output=paper,colorlinks,citecolor=brown]{langscibook}
+\ChapterDOI{10.5281/zenodo.22796670}
+\usepackage{setspace}
+
+\author{Volker Gast\orcid{https://orcid.org/0000-0002-3034-0052}\affiliation{Friedrich Schiller University Jena} and   Vahram Atayan\affiliation{Heidelberg University}   and Martin Schwingenheuer\affiliation{FOSBOS Rosenheim}}
+
+\title[Data visualization in corpus-based CL and TIS]{Data   visualization in corpus-based contrastive linguistics and   translation and interpreting studies}
+\abstract{While inferential   statistics are indispensable in comparative corpus studies such as   those conducted in contrastive linguistics (CL) and translation and   interpreting studies (TIS), it is equally important for researchers   to develop an intuitive understanding of the data. Visualizations   serve as a key tool for this purpose. In this contribution we   distinguish three types of comparative corpus data commonly   encountered by contrastive linguists and translation scholars:   language-specific data, undirected comparative data, and directed   comparative data. We discuss three main visualization techniques:   proportional visualizations, graph-based visualizations and   ordination techniques. We explore the strengths and limitations of these   approaches, point out some caveats and provide scripts (in R and   Python) to enable readers to replicate the analyses.}
+
+
+\IfFileExists{../localcommands.tex}{
+  %\addbibresource{../references.bib}
+   %\addbibresource{references.bib}
+   \input{../localpackages}
+   \input{../localcommands}
+   \input{../localhyphenation}
+   \boolfalse{bookcompile}
+   \togglepaper[1]%%chapternumber
+}{}
+
+
+
+
+
+\begin{document}
+
+%\begingroup
+%\renewcommand{\baselinestretch}{0.95}\selectfont % tighter line spacing
+%\small % smaller font, or use \fontsize{10}{12}\selectfont for more control
+\maketitle
+%\endgroup
+%\tableofcontents
+
+\input{chapters/Introduction}
+\input{chapters/Background}
+%\input{Background_Martin}
+\input{chapters/LanguageSpecific}
+\input{chapters/ComparativeUndirected}
+\input{chapters/ComparativeDirected}
+\input{chapters/GraphicalModels}
+\input{chapters/Conclusions}
+
+\sloppy
+
+\printbibliography[heading=subbibliography,notkeyword=this]
+
+\input{chapters/Appendix}
+
+
+\end{document}

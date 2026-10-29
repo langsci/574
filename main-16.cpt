@@ -1,0 +1,4 @@
+Comparative Sankey plot showing associations of
+    IP-adverbials with French IP-adverbials, given the value for the
+    variable \textsc{Reference point}. The plot was generated with the package
+    \verb+networkD3+ for \verb+R+ \citep{networkD3-package}.^^E^^L 

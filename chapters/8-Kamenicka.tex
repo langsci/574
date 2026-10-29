@@ -1,0 +1,621 @@
+\documentclass[output=paper]{langscibook}
+\ChapterDOI{10.5281/zenodo.22796687}
+\author{Renata Kamenická\orcid{0009-0004-9256-2293}\affiliation{Masaryk University}}
+\title[``Default translation'': how free of fault?]{``Default translation'': how free of fault? An exploratory comparison of NMT and human translation}
+\abstract{The chapter centres around an exploratory extension of the concept of ‘default translation’ proposed by \citet{Halverson2015,Halverson2019}, to study and compare the output of professional translators, trainees and NMT systems, for the purpose of cognitive modelling of translation as well as assessing NMT performance in terms of how successfully it imitates translation which is a product of human cognition.
+
+The data is drawn from translations of the same source text by 4 NMT systems (Google Translate, MS Bing, Systran, DeepL), 6 translation trainees and 6 professional translators. The data sets are compared quantitatively, based on a specific metric developed for the purpose of the study, as well as qualitatively, focusing on the solution-type distance between NMT and human translations.
+
+The source text was selected based on specific criteria to suit the default mode of translation and the human translations were obtained in a specific translation regime elicited by the instructions, designed to bring out ‘default translation’, here understood as a relatively routinized and uninterrupted mode (rather than phase) of translating.
+
+The main findings obtained are, firstly, convincing evidence of DeepL approximating human translations most successfully at collocational level and outperforming the other NMT systems, with a noticeable gap between DeepL and the other systems (and a minimal gap between DeepL and human translations), and, secondly, another solution pattern distinguishing human translations from DeepL, leading to the formulation of the Naturalness Impulse Hypothesis.
+
+\keywords{default translation, neural machine translation (NMT), human translation (HT), DeepL, interference, the Naturalness Impulse Hypothesis}
+}
+\IfFileExists{../localcommands.tex}{
+  \addbibresource{../localbibliography.bib}
+  \input{../localpackages}
+  \input{../localcommands}
+  \input{../localhyphenation}
+  \togglepaper[1]%%chapternumber
+}{}
+
+\begin{document}
+\maketitle
+%\shorttitlerunninghead{}%%use this for an abridged title in the page headers
+
+\section{Introduction}
+
+In the midst of the boom in neural machine translation, closely followed by their reflection in the general media as well as rigorous research in a cluster of disciplines, this chapter aims to explore the differences between products of neural machine translation (NMT) and human translation (HT) from a perspective combining cognitive and quality-related aspects, i.e. to assess how successfully the NMT output imitates translation as a product of human cognition. The study offers insights into some details of how NMT at its best is able to approximate translation by humans as well as attempts to reveal patterns distinguishing human and machine-generated translation at the current stage of development of NMT. The potential use of its findings is seen in (a) the practical area of mapping linguistic and user-oriented characteristics of NMT (both from the perspective of a user and with a view to locating desiderata in further improvement of NMT) and, at the theoretical level, (b) reflecting back on understanding human translation better in cognitive and training-oriented terms and contributing towards human translation modelling.
+
+In contrast to studies focusing on evaluating the performance of NMT in specialized registers and with respect to terminologies, the interest in studying the qualitative and quantitative differences between machine-generated and human translation “as such” shifts research attention from situations of predicted difficulty to a more routinized and uninterrupted mode of translation at the human end of the machine-human comparison. Namely, the aim is to see how NMT translation performance can compare to that of humans in translation situations perceived by humans as not particularly challenging. The mode of translating used in the present research design has been inspired by Sandra L. \citet{Halverson2015,Halverson2019} and the concept of ‘default translation’ she defined for the purposes of studying cognitive aspects of translating and in reference to research in translation processes.
+
+In the translation data used, human translation is represented by translations produced by experienced translators as well as students of translation, which offers an opportunity to describe the qualitative and quantitative aspects of the quality of NMT output in comparison with human translation by both experts and trainees, as well as to situate the quality of translation by trainees relative to that achieved by human experts and NMT systems. In the quantitative comparison, a specific metric developed for the purpose of the study was used, combining meaning/coherence disruption count and stylistic/cohesion disruption count, while the qualitative part of the analysis focused on the solution-type distance between NMT and human translations. NMT material for the comparison was obtained from four NMT systems – Google Translate, MS Bing, Systran, and DeepL. The translations were carried out from English into Czech, i.e. on a language pair showing considerable systemic differences.
+
+\section{Default translation}\label{sec:kamenicka:2}
+
+\subsection{Default translation according to Halverson}\label{sec:kamenicka:2.1}
+
+In her 2019 paper, “‘Default’ translation – a construct for cognitive translation and interpreting studies”, Sandra L. Halverson argues that much of empirical research in translation studies has tended to focus on problem solving and “many studies focus on pre-selected areas of predicted difficulty (so-called \textit{areas of interest} or \textit{rich points})” (2019: 188). The findings of such studies are seen as not very representative since although resolving situations of increased difficulty may take up significant time relative to the whole time spent on translation processes, more research attention should be paid to investigating passages where translators proceed in a more “routine and uninterrupted manner, and where translational choices seem to be made without obvious deliberation” \citep[188]{Halverson2019} as this type of translating is also representative of what translators usually do and complements the view of how translators perform across different situations and over time.
+
+‘Default translation’ as \citet[188]{Halverson2019} construes it, rooting it in embodied philosophy, which views cognition as embodied, embedded, enacted, and affective (4EA), is therefore implicitly but very clearly linked with human translation. It is also explicitly defined as an (uninterrupted) \textit{phase} of translation production, without a priori assuming any specific characteristics to be found in the products of these translation phases. \citet[191]{Halverson2019} emphasizes that although the introduction of the concept of ‘default translation’ may be motivated by the interest in studying relationships between the default phases of production and the properties of translated texts and references can be made to ‘default translations’, it is the phase itself that grounds the construct. She insists that stretches of default translation can be identified in online data only and then provides insights into how this identification can make use of keystroke data and gaze data in process research.
+
+The notion of default translation, in contrast to “challenged translation”, has also been used by \citet[128--129]{CarlDragsted2012} in “Inside the monitor model: processes of default and challenged translation”, but it is important to note that their motivation for using the notion and their approach to it differ from Halverson’s. It is Halverson’s default translation that the present study works with and adapts. The two approaches are clearly set apart by viewing the relationship between default translation and literal translation differently. According to \citet[195]{Halverson2019}, “default translation may involve the selection of translations that bear relatively little formal or semantic similarity to the source, if the two structures are linked often enough in the translational act. Thus, default translation will show evidence of established patterns that originate in shared semantic and/or formal characteristics as well as translational solutions that have become entrenched in spite of their lacking obvious semantic or formal similarities”. \citet{CarlDragsted2012}, in contrast, associate default translation with literal translating. The aim of their study is to provide evidence for their extension of the monitor model \citep{Tirkkonen-Condit2005} by comparing process data from copying and translation processes. In this context, consistent with the monitor model, “literal translation is a default rendering procedure, which goes on until it is interrupted by a monitor that alerts about a problem in the outcome. The monitor’s function is to trigger off conscious decision-making to solve the problem” (\citealt{Tirkkonen-Condit2005}: 407–408). Within the monitor model as used by Carl and Dragsted, default translation is identified with literalness and unchallenged, parallel processing of ST and TT while the opposite, challenged mode of translating is equated with rejecting the first-choice literal solution in favour of a non-literal one.
+
+\subsection{Extending the concept}\label{sec:kamenicka:2.2}
+
+Although \citet{Halverson2019} assumes isolation of stretches of default translation based on online processing data, namely saying that “[i]n this discussion, an initial proposal for the isolation of default translation is derived on the basis of existing research” and “stretches of default translation can be identified in online data only” (p. 198), the mention of the “initial proposal” may be a hint that linking default translation with online data need not be a fixed condition in all research situations. The present study seeks to make a case for extending the concept of default translation beyond the confines of the strict link to specific conditions defined by means of online processing data as a meaningful and justifiable step in certain research settings. Specifically, linking default translating/translation to combinations of processing and performance data – the latter being observational data relating to the performance of translational tasks, such as revision behaviour, use of online or other resources, and other observable behaviour connected with the use of translation technologies – while avoiding grounding it in product data – seems useful for exploratory research. In the present exploratory study, the mode of default translation was elicited by a specific choice of the translation task and conditions and monitored through collection of performance data, especially with respect to ensuring relatively uninterrupted production (for more details see \sectref{sec:kamenicka:3.1}).
+
+Some ground for justified extensions of default translation to longer stretches of text based on performance data can be found in Halverson saying that
+
+\begin{quote}default translation involves \textit{the generation of fast and easy            translations} which are based \textit{either} on coactivation patterns that have been established through bilingual language use (without translation) or that have been established through prior translation activity and subsequently reused for that purpose more or less frequently, or both. Thus default translation can be found where the translator is translating a particular stretch of language for the first time, if the linguistic material used is familiar and the cross-linguistic relationships relatively unambiguous (\citealt[196]{Halverson2019}, first emphasis using italics added)\end{quote}
+
+\noindent and that “[t]he ‘default translation’ construct is being proposed \textit{as a means of investigating routinized translational action by isolating those passages of production that are most likely to contain it}” (\citealt[198]{Halverson2019}, emphasis added).
+
+\section{Aim and methodology}\label{sec:kamenicka:3}
+
+\subsection{The task}\label{sec:kamenicka:3.1}
+
+To elicit a default mode of translating in humans, the text for the task to be administered to the students of translation and professionals was selected so as to meet the criteria of being a non-artificial text for written translation on a non-specialized topic (without specialized vocabulary) and not involving intricacies of style, designed for a general (non-expert) audience. The assignment was based on two passages (with a small overlap between them; of 503 and 521 words respectively) from the transcript of the TED Talk by Bryce Dallas Howard entitled “How to preserve your private life in the age of social media” (\citealt{Dallas2022}). Neither the speech itself nor its transcript feel overly oral in nature (which might be distracting and require some effort detrimental to the default mode of translating directed at resolving the tension between the writing modality and preserving features of orality in the translations).
+
+Prior to collecting the data from the subjects, one pilot was run with an experienced translator/trainer, to fine-tune the instructions and detect potential problems.
+
+The data was collected from the 12 translators based on individual online meetings through Zoom, which consisted of four parts. All translators, professionals and trainees alike, were given the same instructions in the first part of the session. They were informed that they would be translating an extract from a relatively easy-to-translate text and since the research was focusing on “what happens in translation” rather than translation quality, they were being asked to deliver a target text in the quality of a draft (a good draft given the relative easiness of the task), not necessarily a top-quality translation in terms of style etc. (to free them of the worry that they would not be allowed to revise their translation). They were instructed they could also think of the task as translating a text for a friend for informative purposes. They would be given the whole text to read before they were to start translating and would translate without online searches or other dictionary searches (and the text had been selected so that this was feasible and not difficult). They were asked to translate at their leisure, without any time limit, from the beginning of the assigned passage till the end, not coming back to translated passages. The pace of their translating should feel comfortable for them – not too slow (they were not to worry about details) and not too fast (there was no time limit).
+
+In case they got stuck at some point, i.e. they found themselves hesitating about how to translate a given segment or phrase for noticeably longer than in the rest of the text, they were not to wait to find an ideal solution but leave the phrase out and mark the place in the target text and just continue with the rest of the text. After translating the whole passage, they would be given some time to fill in the gaps, should there be any, so that the translation would not feel unfinished.
+
+To ensure that the translation felt like an easy task, they were given some scaffolding regarding potentially tricky lexis (“chipmunk”, “coddle”) depending on which of the two passages they were to translate, and a general instruction about translating idioms (not important if they didn’t know the exact meaning of the idiom; translate within the context).
+
+They were also told whether they would be translating the first or the second part of the text. They were assured there would be time for them to ask questions, if they had any, before starting to translate.
+
+In the second part of the session, they were given some time to read the whole text. To create an atmosphere of ease, no time limit was given (although the notion was that the informative reading should, ideally, not exceed 10 minutes) and they should tell the researcher when they were ready. No translator needed more than 10 minutes. They were told that the passage to translate was copied below and set in blue, with paragraphs set apart by a space for their translation, and they would be later writing their translation into the same document. At the end of this part, the translators were offered space to ask questions to make sure the task was understood and they were asked if they would agree to share the document on the screen while translating and allow the researcher to record that part of the session solely for checking the process (the recordings would only be stored in the researcher’s computer and would not be made accessible to any other parties). All the translators gave their consent.
+
+In the third part of the session the process of translation was recorded and monitored by the researcher. In the fourth part, the translators who needed it were given some time to fill in gaps in their text and a short informal interview was conducted, asking them how the task felt, whether and where they got stuck (to complement textual and visual data), and whether they wanted to add or discuss anything else. Then they were asked to send the file with the translation to the researcher.
+
+\subsection{The translators}
+
+Six experienced translators and six translation trainees participated in the research. Each of the two text extracts (referred to here as Source Text A and Source Text B) was translated by three professionals and three trainees and translations, respectively, from four NMT systems – Google Translate, MS Bing, Systran, and DeepL – were obtained (in  {September 2022}).\footnote{Disclaimer statement: Neither the author nor its employer (department or faculty) have been in any business relationship or partnership with any of the providers of the online translation services.} As there was a short overlap between the two source text variants (of one paragraph of 48 words) to ensure the texts would be of as equal length as possible without starting/ending off at a random place, a short part of the text was available in all the 12 human and 4 NMT versions. In all cases, publicly available (unpaid) versions of the systems were used, as this was found to be consistent with the general topic and unchallenging nature of the text.
+
+All of the professionals had been making their living by translating (and localizing and/or subtitling) for at least seven years at the time the material was collected (the maximum was 23 years). The trainees were students in their third semester of a two-year Master’s degree programme in translation.
+
+\subsection{The metrics}
+
+To assess the overall quality of the translations quantitatively, a simple two-dimensional metric was designed, to suit the nature of the text selected for the default mode of translating, consisting of the meaning/coherence disruption count and the stylistic/cohesion disruption count. These two counts allowed for scoring all dysfluencies in transferring the meaning of the original.
+
+The meaning/coherence disruption count gives the number of instances where the meaning expressed in the source text has been distorted in such a way that the place in the target text is either perceived by a target-only receiver as a disruption of coherence or a significantly different meaning is conveyed (without the receiver necessarily perceiving a disruption of coherence).
+
+The stylistic/cohesion disruption count gives the number of instances which are not meaning/coherence disruptions (correct meaning corresponding to the source text can be constructed) but naturalness of the text with respect to the target language and/or cohesion is noticeably challenged. Meaning/coherence disruptions roughly correspond to the content of the adequacy criterion and stylistic/cohesion disruptions roughly correspond to the content of the fluency criterion commonly used in MT output evaluation. Some examples of application follow:
+
+\ea
+Meaning/coherence disruption in NMT output:
+
+
+
+{ST: When I \textbf{blanked} at my first piano recital and ran offstage crying, my mom insisted I stay and support my peers.}
+
+\textit{Bing:} Když jsem se na svém prvním klavírním recitálu \textbf{vyprázdnila} a s pláčem utekla z pódia, moje máma trvala na tom, abych zůstala a podporovala své vrstevníky. [When I \textbf{emptied} \textbf{myself} \textbf{out} at my first piano recital …]
+\z
+
+\ea
+Meaning/coherence disruption in HT:
+
+ST:
+
+{Much of this was lost on my mom.}
+
+\textit{STU2:}
+
+{Mamka téměř \textbf{nic} \textbf{z~toho} \textbf{ale} \textbf{vůbec} \textbf{netušila}. [My mom however \textbf{had} \textbf{no} \textbf{clue} \textbf{about} \textbf{that}.]}
+\z
+
+\ea
+Stylistic/cohesion disruption in NMT output:
+
+\textit{ST:}
+
+{ Next up, confidence comes from character, not our looks.}
+
+\textit{Google:} \textbf{Dále,} \textbf{sebevědomí} \textbf{pochází} \textbf{z} \textbf{charakteru}, ne z našeho vzhledu. [a literal, clumsy translation]
+\z
+
+\ea
+Stylistic/cohesion disruption in HT:
+
+ST:
+
+{So when my 15-year-old son started a YouTube channel …}
+
+\textit{Systran:} Takže~když~můj~15letý~syn~\textbf{založil~Youtube~kanál}~… [failure to use a reflexive verb (si založil) + failure to use a more natural common collocation (kanál na YouTube)]
+\z
+
+The metric was equally applicable to machine and human translation and distinguishing between dysfluencies of the two types was relatively easy. The strength of the metric is that it accounts for quality of meaning transfer while complementing its assessment with another measure of the smoothness and cohesiveness of the translation/s.
+
+\section{Results}\label{sec:kamenicka:4}
+
+\subsection{Quantitative data and supplementary factors}\label{sec:kamenicka:4.1}
+
+\begin{table}
+\begin{tabularx}{\textwidth}{lYY}
+\lsptoprule
+{{{Subjects}}} & {{{ST A} }}    & {{{ST B} }}\\
+& {{(503 words)}} & {{(521 words)}}\\
+\midrule
+Trainees           & 29.3 mins       & 31.7 mins\\
+Professionals       & 31.0 mins       &  34.7 mins\\
+\lspbottomrule
+\end{tabularx}
+\caption{Average times taken to translate the assigned passages.}
+\label{tab:kamenicka:1}
+\end{table}
+
+The average times needed to complete the translation are given in \tabref{tab:kamenicka:1}. They were recorded only as a supplementary variable though and do not have any explanatory value. It is nevertheless interesting that in both parts, professional translators afforded themselves slightly more time to complete the task. However, both shortest (22 mins and 23 mins) and longest (42 mins and 45 mins) times taken for the task were recorded in the professional group while trainees were a more compact group in terms of time spent on the task.
+
+\begin{table}
+\begin{tabularx}{\textwidth}{lYY}
+\lsptoprule
+ & {   {Meaning/coherence}} {   {disruptions} } & {   {Stylistic/cohesion}} {   {disruptions}}\\
+ \midrule
+Google             & 13    & 28     \\
+MS Bing            &  21   &   21   \\
+Systran            &  22   &   21   \\
+DeepL              &  5    &   15   \\
+Trainees           &  2.7  &   8.3  \\
+Professionals      &  0.3  &   4.0  \\
+\lspbottomrule
+\end{tabularx}
+\caption{Average meaning/coherence and stylistic/cohesion counts for NMT systems and human translators. The counts for human translators have been adjusted to reflect the same length of text.}
+\label{tab:kamenicka:2}
+\end{table}
+
+\tabref{tab:kamenicka:2} shows that the performance of MS Bing and Systran in this task was nearly equal on both counts. Google Translate outperformed them at the level of meaning/coherence, capturing the core meaning of the text better, but partly at the cost of stylistic smoothness of the text – its stylistic/cohesion count and surface textuality detract from the overall performance quality. As expected, based on both components of the metric, human translators, both professionals and trainees, significantly outperformed all NMT systems and professionals outperformed trainees. The position of DeepL in the comparison is interesting: it stands between human translators and the other NMT systems in terms of both counts and it is even closer to translation trainees than to the other most successful NMT system, Google Translate, on account of its meaning/coherence disruption count.
+
+There were also some additional features of translation quality which have not been captured by the metric, mainly the treatment of gender and some technical aspects.
+
+The speaker (the person uttering the text) is Bryce Dallas Howard. The name itself does not clearly indicate the speaker’s female gender for a Czech person while the inflected nature of Czech requires the gender of the speaker to be correctly expressed grammatically. This potential issue was identified in the pilot run of the session and a decision was made not to make the gender of the speaker explicit in the instructions given to the translators since attribution of gender to the speaker and some other protagonists of the text/speech was expected to be a major problem for the NMT systems and is not always correctly resolved by translators, especially translation trainees. It was anticipated that the human translators might a) ask about the gender themselves before starting to translate, b) intuit the gender (correctly or incorrectly) or c) in the event that a significant hesitation pause was spotted on the first occasion where the gender needs to be resolved in Czech, the researcher would prompt the translator with the correct female gender. The need to deal with the gender of the speaker (not resolved successfully by any of the NMT engines) as well as that of some other characters mentioned in the extracts produced interesting results but the details cannot be discussed here due to the focus and scope of the chapter. The gender disambiguation issues were not observed to influence the default mode in the rest of the text and do not have any impact on the overall results.
+
+Another, technical issue which plays a role in translating from English into Czech and which rendered the NMT output formally flawed (with all four NMT systems) was the failure to convert inverted commas opening the direct speech segments to lower inverted commas which are used in Czech – although including this into the algorithms for language-specific conversion is certainly feasible, it probably was not seen as important enough.
+
+The only NMT system which managed to provide output without any obvious mistake clashing with the norms or written Czech (apart from the dysfluencies of cohesion and coherence) was DeepL. The other systems either missed a compulsory comma or inserted a grammatically incorrect form in a syntactically complex situation; however not all human output was flawless in this respect: the typical mistakes were either missing a compulsory comma or a typo, the frequency being somewhat higher than with the NMT systems. The explanation for this may be that even in a relatively simple text like this one, adherence to the written-language norm may often be what translators fix only in the last stages of editing.
+
+There was yet another small but cumbersome technical issue which plagued the output from the publicly available version of Systran, namely a peculiar formatting of individual words resulting in strange divisions of words ending the lines, which was very difficult, nearly impossible to get rid of and would considerably complicate editing Systran output into a flawless Czech text.
+
+The two components of the metric which was applied in this study, as well as the additional factors of output quality as described above, suggest that among the NMT systems, the highest translation quality in the task designed to elicit the default mode of translation in human translators was achieved by DeepL, followed by Google Translate. The two remaining NMT systems ranked lower, and the quality of the output by Systran was also hindered by additional technical issues. As will be shown in the discussion section \ref{sec:kamenicka:discussion}, the same order of rank in translation quality in English{}-Czech translation by these NMT systems was observed by \citet{Zahradník2022}. The finding is especially interesting given that Zahradník focused on quality in technical texts, specifically in translating specialized terminology across a selection of domains, i.e. in translation far from default translation.
+
+\subsection{Qualitative data}\label{sec:kamenicka:4.2}
+
+A qualitative analysis of the NMT and human translation output in the present study yielded two main findings, which will be presented and discussed in this section. Firstly, a thorough line-by-line comparison of the output revealed that even among textual segments (at the phrase rank) which were not marked by coherence dysfluencies or major cohesion dysfluencies, in a number of cases, DeepL imitated solutions chosen by human translators noticeably better than the other NMT systems. The solution types chosen by DeepL actually tended to coincide with the solution types preferred by human translators in general, or those which tended to be selected by professional translators, while the solution types chosen by the remaining NMT systems often differed. In these cases, a gap divided human solutions and solutions by DeepL from other NMT solutions.\footnote{The methodology used, namely monitoring and recording of the text creation process online, provides a guarantee that no NMT engine was used during the translation process; interference from DeepL output can safely be excluded from consideration.}
+
+The second main finding concerns cases (of the rank of a phrase) where DeepL performed consistently with the performance of other NMT systems while the human translations tended to use a shared solution type. The finding leads to the formulation of a hypothesis concerning the division of attention and effort of human translators in the default mode of translating (and possibly in translation in general) – the Naturalness Impulse Hypothesis, to be explored by further research.
+
+\subsubsection{ DeepL approximating humans?}\label{sec:4.2.1}
+
+Firstly, evidence of the first observed tendency will be presented by listing the solutions where the said distribution can be observed and they will be commented on.\footnote{The ST segments are more extensive than the respective translations, to provide some context, and the focus of the comments is on the underlined phrase while other aspects/deficiencies of the translations are mostly left uncommented.}
+
+\ea \label{ex:kamenicka:1}
+
+\textit{In fact, my family has been} in the business of entertainment \textit{for three generations, contending with how to handle putting ourselves out there for the last 70 years.}
+
+\textit{Google} Moje rodina se ve skutečnosti \textit{zabývá zábavou} …
+
+\textit{Bing} Ve skutečnosti se moje rodina \textit{zabývá zábavou} …
+
+\textit{Systran} Ve skutečnosti se moje rodina \textit{věnuje zábavě} …
+
+\textit{DeepL} Ve skutečnosti se moje rodina pohybuje \textit{v zábavním průmyslu} …
+
+\textit{TT1} Vlastně se moje rodina pohybuje \textit{v~zábavním průmyslu} …
+
+\textit{TT2} V~tu dobu moje rodina vlastně \textit{v~zábavním průmyslu} …
+
+\textit{TT3} Popravdě řečeno, moje rodina působí \textit{v zábavním průmyslu} …
+
+\textit{PRO1} Celá moje rodina je součástí \textit{zábavního průmyslu} …
+
+\textit{PRO2} Ve skutečnosti se moje rodina vyskytuje \textit{v~šoubyznysu} …
+
+\textit{PRO3} Moje rodina po pravdě pracuje \textit{v zábavním průmyslu} …
+
+\z
+
+In Example 5, the ST features the phrase “in the business of entertainment”, which is a variation of the more frequent “in the entertainment business”. This caused somewhat vague translations by the first three NMT engines, mentioning “entertainment” and a verb signalling personal investment in it, which are however still comprehensible in context. Human translations as well as DeepL provide the Czech equivalent to “entertainment business” (“zábavní průmysl”); one professional translator opted for a near-synonym, “šoubyznys” (“show business”).
+
+A very similar distribution of translation solutions occurs in Example~6. The phrase “in the public eye” was mistranslated by the first three NMT systems into a Czech equivalent of “in the eyes of the public”, which would be a correct choice had the meaning been “as viewed by the public” but not in this case. The correct solution selected by DeepL coincides with the one by all three professionals and one trainee while two trainees opted for slightly looser translations (“in front of the eyes of the public”, “under the surveillance of the public”).
+
+\ea \label{ex:kamenicka:2}
+
+{... she would need to prepare us for something she herself had never experienced.} \textit{Growing up} in the public eye\textit{. And this entailed some extreme parenting tactics. First. No coddling, like ever.}
+
+\textit{Google} Vyrůstat \textit{v očích veřejnosti}. … [mistranslation]
+
+\textit{Bing} Vyrůstat \textit{v očích veřejnosti}. [mistranslation]
+
+\textit{Systran} Vyrůstat \textit{v~očích veřejnosti}. [mistranslation]
+
+\textit{DeepL} Vyrůstání \textit{na očích veřejnosti}.
+
+\textit{STU1} Na dospívání \textit{před očima veřejnosti}.
+
+\textit{STU2} Dětství a dospívání \textit{pod dohledem veřejnosti}.
+
+\textit{STU3} Dospívání \textit{na očích veřejnosti}.
+
+\textit{PRO1} Dětství a dospívání \textit{na očích veřejnosti}.
+
+\textit{PRO2} Vyrůstání \textit{na očích veřejnosti}.
+
+\textit{PRO3} Na vyrůstání \textit{na očích veřejnosti}.
+
+\z
+This distribution of solution types was fairly frequent in the data. Without citing the full solutions, let us point to another instance of DeepL using the same correct and natural collocation as all human translators in contrast to the other NMT engines: humans and DeepL translated “fame came with many blessings” as “sláva přinášela/přináší …” (lit. “fame brought/brings …”) rather than the dysfluent and literal “sláva přišla/přichází s …”. (Google, Bing, Systran)
+
+\ea \label{ex:kamenicka:3}
+
+\textit{My mom} met \textit{my dad, Ron, when they were 16.}
+
+\textit{Google} Moje máma \textit{potkala} mého otce Rona, když jim bylo 16.
+
+\textit{Bing} Moje máma \textit{potkala} mého tátu Rona, když jim bylo 16.
+
+\textit{Systran} Moje~máma~\textit{poznala}~mého~otce~Rona,~když~jim~bylo~16.~
+
+\textit{DeepL} Máma se s mým tátou Ronem \textit{seznámila}, když jim bylo 16 let.
+
+\textit{TT1} Máma \textit{potkala} tátu, Rona, když jim bylo šestnáct.
+
+\textit{TT2} Mamka tátu \textit{potkala}, když jim oběma bylo šestnáct let.
+
+\textit{TT3} Moje máma \textit{potkala} tátu, Rona, když jim bylo 16.
+
+\textit{PRO1} Máma se s~mým tátou Ronem \textit{seznámila}, když jim oběma bylo 16 let.
+
+\textit{PRO2} Máma se s~mým tátou Ronem \textit{seznámila}, když jí bylo šestnáct.
+
+\textit{PRO3} Máma se \textit{seznámila} s mým tátou, Ronem, v šestnácti.
+
+\z
+In Example 7, the translations feature solutions for expressing the first encounter of the couple at age 16. All Czech solutions function well and do not attract any attention by lacking in naturalness but while the first three NMT engines and trainees translated the verb with the close Czech equivalent, all three professionals and, significantly, DeepL selected another verb, most frequently used in Czech where the first encounter of a couple-to-be is being referred to.
+
+\ea \label{ex:kamenicka:4}
+
+\textit{After they finally joined forces, after} he actually proposed three times\textit{, and} had kids\textit{, my mom transformed into a full-on warrior woman, ready to protect.}
+
+\textit{Google} Poté, co konečně spojili své síly, poté, co třikrát požádal o ruku \textit{a měl děti}, …
+
+\textit{Bing} Poté, co konečně spojili své síly, poté, co ve skutečnosti třikrát požádal o ruku \textit{a měl děti}, …
+
+\textit{Systran} Poté, co konečně spojili síly, poté, co se třikrát přihlásil \textit{a měl děti}, …
+
+\textit{DeepL} Poté, co konečně spojili své síly, poté, co \textit{mě} skutečně třikrát požádal o ruku, a \textit{měli děti}, …
+
+\textit{STU1} Potom, co konečně spojili síly, táta mámu třikrát požádal o ruku a \textit{měli děti}, …
+
+\textit{STU2} Poté, co se konečně dali dohromady, poté, co ji táta požádal o ruku hned třikrát, a \textit{měli děti}, …
+
+\textit{STU3} Poté, co konečně spojili síly, co ji táta už potřetí požádal o ruku a co \textit{měli děti}, …
+
+\textit{PRO1} Poté, co se konečně dali dohromady, poté, co ji třikrát požádal o roku, a \textit{narodily se jim děti}, …
+
+\textit{PRO2} Když potom, co táta mámu dokonce třikrát požádal o ruku a \textit{měli spolu děti}, konečně spojili síly, …
+
+\textit{PRO3} Když nakonec spojili síly, potom, co ji třikrát požádal o ruku, a \textit{měli spolu děti}, …
+
+\z
+In Example 8, the phrase whose translations are interesting to focus on expresses that the speaker’s mother and father finally had children. It follows after an insertion, appropriately enclosed in commas, specifying that the speaker’s father had to overcome his partner’s resistance by proposing to her three times, which complicates the attribution of actions to persons for the NMT systems significantly. While human translators with embodied thinking distinguished easily that only the father proposed three times but it was both parents who had kids, which was once paraphrased as “children were born to them” (PRO1), all NMT engines except DeepL – which used the correct majority solution – attributed having kids wrongly to the father only, which in the given context might imply that he had kids with someone else and might be potentially confusing for the addressee.
+
+Although there is not enough space for the commentaries on the examples to discuss other dysfluencies featuring in solutions by NMT systems apart from the phrases in question, let us note another detail in Example 8 which might be illustrative of the differences between output by DeepL and the remaining NMT engines. The grammatical object of the marriage proposal, the mother, “her”, is not explicitly mentioned in the ST, which presented a potential difficulty (not for human translators with embodied thinking though). DeepL introduced a mistake here (included in the meaning/coherence disruption count) by attributing the proposal to the speaker instead of her mother. The situation with the other engines is as follows: the verb for the action of proposing has been selected correctly by Google Translate and Bing and incorrectly by Systran (literally “he raised his hand three times”) but the grammar of the output by Google Translate and Bing is flawed in not stating the grammatical object of the proposal, which is compulsory in Czech (and this was covered by the stylistic/cohesion disruption count). The mistake by DeepL arose in the context of attempted correctness of the lexicogrammar of the phrase, distinguishing DeepL from the other three NMT systems, this time through a slightly different translation solution patterning.
+
+Examples 9 and 10 show how DeepL approximates situations where the ST uses grammatical means available in English for expressing temporal relations between events beyond a simple temporal sequence. It is the use of past perfect (for which no grammatical equivalent is available in Czech) to stress what the speaker’s mother had managed by a certain point (Example 9) and an anticipation of the future (“he’d soon film a pilot”), where the contracted form has to be disambiguated to be interpreted as a conditional (Example 10).
+
+\ea \label{ex:kamenicka:5}
+
+And by that point she had flown \textit{solo in an airplane, joined an all-boys gun club, gotten in tons of fist fights and helped her single dad raise her younger sisters.}
+
+\textit{Google} A v té době \textit{už létala} sólo v letadle, …
+
+\textit{Bing} A v té době \textit{už letěla} sólo v letadle, …
+
+\textit{Systran} A~v~tu~chvíli~\textit{už~letěla}~sólo v~letadle, …
+
+\textit{DeepL} A to už \textit{měla za sebou} sólový let v letadle, vstup do chlapeckého střeleckého klubu, spoustu pěstních soubojů a pomáhala svobodnému tátovi vychovávat mladší sestry.
+
+\textit{TT1} Do té doby \textit{už} sama \textit{letěla} letadlem, …
+
+\textit{TT2} V~tom věku už \textit{toho za sebou měla} \textit{hodně} – …
+
+\textit{TT3} V~té době \textit{už} sama \textit{letěla} letadlem, …
+
+\textit{PRO1} A to už \textit{měla za sebou} sólový let \textit{za kniplem letadla}, …
+
+\textit{PRO2} A tou dobou \textit{už} sama \textit{letěla} letadlem, …
+
+\textit{PRO3} V té době \textit{už toho zažila a dokázala dost}: …
+
+\z
+\ea \label{ex:kamenicka:6}
+
+\textit{It was the early 70s, and my dad was known for playing Opie in the “Andy Griffith Show,” and} he'd soon film \textit{a pilot for a new show called “Happy Days.”}
+
+\textit{Google} … a \textit{brzy natočil} pilotní díl pro novou show s názvem \textit{“}Happy Days”.
+
+\textit{Bing} … a \textit{brzy natočil} pilotní díl pro novou show s názvem “Happy Days”.
+
+\textit{Systran} … a \textit{brzy natočil} pilotní díl pro novou show s~názvem “Happy Days”.
+
+\textit{DeepL} a \textit{brzy měl natáčet} pilotní díl nového seriálu “Happy Days”.
+
+\textit{TT1}
+
+{\textit{Chvíli na to natočil} první díl seriálu \textit{Šťastné dny}.}
+
+\textit{TT2}
+
+{ … přičemž \textit{brzy měl točit} pilotní díl nového pořadu, který se jmenoval „Happy days“ (Šťastné dny).}
+
+\textit{TT3}
+
+{ … a \textit{čekalo ho natáčení} úvodního dílu seriálu \textit{Šťastné dny}.}
+
+\textit{PRO1}
+
+{ … a \textit{brzy měl natáčet} pilotní díl nového seriálu „Šťastné dny“.}
+
+\textit{PRO2}
+
+{ … a \textit{brzy měl natočit} pilotní díl nového seriálu s~názvem „Happy Days“.}
+
+\textit{PRO3}
+
+{ … a \textit{brzy ho čekalo natáčení} pilotního dílu nového seriálu Happy Days.}
+
+\z
+All solutions in Example 9 are acceptable but DeepL approximates successfully what occurs only in human translations in using a natural-sounding and lexically explicit phrase “mít za sebou”, used by one professional and one trainee, similar to another lexical paraphrase used by PRO3 (“she had already experienced and achieved a lot:” followed by a specification of the achievements). The remaining NMT systems, two trainees and one professional, on the other hand, use a solution less explicit about the sequence of events (“already flew/was already flying”).
+
+Similarly in Example 10, three NMT systems, except for DeepL, translated the anticipatory conditional by the same phrase, causing a cohesive dysfluency but without disturbing meaning in a major way, while DeepL coincided with human translations by providing a natural-sounding lexical paraphrase (“was soon to film”) identical to solutions by TT2, PRO1 and PRO2 while TT3 and PRO3 selected another similar lexical paraphrase. The solution by TT1 also differed from Google Translate, Bing and Systran, by singling out the event syntactically and not using the literal equivalent to “soon” but translating it more freely as “a while later”.
+
+\ea \label{ex:kamenicka:7}
+
+Much of this was lost on my mom\textit{. The only thing she watched on TV was “Star Trek.”}
+
+\textit{Google Hodně z toho přišla moje máma}. [meaning lost]
+
+\textit{Bing Hodně z toho se ztratilo na mé matce}. [meaning lost]
+
+\textit{Systran Hodně z~toho se ztratilo na mé mámě}. [meaning lost]
+
+\textit{DeepL} \textit{Mámě to moc neříkalo.}
+
+\textit{TT1} Máma o většině toho vůbec nevěděla.
+
+\textit{TT2} Mamka téměř nic z~toho ale vůbec netušila.
+
+\textit{TT3} Tohle \textit{máma ocenit neuměla}.
+
+\textit{PRO1} Tohle všechno \textit{mámě nic neříkalo}.
+
+\textit{PRO2} Většinu z~toho máma vůbec nevěděla.
+
+\textit{PRO3} Mojí \textit{mámě tohle nic neříkalo}.
+
+\z
+In Example 11, Google, Bing and Systran translate the phrase in question literally, causing a meaning disruption (correct meaning cannot be retrieved from context), in contrast to a correct and very natural translation by DeepL, very close to human translations by PRO1 and PRO3. TT3 translated the phrase by a close paraphrase and TT1, TT2 and PRO2 opted for looser paraphrases centered around the mother not being aware of any of this (where the meaning was sufficiently preserved).
+
+To support the claim that DeepL shows, across a range of situations, significant resemblances to human translations, one last example will be presented, due to the limited space of this chapter.\footnote{To save space, the less interesting (but reasonably acceptable) translations by TT3, PRO1 and PRO2 have been left out.}
+
+\ea \label{ex:kamenicka:8}
+
+\textit{Years later, when my son grimaced at} a chipmunk carcass, our cat had left in the driveway\textit{, Cheryl made him clean up the remains.}
+
+\textit{Google} O několik let později, když se můj syn zašklebil na mršinu veverky, \textit{naše kočka odešla na příjezdové cestě}, Cheryl ho přiměla uklidit zbytky.
+
+\textit{Bing} O několik let později, když \textit{se můj syn ušklíbl na mrtvolu chipmunku, naše kočka odešla na příjezdovou cestu}, Cheryl ho donutila \textit{vyčistit ostatky}.
+
+\textit{Systran~}O~několik~let~později,~\textit{když~se~můj~syn~zašklebil~na~jatečně~upraveném~těle,~naše~kočka~odešla~na~příjezdovou~cestu},~ho~Cherylpřiměla,~aby~zbytky~uklidil.
+
+\textit{DeepL} Když se můj syn po letech ušklíbl \textit{nad mrtvolkou veverky}, kterou naše kočka nechala na příjezdové cestě, Cheryl ho donutila zbytky uklidit.
+
+\textit{TT1} Když se o mnoho let později zatvářil můj syn zhnuseně nad veverčí kostrou, kterou nechala na příjezdové cestě naše kočka, Cheryl ho donutila \textit{zbytky kostřičky} uklidit.
+
+\textit{TT2} A když se pak můj syn o mnoho let později zašklebil při pohledu \textit{na mrtvolku čipmanka}, kterého naše kočka ulovila a nechala přede dveřmi, Cheryl ho přiměla, aby ji uklidil.
+
+\textit{PRO3} A když se můj vlastní syn o spoustu let později ušklíbl při pohledu na mrtvou krysu, kterou naše kočka nechala ležet před domem, Cheryl mu nařídila, aby \textit{mrtvolku} uklidil.
+
+\z
+The sentence mentions “chipmunk”, an animal not native to Europe the translation of which might have disrupted the default mode of translating in the human translators, therefore \textit{chipmunk} (together with the verb \textit{coddle}) was mentioned as one of the potentially difficult lexical items as a part of the instructions (to those who translated the respective part of the text); the translators were prompted with the corresponding name of the biological species (“burunduk”) and told not to worry about this and to translate in context (implying that functional equivalents are acceptable solutions). The NMT translations by Google, Bing and Systran of the sentence, where an incorrect extra comma was added in the transcript published on the internet, are illustrative of the role of pre-editing as the redundant comma caused a number of meaning disruptions. DeepL, nevertheless, managed to translate the whole sentence without any disruption at all.
+
+Moreover, three human translators, TT1, TT2 and PRO3, as well as DeepL, each managed to include a diminutive, a unique item in translation from English into Czech: “remnants of the little skeleton”, “the little dead body of the chipmunk, “the little dead body” and “over the little dead body of the squirrel”, respectively. The use of a diminutive is a very opportune solution, softening the impression of the scene as one would expect in Czech when the dead body of a small animal is being referred to. Since the use of unique items is observed to be a feature endowing translated texts with a feel of naturalness, associating them with non-translated writing in the respective language and increasing the likelihood that they will not be recognized as translations due to translationese \citep{Tirkkonen-Condit2004}, the contextually very appropriate use of the diminutive by DeepL is another strong piece of evidence of its very good performance in approximating human translations.
+
+\subsubsection{ Human and more than non-interferential}\label{sec:kamenicka:4.2.2}
+
+The features shared by the examples to be presented in this section in support of the hypothesis to be formulated, which formed another pattern spotted in the overview of the translations are the following:
+
+\begin{itemize}
+\item the solutions by NMT systems are all acceptable and all (including output by DeepL) are typologically different from solutions by human translators;
+\item the solutions by human translators are less literal and often but not necessarily more natural in Czech in terms of frequencies of occurrence of lexically salient expressions and/or collocationally more natural (they feel “vivid” rather than “neutral”);
+\item the units (simple sentences, or distinct parts of complex sentences) are shorter ones of a rather uncomplicated nature.
+\end{itemize}
+
+In example 13, only TT1 and TT3 use a literal translation analogous to those by the NMT engines, improving it by using the feminine form of \textit{actor}, whose use is compulsory for female actors in Czech. The other solutions are less literal and more natural to Czech as they express what the present perfect expresses in English by lexical means available in Czech.
+
+\ea \label{ex:kamenicka:9}
+
+And I've been an actor \textit{since my early twenties.}
+
+\textit{Google} A \textit{hercem jsem} od svých dvaceti let.
+
+\textit{Bing} A \textit{hercem jsem} od svých dvaceti let.
+
+\textit{Systran} A~já~\textit{jsem~herec}~od~svých~raných~dvaceti~let
+
+\textit{DeepL} A já \textit{jsem hercem} od svých dvaceti let.
+
+\textit{TT1} Já \textit{jsem herečkou} od té doby, co mi bylo dvacet a něco.
+
+\textit{TT2} A já \textit{jsem se stala herečkou} chvíli poté, co jsem oslavila dvacáté narozeniny. [I became an actress …]
+
+\textit{TT3} A já \textit{jsem herečkou} od svých raných dvaceti.
+
+\textit{PRO1} A já \textit{se herectvím živím} od svých dvaceti. [I am making my living by acting …]
+
+\textit{PRO2} A já \textit{začala hrát} hned po dvacítce. [I started acting …]
+
+\textit{PRO3} A já \textit{se jako herečka živím} už zhruba od dvaceti. [I am making my living as an actress …]
+
+\z
+All NMT translations in Example 14 are literal, with a small but notable variation by DeepL, which leaves out the initial causal connector (just like T1), in contrast with the human translations which break the (certainly acceptable) literalness by changing the noun phrase into a verbal phrase in consistency with general tendencies in Czech (TT1, PRO2), changing the connector (TT2, TT3, PRO1, PRO2), or a verbal paraphrase accentuating that coddling was out of question (PRO3).
+
+\ea \label{ex:kamenicka:10}
+
+So that meant \textit{zero coddling. Put your comfort away, she'd preach.}
+
+\textit{Google} \textit{Takže to znamenalo} nulové mazlení. …
+
+\textit{Bing Takže to znamenalo} nulové rozmazlování.
+
+\textit{Systran Takže~to~znamenalo}~nulové~hýčkání.~
+
+\textit{DeepL} \textit{To znamenalo} nulové rozmazlování.
+
+\textit{TT1 To znamenalo, že} s~námi rozhodně nejednala v~rukavičkách.
+
+\textit{TT2} \textit{A} to znamenalo žádné rozmazlování.
+
+\textit{TT3 Což} znamenalo absenci rozmazlování.
+
+\textit{PRO1} \textit{Což} znamenalo nulové rozmazlování.
+
+\textit{PRO2} \textit{Což} znamenalo, \textit{že} se s~námi nemazala.
+
+\textit{PRO3} \textit{Takže rozmazlování nepřipadalo v úvahu.}
+
+\z
+The ST in Example 15 features the noun “challenge”, the frequency of whose direct equivalent in Czech (\textit{výzva}) was very low before the surge of post-1989 translations from English and which still has a subtle connotation of a stylistic/conceptual importation, which makes the translation situation interesting. All NMT translations are literal and identical, coinciding only with the solution by TT2. All other human translators diverted from the literal version by varying the pronoun (“any time a challenge arose”, TT1), using a near-synonym to the noun (“obstacle”, TT3), using a verbal phrase instead of a simple verb (“which occurred in front of us/which was an obstacle on our way”, PRO1 and PRO2) or linking the challenge with an opportunity in a looser paraphrase (“each new challenge presented an opportunity”, PRO3).
+
+\ea \label{ex:kamenicka:11}
+
+Any challenge that arose \textit{was an opportunity to find your sea legs.}
+
+\textit{Google} \textit{Jakákoli výzva, která se objevila}, …
+
+\textit{Bing Jakákoli výzva, která se objevila}, …
+
+\textit{Systran} \textit{Jakákoliv výzva, která se objevila}, …
+
+\textit{DeepL} \textit{Jakákoli výzva, která se objevila}, …
+
+\textit{TT1 Kdykoli se objevila nějaká výzva}, …
+
+\textit{TT2} \textit{Jakákoliv výzva, která se objevila}, …
+
+\textit{TT3} \textit{Jakákoli} \textit{překážka, která se před námi objevila}, …
+
+\textit{PRO1} \textit{Jakákoli výzva}, \textit{která se nám postavila do cesty}, …
+
+\textit{PRO2} \textit{Jakákoli výzva}, \textit{která se nám postavila do cesty}, …
+
+\textit{PRO3} \textit{Každá nová výzva představovala příležitost} najít rovnováhu.
+
+\z
+The examples could go on, but one more will have to suffice: Example~16 is somewhat different from the preceding ones by virtue of the human translations (except for one, by PRO1) contrasting with the uniform NMT solutions in form, but not differing in naturalness. The collocation “jako malý/malá” (lit. “as little/being little”) seems equally likely in the context as “jako dítě” (lit. “as a child”) but it seems not to be accidental that human translators opted for the less literal variants, perhaps for the sake of avoiding literality itself. The solution by PRO2 features a somewhat expressive expression “děcko” as a less frequent and more marked equivalent to “kid”. The phenomenon might indicate “a fear of interference” where the translator can easily afford investing into a variation on the very literal solution although the latter is not marked by negative interference.
+
+\ea \label{ex:kamenicka:12}
+
+As a kid\textit{, I was terrified of snakes, so my mom got me a pet snake.}
+
+\textit{Google Jako dítě} jsem se bála hadů, a tak …
+
+\textit{Bing Jako dítě} jsem se bál hadů, takže …
+
+\textit{Systran} \textit{Jako~dítě}~jsem~se~bál~hadů,~tak~…
+
+\textit{DeepL} \textit{Jako dítě} jsem se bála hadů, a tak …
+
+\textit{TT1 Jako malá} jsem se bála hadů, tak …
+
+\textit{TT 2} \textit{Jako malá} jsem se bála hadů a tak …
+
+\textit{TT 3} \textit{Jako malá} jsem se bála hadů, tak …
+
+\textit{PRO1} \textit{Jako dítě} jsem se bál hadů, tak …
+
+\textit{PRO2} \textit{Jako děcko} jsem měla hrůzu z~hadů, a tak …
+
+\textit{PRO3} \textit{Jako malá} jsem se bála hadů, a tak …
+
+\z
+
+
+The examples quoted in this section and other similar ones appear interesting in the context of the monitor model \citep{Tirkkonen-Condit2005}, according to which literal translation is the first-choice solution adopted in the translation unless the monitor(ing) function “alerts about a problem in the outcome” and “triggers off conscious decision-making to solve the problem”. (\citealt{Tirkkonen-Condit2005}: 407–408) The examples quoted here representatively – but not exhaustively – however indicate that although the literal or close-to-literal NMT solutions would easily pass the test, actual human translation solutions – whether by trainees or professionals – elicited under the default mode of translating differ from them systematically even though there seems no obvious reason for the monitor having to be triggered.\footnote{Having
+  said this, I do not deny the possible influence of translator/trainee “programming” through instruction in translation training to avoid interference or awareness of translation norms in that respect. This possible influence is viewed here as consistent with entrenchment (see the quotation from \citet{Halverson2019} in 2.1) and the paper distinguishes between avoiding negative interference (triggering the monitor mechanism in a direct sense) and rejecting stylistically neutral more literal solutions in favour of non-literal solutions based on dynamics of translational efforts and processing capacity (see the Naturalness Impulse Hypothesis below). I am indebted to Giuseppe Palumbo for making me aware of the need to clarify how conditioning by training is approached here.
+}
+
+{ Yet another mechanism therefore seems to be operating in these cases, and it is hypothesized here that in the relatively unchallenged default mode of translating, the translator reaches for a non-literal but cognitively relatively easy-to-access solution more often than the monitor model would suggest, which is, nevertheless, consistent with the concept of “minimax strategy” proposed by Jiří \citet[1179]{Levy1967}, which amounts to the translator choosing solutions yielding maximum effect with a minimum effort. A possible reason may be sought in the fluent and unchallenged mode of translating and in the relative simplicity of the segments in which this phenomenon occurred even in comparison with their textual surroundings. Where the translation is particularly unchallenged (compared with the textual surroundings), translators, with some degree of automation and understanding of the translation task as a mediation activity, may be choosing cognitively easily accessible solutions which are freer than the correct but literal ones to specifically avoid literalness and inject the translation with a sense of freshness to forestall an impression of dullness, which might otherwise come with segments where more cognitive effort has to go into other issues.} The hypothesis may be referred to as the Naturalness Impulse Hypothesis. It seems to correspond well to Halverson’s notion (already quoted above) that \begin{quote}“default translation may involve the selection of translations that bear relatively little formal or semantic similarity to the source, if the two structures are linked often enough in the translational act. Thus, default translation will show evidence of established patterns that originate in shared semantic and/or formal characteristics as well as translational solutions that have become entrenched in spite of their lacking obvious semantic or formal similarities”. (2019: 195)\end{quote}
+
+\section{Discussion of results}\label{sec:kamenicka:discussion}
+
+It is not the purpose of this chapter to provide a comprehensive comparison of NMT systems’ performance within the multiple contexts which might be relevant (the same language pair vs. other language pairs, different text types and content domains, comparisons along the temporal dimension, etc.), among other things because systematic findings for the English/Czech language pair at the point of publication are rather scarce and – to the author’s knowledge – more or less restricted to final theses written in university translation programmes. There is also a considerable gap between publications arising from the MT community and focused mainly on improving MT architectures and evaluating the outcomes of this process on the one hand (such as the WMT report series and other related publications, e.g. \citealt{KocmiEtAl2023}) and translation studies approaches on the other. It is significant that the latter publication, summarizing the findings of testing the submitted systems on 8 language pairs, most of which were tested in both directionalities, reports that “For most language pairs, \textit{apart from English and Czech}, MT systems produce outputs that cannot be identified as being worse than the manually produced reference translations in a statistically significant way, using our current evaluation methods” (Kocmi et al.: 16; emphasis by the present author), singling English-Czech MT out as involving more relative difficulty than other language pairs tested (which included, for instance, Chinese, Japanese, and Hebrew).
+
+Some notable exceptions for translation within the English–Czech/Slovak language pairs as pairs of analytical vs. inflectional languages are, in this respect, \citet{MunkovaEtAl2021}, \citet{Munkova2023} and \citet{KloudováEtAl2023}, focusing on MT evaluation in the context of language complexity, proposing an error typology for such contexts, and exploring the methodology for producing optimal reference translations, respectively. At the level of university theses, the Bachelor’s final thesis by \citet{Kendová2019} is an interesting attempt at exploring the grammatico-syntactic transformations and success/failure in Czech-English NMT by Google Translate while Master’s theses by \citet{Řehořová2022} and \citet{Nováková2023} apply different human evaluation methods to several kinds of NMT output and NMT output alongside HT, respectively.
+
+The first main finding, namely the superiority of performance by DeepL over other NMT engines in the default translation task and its ability to approximate solutions by human translators better than Google, Bing or Systran (as of  {September 2022}), is perhaps interesting to compare with results obtained in a final Master’s thesis by \citet{Zahradník2022},\footnote{As the reviewer of the thesis, the present author is very familiar with its content and confident of its quality.}  in a setting vastly different from the one in this research. Zahradník performed a translation quality assessment of performance of the same NMT engines on expert and popular science texts, namely research articles, abstracts, popular science and technical documentation, also in translation from English into Czech, focusing on quality in terminology translation. The thesis by Zahradník includes a comprehensive manual evaluation of the translation of 101 term candidates, with the following results: \tabref{tab:kamenicka:3} indicates that even in translating terminology from English into Czech, a task radically different from default translation, the best results were achieved by DeepL, followed by Google and Bing, and Systran was the least successful of the four NMT engines. In this case, however, the scores had a narrower distribution. A supplementary assessment of grammatical and formal correctness in the expert and popular science texts analysed by Zahradník rendered the same order of rank, the error scores for DeepL, Google, Bing and Systran being 24, 25, 39 and 51, respectively \citep[67]{Zahradník2022}.
+
+\begin{table}
+\begin{tabularx}{\textwidth}{lYYYY}
+\lsptoprule
+ & {{{Google}}} & {{{Bing}}} & {{{Systran}}} & {{{DeepL}}}\\
+ \midrule
+Correct translations     & 53          & 52           & 48             & 55          \\
+Total mistranslation    & 28           &    29        &     32         &      24     \\
+Acceptable variants     & 20           &    20        &     21         &      20     \\
+\midrule
+Accuracy                        &  {53}  &     {52}    &  {48}    &    {55}\\
+\lspbottomrule
+\end{tabularx}
+\caption{A comparison of NMT accuracy achieved in translation of terminology across genres and domains, adapted from \citet[58]{Zahradník2022}.}
+\label{tab:kamenicka:3}
+\end{table}
+
+The aim and conditions under which the concept of default translation was envisaged by \citet{Halverson2019} have been extended for the purposes of this exploratory study as described in \sectref{sec:kamenicka:2.2}. The research setting for elicitation of the extended default mode of translating in human translators has also been described in detail (in \sectref{sec:kamenicka:3.1}), but some further details could not be provided due to the limited scope of this chapter. Consistent with the observation by \citet[204]{Halverson2019}, default translation studied on language pairs with considerable structural differences – such as English and Czech – provides a good opportunity for research to remove some of the noise present in other translation settings and explore specific hypotheses.
+
+The inspiration for extending default translation to longer stretches of text was partly drawn from sight translation (alternatively referred to as sight interpreting), where reading through the document to be sight-translated is a relatively common practice – similar to the pre-translation reading used in the present study. In “Exploring Translation and Interpreting Hybrids. The Case of Sight Translation”, \citet{DragstedHansen2009} compared output quality in interpreters’ oral translation, translators’ written translation and translators’ oral translation as an intermediary mode, concluding that the lower output rate in written translation was not justified by the significantly higher quality of the written products (588). The characteristics which connect sight translation to the default mode of translating are the relative simplicity of the STs and online processing (also referred to as parallel processing). In the present research design, however, the written mode was elicited, as this was the habitual mode for the translators and a switch to another mode of production might have become a factor influencing their production, especially that of the trainees, for whom it might have been a stressful factor interfereing with the desired default mode of translating. Moreover, although e.g. \citet[31]{Oster2017} assumes in reference to what is “widely accepted” that the main difference between translation and interpreting is the degree of monitoring (and in the model she adopts it is the \textit{only} difference), she also notes that monitoring is a dynamic capacity (29) and that although it is generally stronger in written production than in oral production, the factors influencing it should be explored in detail.
+
+The empirical study on “The influence of self-monitoring on the translation of cognates” by \citet{Oster2017} also highlights one crucial question, which the present study might contribute to answering: namely the question of how the tendencies towards language transfer and normalization (\citealt{Toury1995}: 310–315) operate and how the mechanisms by which translators withstand interference can be modelled. The assumption by \citet{Tirkkonen-Condit2005} of the existence of a ‘monitor’ or ‘monitor function’ to trigger repair in case the literal translation does not work well is a very general one and the operation of the actual mechanisms is far from clear. Referring to previous research, Oster mentions motivation, age and time pressure as factors influencing monitoring (29), but it is evident that a full list – had we had one – would be much longer (e.g. attention/tiredness or training certainly play a major role in realistic translation) and the question remains how dynamic actually monitoring is and how to model it. Questions linking the operation of the monitor to literal versus non-literal default translation solutions, immediate response solutions and delayed translation solutions and to translation quality are major questions to be addressed by rigorous research.
+
+The three{}-fold origin of the translations compared within the research presented here has a broad potential; due to the limitations of the scope of presentation, however, the comparison of trainees to professionals has had less attention paid to it here than the comparison of NMTs to humans.
+
+In light of the Naturalness Impulse Hypothesis, formulated as a result of this research, it seems useful to point out that comparing NMT output with human translation output in a task expected and designed to be easy for the human translators may generally be a setting favourable to spotting patterns characteristic of human translation, as non-human and non-embodied attempts at coping with the task may provide a good background for them to stand out against. It is however important to note that it is not human cognition in translational behaviour \textit{at its most general} that this chapter seeks to characterize: human translations by subjects conditioned by translation training and/or translation norms and NMT translational output are compared, as it is translation by these human subjects that NMT seeks to emulate. Nevertheless, how the Naturalness Impulse Hypothesis concerns or does not concern translating by non-translators with SL and TL knowledge may be interesting to research in the future.
+
+Although the monitor model is used here for reference as a general background, this study does not seek to confirm or develop the model and the sets of translation solutions that have led to the formulation of the Naturalness Impulse Hypothesis are actually at odds with the monitor model. It is probably not accidental that \citet{Halverson2019} avoids reference to it, beginning her argumentation from scratch and counting on a firm empirical basis under carefully controlled conditions. The very existence of instances where a smooth literal translation of a segment is rejected in default translation in favour of a less literal variant certainly calls for challenging the assumption that the monitor model might provide a safe default basis for describing and explaining translation processes.
+
+\citet[410]{Tirkkonen-Condit2005} herself mentions the factor of \textit{time} in reference to a previous study providing evidence of the operation of a monitoring mechanism (“the monitor needs time for its operation, and that is why the [different mapping condition] sentences in the experiment take a longer time to translate”). With the degree of monitoring being a feature setting written translation and interpreting apart, it is clear that temporal factors are, among other factors, likely to influence monitoring and translational output in human translation in such ways that it is safer not to assume anything a priori about.
+
+Default translation, just like interpreting (and other types of translation, for that matter), is a process taking place in time. In interpreting, the time factor is more palpable than elsewhere but also in sight interpreting or the default mode of translating, which is “easy and fast” \citep[320]{Halverson2015}, the translation pace is likely to play a non-negligible role. In reality, time always plays a role in translation. Effort models for interpreting (simultaneous and consecutive) (\citealt{Gile1997,Gile2009}) regard time as a factor limiting processing capacity. Based on the (implicit) assumption that output monitoring is minimal in interpreting, monitoring is not included as a separate source of effort (i.e. complex operation) in interpreting, but it may be justifiably included as a source of effort in modelling translation, including default translation.
+
+As for the limitations of the study beyond the small-scale extent of this exploratory probe, the elicitation of the default mode beyond the control of variables from online processing comes at a certain cost and one of the consequences is that the translation situation does not conform to parameters associated with typical scenarios of professional (or semi-professional, with the trainees) translation. The author of this chapter however believes that although the binary distinction between “professional” and “unprofessional” translation may be useful in some settings, its validity is relative; namely, that translators’ professionalism or semi-professionalism in approaching translation – in terms of applying general norms such as withstanding ST/SL interference – does \textit{not} crucially depend on adherence to fixed translation scenarios. The fact that stronger resistance to interference than models described in the literature suggest has been observed, also seems to support the legitimacy of the adoption of the research scenario. Further research may treat the above-mentioned objection for instance by adding an editing stage to the default translation to make sure that the effect of the hypothesized Naturalness Impulse Hypothesis does not disappear when the translation product from an easy translation task undergoes the standard editing stage.
+
+\section{Conclusion}
+
+The adoption of an extended understanding of the concept of default translation as coined by Halverson, freed from being defined strictly by online processing data, is a step bringing new opportunities as well as limiting the study in certain respects. The opportunities resulting from contrasting human performance with the performance of NMT engines in a translation task which is relatively simple from a human perspective has helped to bring out some regularities in the behaviour of humans conditioned by translation training and practice, which are interpretable as a part of active forestalling of interference.
+
+Specifically, the findings of \sectref{sec:kamenicka:4.2.2} led to the formulation of the Naturalness Impulse Hypothesis, which suggests that on the background of relatively unchallenged translation (in the default mode), particularly unchallenged segments\footnote{How to define the borderline between “relatively unchallenged” and “particularly unchallenged” segments in default translation would be, of course, a pending question for research. At this point, only a preliminary formulation of the hypothesis is being offered.} – where monitoring of literal output does not trigger repair activity, which would require extra time/effort – may be inviting the translator to use the available part of the overall processing capacity to actively forestall a ‘shining-through’ effect in their translation. This forestalling of a ‘shining-through’ effect conforms to the general norm that, in most even if not all types of translation, “a~successful translation should not be immediately recognized as a translation by virtue of the language”. These patterns seem to amount to a less conscious if not unconscious component of withstanding interference with some degree of automation; qualifying them as such is based on corresponding strategies not having been – to the author’s knowledge – covered by translation norms as reflected on either in descriptive research or in texts written to support translation training. The patterns spotted resulting in the formulation of the Naturalness Impulse Hypothesis, nevertheless, do agree with the minimax strategy (achieving maximum effect with a minimum effort) formulated at a more general level by \citet{Levy1967} and with \citegen{Pym2015} perspective of the role of risk management in translation.
+
+The limitations of this study, on the other hand, besides the obvious ones having to do with the small-scale research design centred around only one source text (with two subtext variants) and a limited number of participants, include mainly the extension of the default translation condition and its practical execution. The nature of the translation task as described in \sectref{sec:kamenicka:3.1} makes it akin to hybrid forms of translation such as sight translation/interpreting. While this may be viewed as supportive of exploring the \textit{general} characteristics of translational behaviour in human agents acting under and influenced by translational norms operating beyond specific genres or situations, it might be argued that the task at hand including the instructions does not satisfy typical conditions in professional translation.
+
+Last but not least, in the context of the current technological turn in translation and boom in NMT and post-editing, it is worth noticing that Halverson herself comments on the relationship between corpus data and/or machine translation on the one hand and default translation on the other: “Corpus frequency or translation selection in statistical machine translation may be effects of default translation, while at the same time corpus frequency may be considered a reflection of community-wide language norms that impact what becomes a default in the first place” (2019: 191). Studying how selecting between literal and non-literal translation solutions in default translation by humans operates is certainly an intriguing task and comparing human output with NMT output may help to highlight how the translator’s knowledge “including but not limited to linguistic and metalinguistic knowledge, established routines for action, and conceptualization of the specific task at hand” \citep[191]{Halverson2019}, the latter being as general as possible in default translation, enters as a factor. The Naturalness Impulse Hypothesis may hopefully serve as a small step in that direction.
+
+\section*{Acknowledgements}
+
+My thanks go to the anonymous translation trainees and professionals who generously agreed to give their time and attention to benefit research without any reasonable guarantee that it will bear some fruit.
+
+\section*{Abbreviations}
+
+\begin{tabularx}{\textwidth}{lX}
+NMT & neural machine translation\\
+HT & human translation\\
+TT & translation trainee\\
+PRO & professional\\
+ST & source text\\
+TT & target text\\
+\end{tabularx}
+
+\sloppy\printbibliography[heading=subbibliography,notkeyword=this]
+\end{document}

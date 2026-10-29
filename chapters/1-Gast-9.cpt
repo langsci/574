@@ -1,0 +1,6 @@
+Stacked Correspondence analysis showing the
+    location of three German \pradv s in latent space constituted by
+    the variables \textsc{Illocutionary force} and \textsc{Agent}. The
+    CA was fitted with the package \verb+ca+ for \verb+R+
+    (\citealt{ca-package}) and the plot was created with the package
+    \verb+factoextra+ for \verb+R+ \citep{factoextra-package}.^^E^^L 

@@ -1,0 +1,175 @@
+% $ biblatex auxiliary file $
+% $ biblatex bbl format version 3.3 $
+% Do not modify the above lines!
+%
+% This is an auxiliary file used by the 'biblatex' package.
+% This file may safely be deleted. It will be recreated by
+% biber as required.
+%
+\begingroup
+\makeatletter
+\@ifundefined{ver@biblatex.sty}
+  {\@latex@error
+     {Missing 'biblatex' package}
+     {The bibliography requires the 'biblatex' package.}
+      \aftergroup\endinput}
+  {}
+\endgroup
+
+
+\refsection{0}
+  \datalist[entry]{nyt/global//global/global/global}
+    \entry{Baker1993}{incollection}{}{}
+      \name{author}{1}{}{%
+        {{hash=b8e483aa96ea938f4b6b3ae62fdfcd3c}{%
+           family={Baker},
+           familyi={B\bibinitperiod},
+           given={Mona},
+           giveni={M\bibinitperiod}}}%
+      }
+      \name{editor}{3}{}{%
+        {{hash=b8e483aa96ea938f4b6b3ae62fdfcd3c}{%
+           family={Baker},
+           familyi={B\bibinitperiod},
+           given={Mona},
+           giveni={M\bibinitperiod}}}%
+        {{hash=9e116fa1191cc165e658b4042a5b6602}{%
+           family={Francis},
+           familyi={F\bibinitperiod},
+           given={G.},
+           giveni={G\bibinitperiod}}}%
+        {{hash=382a31a8a69b57fe8267b01480ecb20a}{%
+           family={Tognini-Bonelli},
+           familyi={T\bibinithyphendelim B\bibinitperiod},
+           given={E.},
+           giveni={E\bibinitperiod}}}%
+      }
+      \list{location}{1}{%
+        {Amsterdam/Philadelphia}%
+      }
+      \list{publisher}{1}{%
+        {Benjamins}%
+      }
+      \strng{namehash}{b8e483aa96ea938f4b6b3ae62fdfcd3c}
+      \strng{fullhash}{b8e483aa96ea938f4b6b3ae62fdfcd3c}
+      \strng{fullhashraw}{b8e483aa96ea938f4b6b3ae62fdfcd3c}
+      \strng{bibnamehash}{b8e483aa96ea938f4b6b3ae62fdfcd3c}
+      \strng{authorbibnamehash}{b8e483aa96ea938f4b6b3ae62fdfcd3c}
+      \strng{authornamehash}{b8e483aa96ea938f4b6b3ae62fdfcd3c}
+      \strng{authorfullhash}{b8e483aa96ea938f4b6b3ae62fdfcd3c}
+      \strng{authorfullhashraw}{b8e483aa96ea938f4b6b3ae62fdfcd3c}
+      \strng{editorbibnamehash}{57aca07212f1f73f02af9e3e914e77e2}
+      \strng{editornamehash}{43e1743e3e94a9444942d0dbfe85a7c6}
+      \strng{editorfullhash}{57aca07212f1f73f02af9e3e914e77e2}
+      \strng{editorfullhashraw}{57aca07212f1f73f02af9e3e914e77e2}
+      \field{sortinit}{B}
+      \field{sortinithash}{d7095fff47cda75ca2589920aae98399}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{Text and Technology: In Honour of John Sinclair}
+      \field{title}{Corpus linguistics and Translation Studies: Implications and applications}
+      \field{year}{1993}
+      \field{pages}{233\bibrangedash 250}
+      \range{pages}{18}
+    \endentry
+    \entry{GriesWulff2011}{incollection}{}{}
+      \name{author}{2}{}{%
+        {{hash=e588ba7cac6395578892ec09c5dbbbd1}{%
+           family={Gries},
+           familyi={G\bibinitperiod},
+           given={Stefan\bibnamedelima Th.},
+           giveni={S\bibinitperiod\bibinitdelim T\bibinitperiod}}}%
+        {{hash=40cccfd9d64e165c36239457f328b983}{%
+           family={Wulff},
+           familyi={W\bibinitperiod},
+           given={Stefanie},
+           giveni={S\bibinitperiod}}}%
+      }
+      \name{editor}{2}{}{%
+        {{hash=c6d04f3b42981d4a0b8673f01de9e15c}{%
+           family={Oakes},
+           familyi={O\bibinitperiod},
+           given={Michael\bibnamedelima P.},
+           giveni={M\bibinitperiod\bibinitdelim P\bibinitperiod}}}%
+        {{hash=53d9f9d02da4f715a8b5c72d60b45701}{%
+           family={Ji},
+           familyi={J\bibinitperiod},
+           given={Meng},
+           giveni={M\bibinitperiod}}}%
+      }
+      \list{location}{1}{%
+        {Amsterdam}%
+      }
+      \list{publisher}{1}{%
+        {Benjamins}%
+      }
+      \strng{namehash}{5ba9bb06b87e5e4c7d206355b6f938da}
+      \strng{fullhash}{5ba9bb06b87e5e4c7d206355b6f938da}
+      \strng{fullhashraw}{5ba9bb06b87e5e4c7d206355b6f938da}
+      \strng{bibnamehash}{5ba9bb06b87e5e4c7d206355b6f938da}
+      \strng{authorbibnamehash}{5ba9bb06b87e5e4c7d206355b6f938da}
+      \strng{authornamehash}{5ba9bb06b87e5e4c7d206355b6f938da}
+      \strng{authorfullhash}{5ba9bb06b87e5e4c7d206355b6f938da}
+      \strng{authorfullhashraw}{5ba9bb06b87e5e4c7d206355b6f938da}
+      \strng{editorbibnamehash}{d8da904532fd85c98fad964e8c3235f8}
+      \strng{editornamehash}{d8da904532fd85c98fad964e8c3235f8}
+      \strng{editorfullhash}{d8da904532fd85c98fad964e8c3235f8}
+      \strng{editorfullhashraw}{d8da904532fd85c98fad964e8c3235f8}
+      \field{sortinit}{G}
+      \field{sortinithash}{32d67eca0634bf53703493fb1090a2e8}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{Quantitative Methods in Corpus-Based Translation Studies: A Practical Guide to Descriptive Translation Research}
+      \field{title}{Regression analysis in translation studies}
+      \field{year}{2011}
+      \field{pages}{35\bibrangedash 53}
+      \range{pages}{19}
+    \endentry
+  \enddatalist
+  \missing{AlcarazHughes2002}
+  \missing{Berruto1998}
+  \missing{CardinalettiGarzone2005}
+  \missing{Cerruti2015}
+  \missing{Cinque2010}
+  \missing{DreyerSchmitt2001}
+  \missing{EbelingHasselgard2018}
+  \missing{Eichinger2006}
+  \missing{Engel1988}
+  \missing{Garzone2005}
+  \missing{GötzeHess-Lüttich2002}
+  \missing{Granger2003}
+  \missing{GriessWulff2012}
+  \missing{Hartmann1980}
+  \missing{Heidolph1984}
+  \missing{Johansson1997}
+  \missing{Johansson2003}
+  \missing{Johansson2011}
+  \missing{JohanssonHasselgard1999}
+  \missing{Kather2011}
+  \missing{Kayne1994}
+  \missing{KilgariffEtAl2004}
+  \missing{KotowskiHärtl2019}
+  \missing{Laviosa1998}
+  \missing{Laviosa2002}
+  \missing{Laviosa2003}
+  \missing{Mathesius1975}
+  \missing{Pümpel-MaderEtAl1992}
+  \missing{Resi2011}
+  \missing{Roehrs2015}
+  \missing{Roehrs2023}
+  \missing{Rohdenburg1996}
+  \missing{SadlerArnold1994}
+  \missing{Scollo2020}
+  \missing{Tognini-Bonelli2000}
+  \missing{Tognini-Bonelli2001}
+  \missing{Toury1991a}
+  \missing{Toury1991b}
+  \missing{VeldeSleeman2014}
+  \missing{vanRiemsdijk1983}
+\endrefsection
+\endinput
+

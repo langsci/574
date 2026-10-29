@@ -1,0 +1,4 @@
+Sankey plot showing French translations of the German
+    \ipadv s \textit{gleich} and \textit{sofort}. The plot was
+    generated with the package \verb+networkD3+ for \verb+R+
+    \citep{networkD3-package}.^^E^^L 

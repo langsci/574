@@ -1,0 +1,769 @@
+\documentclass[output=paper]{langscibook}
+\ChapterDOI{10.5281/zenodo.22796689}
+\author{Věra Kloudová\affiliation{Charles University} and Petra Mračková Vavroušová\affiliation{Charles University} and Dávid Javorský\affiliation{Charles University} and Ondřej Bojar\affiliation{Charles University}}
+\title[{Human} and automatic {simultaneous} {interpreting}/{speech} {translation}]{{A} {comparison} {of} {human} {simultaneous} {interpreting} {and} {automatic} {simultaneous} {speech} {translation} {as} {a} {basis} {for} {further} {research}}
+\abstract{
+Simultaneous interpreting (SI) is a cognitively difficult task requiring specialized training and continued learning. Even with full attention, occasional errors in interpreting are inevitable, and tend to rise in longer sessions. Nowadays, with the advances in deep learning, we are witnessing an increase in the quality of automatic simultaneous speech translation (ASST). However, compared to human interpretation, whose output is the spoken word, the ASST model creates a translated transcription of the original.
+
+The presented study assesses the state of the art by analysing translation departures in human SI (professional and trainee interpreters) and ASST systems. Two terminologically rich speeches, delivered by non-native English speakers, were remotely interpreted by two M.A. interpreting students, and one professional interpreter, to Czech. We had the speeches translated also by an in-house speech translation system.
+
+Our quality assessment focuses on content transfer   from the original speech, extending Barik’s taxonomy (1971). %, which identifies omissions, additions, substitutions, and semantic errors, with grammatical errors and formal defects \citep{Kopczyński1980}.
+
+Our findings reveal that trainee interpreters outperformed the professional one in multiple areas, such as avoiding over-reliance on original structure or excessive use of demonstrative pronouns. In comparison, the ASST model translated more literally, with outputs having fewer translation departures than human interpretations.
+%However, focusing on content transfer only abstains from considering all aspects of interpreting quality assessment of human SI that are more important to the client. Future research aims to expand our sample size and evaluation criteria, incorporating more evaluators, students, and professionals, to further validate our findings.
+
+% Simultaneous interpreting (SI) is a cognitively demanding task requiring specialized training and continued learning. Even with full attention, interpreting errors are inevitable and tend to increase during longer sessions. Advances in deep learning have improved automatic simultaneous speech translation (ASST). However, unlike human interpreters, who produce spoken output, ASST systems generate translated transcriptions.
+%
+% This study assesses the state of the art by analysing translation departures in human SI (professional and trainee interpreters) and ASST systems. Two terminologically rich speeches delivered by non-native English speakers were remotely interpreted into Czech by two M.A. interpreting students and one professional interpreter. The speeches were also translated by an in-house speech translation system.
+%
+% Our quality assessment focuses on content transfer, excluding other important aspects such as latency or voice quality. We extend Barik’s taxonomy (1971), comprising omissions, additions, substitutions, and semantic errors, with grammatical errors and formal defects \citep{Kopczyński1980}.
+%
+% Our findings show that trainee interpreters outperformed the professional in several areas, including avoiding over-reliance on the original structure and excessive use of demonstrative pronouns. The ASST model translated more literally and produced fewer translation departures than the human interpreters. However, evaluating content transfer alone does not capture all aspects of human SI quality that may matter more to clients. Future research will expand the sample and evaluation criteria by including more evaluators, students, and professionals to further validate these findings.
+
+
+\keywords{simultaneous interpreting, automatic simultaneous speech translation, English to Czech interpreting, translation departures, audit speeches}
+}
+\IfFileExists{../localcommands.tex}{
+  \addbibresource{../localbibliography.bib}
+  \input{../localpackages}
+  \input{../localcommands}
+  \input{../localhyphenation}
+  \togglepaper[1]%%chapternumber
+}{}
+
+\begin{document}
+\maketitle
+%\shorttitlerunninghead{}%%use this for an abridged title in the page headers
+
+\section{Introduction}\label{sec:kloudova:1}
+
+The confluence of translation studies, linguistics, cognitive science, and technology promises a new horizon for the field of translation and interpretation. While traditional simultaneous interpreting (SI) has long been an integral part of multilingual conferences and events, the emergence of Automatic Simultaneous Speech Translation (ASST) platforms offers real-time solutions, often in the form of transcript translation. Today, ASST has reached commendable levels of precision.
+
+However, how does the machine’s attempt at interpreting stack up against its human counterpart? The evolution of ASST underlines an essential axiom for both professional interpreters and students: the imperativeness of continuous learning. As technology surges ahead, it becomes crucial for interpreters to maintain their edge, updating their skills and embracing technological advancements.
+
+In this chapter we undertake a tri-fold analysis, juxtaposing the efforts of a professional interpreter, interpreting students, and ASST, with a focus on classifying the types of translation departures across these domains. \sectref{sec:kloudova:2} lays the foundation by introducing key terminology and discussing previous works in both realms of interpreting and automatic speech translation. Our methodology, presented in \sectref{sec:kloudova:3}, elucidates our research setting, the metrics for quality assessment, and the qualitative analysis model we have adopted. \sectref{sec:kloudova:4} presents an in-depth analysis of two audit speeches, revealing critical insights. The discussion segment in \sectref{sec:kloudova:5} extrapolates these findings, contextualizing them within the broader panorama of translation studies and machine translation. We also add our research limitations in \sectref{sec:kloudova:6}.
+
+This chapter attempts to understand, through a small sample, what the current state of ASST (i.e., transcript translation or live subtitling) is vis-à-vis human interpreting and reflects on the future development in the intersection of technology and interpreting.\footnote{{Computer Assisted Interpreting (CAI) is also a part of the landscape but we will not cover it in our chapter.}}
+
+\section{Terminology and related work} \label{sec:kloudova:2}
+
+\subsection{Simultaneous interpreting} \label{sec:kloudova:2.1}
+
+Interpreting is a communicative act. An interpreter, hearer and speaker in one person, is a mediator of communication between people who do not speak the same language and come from different cultural backgrounds. When mediating communication, quality is more important than quantity \citep{Kopczyński1980}.
+
+Simultaneous interpreting (SI) is basically the “youngest” type of interpreting. It dates back to the 1920s, when the first interpreting technology IBM-Filene-Finlay was used. The use of simultaneous interpreters was pioneered by the International Labour Organisation (ILO) and on a smaller scale also by the United Nations.  {In 1935}, I. P. Pavlov’s speech was simultaneously interpreted at a conference in Leningrad. The most important and famous moment when simultaneous interpreting was used was the 1945 and 1946 Nuremberg Trial with war criminals. It was the first time when simultaneous interpreting was used on such a large scale and with four languages (German, English, French, Russian). Given its nature, simultaneous interpreting is the preferred type of interpreting in the United Nations, UNESCO, NATO, OECD, IMF or in the EU institutions, but of course it can also be found elsewhere in the private and public sectors.
+
+Simultaneous interpreting can be defined in the following way:
+
+Simultaneous interpreting in the booth – interpreting with technical equipment, an interpreter uses headphones, where they can hear the original speech, and a microphone for the transmission of the message to the target language (…) Simultaneous interpreting requires more focused attention, readiness, and is generally more demanding in terms of immediate logical analysis, processing of the received information and its parallel translation into the target language (\citealt{Čeňková2008}: 21).\footnote{{The translation into English is our own.}}
+
+The very name “simultaneous” suggests that the interpreter interprets at the same time as the speaker speaks. They maintain a phase shift, also called “decalage”, from tenths of a second to full seconds. Interpreting consists of several phases: listening, understanding, analysing, re-expressing \citep[6]{Jones1998}. The peculiarity of SI is that the reproduction phases need to take place before it is possible to listen to the whole interpreted segment. There is also an acoustic difficulty, because the interpreter has to listen and speak at the same time, which is an unnatural process that needs to be trained. The mental difficulty lies in the fact that in simultaneous interpreting the interpreter does not know which direction the speech will take (\citealt{Jones2002}: 66–67).
+
+Daniel Gile’s effort model is related to the phases of SI (\citealt{Gile2009}: 157–190). An interpreter has a certain processing capacity, its saturation leads to interpreting defects. During various phases of interpreting, the interpreter will exert efforts of listening and analysis, short-term memory, production and coordination. The coordination effort ensures that the previous efforts are used efficiently during simultaneous interpreting.
+
+Simultaneous interpreting is a complex activity, in which the interpreter has to use different interpreting strategies, techniques and procedures. They include, “first of all, divided attention, anticipation, the principle of linguistic economy and backward error correction”. (\citealt{Čeňková2008}: 52) Roderick \citet[83]{Jones1998} adds that “the interpreter must always speak coherently and grammatically, and in particular that they must always finish their sentences.” According to “Golden Rules of Simultaneous Interpreting”, mentioned by Jones, the interpreter should: communicate, use technology, be able to hear the speaker and themselves properly, not try to interpret something they have not heard (or acoustically understood), concentrate as much as possible, not get distracted by single problematic words, cultivate split attention (listen actively to the speaker and monitor critically their own output), use (if possible) short and simple sentences and express some sense with every sentence (\citealt{Jones2002}: 71–72).
+
+\subsubsection{Remote simultaneous interpreting (RSI)} %2.1.1. /
+
+Remote interpreting has been on the interpreting market since the 1970s. According to \citep[352]{Braun2015}: 352, “remote interpreting (RI), refers to the use of communication technologies to gain access to an interpreter in another room, building, town, city or country. In this setting, a telephone line or videoconference link is used to connect the interpreter to the primary participants, who are together at one site”. \citealt{ISO2010}8:2017(en) sets the term “distance interpreting” (also “remote interpreting”) and defines it as “interpreting of a speaker in a different location from that of the interpreter, enabled by information and communications technology (ICT)”.\footnote{{\textit{\citealt{ISO2010}8:2017(en) Simultaneous interpreting — Quality and transmission of sound and image input — Requirements}}{. Available at:} \url{https://www.iso.org/obp/ui/\#iso:std:iso:20108:ed-1:v1:en} {[15  {May 2021}]}}
+
+Because of the rapid growth of “remote interpreting”, in  {January 2019} (updated in  {March 2020}), the International Association of Conference Interpreters (AIIC) issued a recommendation for distance interpreting\footnote{{\textit{AIIC Guidelines for Distance Interpreting}}{. Available at:}\url{https://aiic.org/document/4418/AIIC\%20Guidelines\%20for\%20Distance\%20Interpreting\%20(Version\%201.0)\%20-\%20ENG.pdf} {[15  {May 2021}]}} and also created guidelines for distance interpreting during the Covid-19 pandemic.\footnote{{\textit{AIIC Covid-19 Distance Interpreting Recommendations}}{. Available at:} \url{https://aiic.org/site/world/about/inside/basic/covid} {[15  {May 2021}]}}
+
+The precise form of RI may vary considerably depending on where the speakers, audience and interpreters are located and which participants in the interpreting process are at the same place.\footnote{{For a more detailed classification of RI using these parameters, see e.g., \citealt{Braun2015} or \citealt{ZieglerGigliobianco2018}.}} In case of remote simultaneous interpreting (RSI), a more complex technological solution is usually needed: one that allows the organisers to put the interpreters into virtual “booths” and enables the audience to switch between different language channels. There are two types of platforms: ones that were made specifically for organizing multilingual interpreted conferences (for example KUDO, Interprefy or Interactio) and ones that focus on video conferencing meetings and video communication in general and interpreting is just a bonus feature (for example ZOOM or Webex; both these platforms have integrated an RSI function). An advantage of professional platforms such as KUDO or Interactio is that they have some advanced features, they, for example, enable relay.\footnote{{Relay interpreting is the practice of interpreting from one language to another through a third language.}} However, they are more expensive and harder to control.
+
+The primary benefits of RI are economic, and it also solves organizational issues like the lack of available interpreters in specific locations or unsuitable spaces for interpretation booths (\citealt{ZieglerGigliobianco2018}: 119–120). Initially, RI faced challenges due to poor data transmission; however, while data transmission quality has improved significantly today, some issues persist. As the AIIC Recommendations put it: “[…] different distance interpreting scenarios provide interpreters with varying quantity and quality of sensory input, with differing possibilities for effective teamwork […]”.\footnote{{AIIC Recommendations: https://aiic.org/site/world/about/inside/basic/covid, [24  {February 2022}].}} Therefore, one of the main drawbacks of RI is that it complicates collaboration between colleagues, which is particularly crucial in SI.\footnote{{This is confirmed, for example, by a survey of conference interpreters conducted by ESIT in 2021: 83 \% of all respondents said that RSI was more difficult for them. The same survey showed that 77 \% of respondents regularly help their colleague, but with RSI, 74 \% of interpreters had to find another technical solution, because their colleague was in another location and the interpreting platform did not support a direct connection in the (virtual) booth. ESIT Research Project on Remote Simultaneous Interpreting. First overview of survey results. Available at:} \url{https://ec.europa.eu/education/knowledge-centreinterpretation/news/esit-research-project-remote-simultaneous-interpreting_en} {[17  {March 2022}]}} The demand for RI saw a sharp increase during the Covid-19 pandemic due to the widespread societal restrictions it imposed.\footnote{{The long-term impact of this shock on the interpreting market is not yet clear, but it is possible that thanks to the rapid technological development, the advantages of R(S)I will outweigh the disadvantages for some clients and the share of remote interpreting will be greater than it was before the pandemic.}}
+
+\subsubsection{Strategies used in simultaneous interpreting} %2.1.2. /
+
+Simultaneous interpreting is a highly cognitively demanding process and therefore, the interpreter is to a certain extent at a disadvantage in the communication situation. Interpreters use various strategies to overcome these issues and handicaps. \citet[123]{Kalina1992} defines a strategy followingly: “A strategy is goal-oriented, so that the goal determines the amount and thoroughness of processing. It may be consciously used but may also have become automatic in so far as the processor will not have to make any cognitive decision.” In accordance with Kalina, this chapter uses the term strategy which refers to strategic thought processes taking place during text analysis and production \citep[115]{Kalina1998}.
+
+\subsubsubsection{Time lag adjustment}
+
+Time lag describes the difference between the moment when an interpreter hears a certain segment of a speech and the moment when they reformulate it in the target language. Time lag is also referred to as the Ear-Voice Span, EVS \citep[204]{Gile2009}. Jones (2002: 72–73) points out that an ideal EVS cannot be described in absolute terms – it always depends on the nature of the text and the delivery of the speaker. Lengthening or shortening of the EVS always comes with certain advantages, but also with problems. Shortening the EVS usually relieves the interpreter’s working memory and therefore lowers the effort needed in this regard. On the other hand, shorter EVS means worse anticipation, which might cause calques and an excessive dependence on source language sentence structure. Longer EVS may help achieve a more natural and fluent delivery, but it comes with a risk of overwhelming the short-term memory, especially in more complicated parts of the speech that include lists, numbers, or names (\citealt{Gile2009}: 204–205).
+
+\subsubsubsection{Anticipation}
+
+Anticipation refers to approximating how the text or the speech is going to continue. Interpreters often rely on anticipation: the first type of anticipation takes place on the linguistic level, for example because of different syntactic structures of the source and target languages. The second type of anticipation is concerned with the content and the ideas of the speech. This type of anticipation is only possible thanks to preparation before the interpretation, but also thanks to factors such as a presentation the speaker may show or specific turns of phrase and words that suggest what position the speaker is likely going to take \citep[174]{Gile2009}.
+
+\subsubsubsection{Segmentation}
+
+Segmentation, also known as chunking \citep[117]{Kalina1998} or the “salami technique” \citep[91]{Jones2002}, is a crucial strategy for short-term memory management and therefore also for successful interpretation. Dividing compound sentences into short and simple sentences lowers the short-term memory workload, partially because complete meaningful units are easier to remember, but also because it’s possible to quickly produce each unit separately without having to listen to the entire complex sentence \citep[117]{Kalina1998}. At the same time, this strategy makes understanding the target speech easier for listeners \citep[93]{Jones2002}. However, \citet[205]{Gile2009} warns that formulation of short sentences from a complex compound sentence can in some cases increase demands on the processing capacity and thus it is necessary to consider if this strategy is appropriate depending on concrete circumstances.
+
+\subsubsubsection{Reformulation}
+
+Reformulation is a necessary part of interpreting, because the goal of the interpreter is “to provide a correct translation of the original in a form that sounds as natural and as authentic as possible in the target language […]“. \citep[82]{Jones2002} In general, reformulation can be considered a core strategy that is indispensable in any interpretation, therefore, we must distinguish between basic reformulation needed for correct and idiomatic expression in the target language and “crisis strategy” reformulation, which is for example accompanied by omission of less important information or by generalization, simplification (of the syntactic structure), summarization or paraphrasing.
+
+\subsection{Automatic simultaneous speech translation (ASST)} %2.2. /
+
+These days, we witness significant improvements in the field of natural language processing which, undoubtedly, not only reaches unprecedented text processing and generation capabilities (systems such as ChatGPT and other large language models), but also affects speech processing and speech translation. Therefore, in parallel to two interpretation tracks, our intention extends towards scenarios where interpreting is carried out by a machine, which results in an alternative third option – automatic simultaneous speech translation (ASST).\footnote{{Automatic simultaneous speech translation is also referred to as simultaneous spoken language translation (simultaneous SLT) or simultaneous speech translation (ST, SST) in the literature. Note that we explicitly avoid the term “automatic interpreting”, to highlight the scale of the difference between automatic outputs and the outputs of human interpreters. Machines, so far, indeed only transcribe and translate sentences of the source language, without any attempt at interpreting their meaning, condensing, simplifying or adapting it for the audience. Other possible terms to describe this process are live translation or live subtitling.}}
+
+ASST models (i.e. fully automatic systems that are capable of generating translation given speech in foreign language) are naturally limited by several constraints. For example, these models lack the world and situation experience to select more and less important parts of the message, and they are so far unable to incorporate contextual cues such as nonverbal or visual inputs. This is in contrast to human interpreters who possess the ability to include surrounding context and nuance of the social situation, contributing to a more holistic interpretation. We hope that our study will highlight some specific differences between human interpreting and ASST, serving as a basis for future improvements of ASST systems.
+
+When an ASST system is created, it can be trivially scaled in terms of number of sessions or session duration. If the presentation in the form of subtitles is sufficient for the audience (instead of voice interpreting), using ASST systems might reduce the overall cost. In other words, softening requirements on the final presentation makes the usage of ASST systems more affordable. This can be especially advantageous in cases where many target languages need to be covered, e.g. in the European Parliament or other multinational fora, by multi-target models (\citealt{bojar_elitr_2021,bojar_operating_2021}).
+
+The purpose of this section is to very briefly introduce the current approaches to ASST, focusing more on the aspect of their practical use in interpreting settings than on their internal technical design.
+
+\subsubsection{Final output form, overall setting and approaches to ASST systems} %2.2.1. /
+
+We differentiate systems based on how they present their outputs to the audience. Depending on the situation, it is preferable that models present their output either as text (subtitling) or as speech (interpreting). Presenting the translation in the form of subtitles or transcripts available on individual participants’ devices \citep{bojar_elitr_2021} can be effective if the source speech content is presented exclusively verbally. In such cases, reading subtitles might not be as distractive for the audience as it would be if the speech content was also presented visually. On the other hand, if the speaker makes use of additional visual inputs such as a presentation, the audience might prefer speech output even if it requires headphones. This setup, however, puts more demands on simultaneity – the audience needs the visual information and the translation to be synchronized as much as possible (Javorský et al. 2022).
+
+The final presentation of systems is tightly connected to their design. There are two major categorizations of models that influence the overall translation quality and simultaneity.
+
+The first classification distinguishes how the models are created. The architecture (i.e. the design of the model) can be either a cascade of several components, or one component that translates the input speech directly to the output text or speech, in an “end-to-end” fashion. In the cascaded setting, a typical model consists of an automatic speech recognition (ASR), segmenter (which splits the flow of words into segments – sentences), a machine translation (which translates individual sentences) and an optional text-to-speech module (\citealt{MüllerEtAl2016}, \citealt{bojar_elitr_2021}). Unfortunately, this cascaded approach suffers from the inherent problem of error propagation – each component introduces its own errors and these errors compound as the generation progresses \citep{RuizEtAl2014}. The advantage is, on the other hand, that there exist many resources for developing individual components and we can thus optimize each component independently, which improves the overall quality. However, in end-to-end settings, the system is designed to process the flow of words continuously, producing subtitles or speech directly, without any intermediate steps \citep{PolákEtAl2022}. Such systems can incorporate crucial information about prosody (i.e. the rhythm, intonation, emphasis) and they generate translation with a smaller delay because they do not need to wait for (partial) outputs from previous components. Although the resources for creating these systems might be limited, overall, the performance has recently become superior to the cascaded models for widely-spoken languages.
+
+The second dimension of classification lies in how the output is delivered. There are either re-translating (\citealt{NiehuesEtAl2016}, 2018) or incremental machine translation systems \citep{DalviEtAl2018}. Re-translating models afford the possibility of changing output hypotheses based on the growing context. For instance, translating from a language where gender is not expressed for every noun, more context might provide some indications that help the model to guess the grammatical gender. In subtitles, such changes in the output are perceived as flickering – the update of text that has already been emitted. It also becomes apparent that speech synthesis (i.e. the automatic generation of speech from text) cannot be used in this setting. On the other hand, incremental models are only allowed to append more words and cannot alter the history. In this setting, the audience follows the subtitles more conveniently but the systems cannot correct errors they made and, therefore, the overall quality of the translation can be worse compared to the re-translating approach.
+
+\subsubsection{ASST systems vs. human interpreting} %2.2.2. /
+
+In this section we discuss how ASST systems are usually evaluated. One option is to evaluate the quality of the final, textual translation using established automatic metrics (\citealt{PapineniEtAl2002}, \citealt{Popović2015}, \citealt{Rei2020}). These metrics assess the similarity (in the simplest case the overlap between words) of the reference and the evaluated translation. Using this type of evaluation is fast but often not reliable. Another way is to evaluate the whole subtitled presentation manually, e.g. in an online setting using so-called Continuous Rating (Javorský et al. 2022) – annotators who understand both the source and target language are asked to continuously rate the quality of the subtitles. The advantage is that humans are able to assess nuances which automatic metrics cannot. On the other hand, the agreement between annotators can be poor (subjectivity may play a major role in the assessment) and it becomes difficult to interpret the results in a meaningful way. Nowadays, both automatic and manual types of evaluation are used in so-called shared tasks (\citealt{AgrawalEtAl2023}, \citealt{AnastasopoulosEtAl2022}). Shared tasks involve cooperative efforts where researchers and professionals collaborate to address a mutual challenge by utilizing shared data and assessment criteria.
+
+The first comparisons of interpreters and systems were performed during these shared tasks. Since the systems are capable of presenting only textual output to the audience, the evaluation was performed only in the form of subtitles. Interpreting was thus transcribed, discarding many of its important qualities such as comfortable setting of audience listening, interpreters summarising the message to avoid overburdening listeners with too much of a speedy rendering, etc. Furthermore, the systems were created in a well-resourced domain and input speech was segmented into sentences and the systems were only given short recordings rather than the whole speech audio as it would be the case in a true-to-life scenario. In such a specific and not quite fair comparison, the results of the evaluation on semantic completeness seem to indicate that systems appear superior to interpreters.
+
+Given all that, there is still a significant gap between what we know about errors observable in the translation generated by automatic systems and the errors in interpreting. We believe that knowing the relations or common attributes between interpreting and ASST might shed more light in how to better design and evaluate systems. This is a crucial aspect in developing more robust and reliable systems and moving forward in the field.
+
+\section{Method}\label{sec:kloudova:3}
+
+\subsection{Research setting and experimental design}
+
+Our study is based on data we collected during remote simultaneous interpreting (RSI) sessions in 2021 and 2022. Interpreters of varying proficiency levels (professional and trainee interpreters) were required to perform RSI of several speeches via Zoom. The speeches were available both as audios and videos, so we decided to show the videos to the interpreters: it is more pleasant for the interpreter to see the speaker and to have a general overview of the communication situation. Besides, the speech was sometimes directly referring to the visual information, e.g. to some illustrations or numbers in the slides.
+
+For our analysis, we selected two audit speeches in the form of monologue presentations. Both audit speeches chosen for our experiment were fully prepared: the speakers had created their presentations in advance. However, the interpreters did not receive the full slides of the presentations in advance, they were only given keywords representing the given thematic area (see \sectref{sec:kloudova:6}). Both original speakers were non-native speakers with an advanced level of English knowledge.
+
+The RSI was carried out in the language combination English-to-Czech (from B language to A language).\footnote{{In addition, the RSI was also carried out in the language combination English-to-German.}} Our analysis presented in this study concerns the English-to-Czech direction. We hired one professional\footnote{{We are aware of the fact that we are analysing two interpretations by only one professional interpreter. However, it should be explained that the recording of interpreting performance is very problematic in the market. Professional interpreters are very careful. If the client records their performance, it is for an additional fee. Professional interpreters, unlike students, participate in experiments very rarely; they do not want to be analysed and evaluated, because they are aware that interpreting has a so-called suboptimal quality, because it is an activity that takes place “here and now”. Interpreters are under a lot of pressure, they have to make decisions very quickly, often omitting or generalizing some information. In addition, interpreting serves in the given context. When analysed ex-post, many strategies may appear inadequate; the evaluator has more time and no pressure compared to the interpreter to evaluate his performance and find an optimal solution.}} interpreter for the language combination English-to-Czech (I1) and several trainee interpreters, two of whom (I2, I3) interpreted either of the two speeches for us. (See \tabref{tab:kloudova:1} for more details.)
+
+\begin{table}
+\begin{tabularx}{\textwidth}{lQ@{}lp{20mm}p{18mm}}
+\lsptoprule
+                & topic & length & professional\newline interpreter & trainee\newline interpreter\\
+\midrule
+audit speech 1 & Data Analysis with the Municipality Monitoring Tool (Austria) & 10:31 & I1 & I2\\
+audit speech 2 & Open Data in the Netherlands & 11:27 & I1 & I3\\
+\lspbottomrule
+\end{tabularx}
+\caption{Basic information on the two interpreted speeches.}
+\label{tab:kloudova:1}
+\end{table}
+
+The professional interpreter (I1) has more than 10 years of interpreting experience. She studied at the Institute of Translation Studies, Faculty of Arts, Charles University (ÚTRL) Czech and English translation and interpreting. The trainee interpreters (I2 and I3) were (at the time of the experiment) MA students of interpreting (with at least two semesters of SI) from ÚTRL (MA Study Programme: Czech and English translation and/or interpreting).
+
+The RSI sessions were recorded both by the interpreters themselves on a computer or mobile phone and also by us via the Zoom platform (as a backup). The recordings of the interpretation (as well as the original speeches) were automatically transcribed using an automatic speech recognition (ASR) system. The resulting transcripts were then manually corrected by specially trained annotators (by the present authors) according to the audio recordings.
+
+We also had the speeches translated by our ASST system ELITR \citep{bojar_elitr_2021}, developed and trained at the Charles University, Institute of Formal and Applied Linguistics (ÚFAL). The specific setup used in this study consisted of the speech recognition module Whisper \citep{RadfordEtAl2023} operated in continuous and simultaneous mode using Whisper-Streaming \citep{MacháčekEtAl2023} with 1 second minimum chunk size. The automatically transcribed English speech was translated into Czech using the CUNI Transformer Marian model from WMT19 \citep{PopelEtAl2019} in re-translation mode implemented in ELITR submission for \citealt{IWSLT2020} \citep{MacháčekEtAl2020}. Only completed segments (i.e., not gradual updates in the re-translation) were considered in this study. The outputs of this pipeline are also transcripts.
+
+Then, we as the authors of this chapter, analyzed the (corrected) transcripts according to the proposed qualitative model (see \sectref{sec:kloudova:3.3}), and we also had the recordings available to compare the transcripts with if necessary (in case of human SI). We divided the transcripts into segments (sentences in most cases), aligned them and compared the three interpreted versions (I1 vs I2 or I3 vs ASST) to each other and to the original speech. Our goal was to examine each segment in terms of the qualitative analysis model (see below), and to assign to individual segments one (or more) of the translation departure subcategories, if found there.
+
+\subsection{Interpreting quality assessment}\label{sec:kloudova:3.2}
+
+It is very difficult to define the quality in interpreting, as it, to certain degree, depends on a subjective perception. According to Jesús Baigorri \citet[57]{Jalón2000}, quality assessment is (and always has been) inherently subjective: “The audience’s evaluation of the interpreter’s performance has always depended solely on their subjective criteria […] These are the only quality assessment criteria that are reliably available to us.” Opinions on the quality assessment vary. Therefore, different criteria (presentation, pleasant voice, grammar, hesitations etc.) or different audience groups are used when assessing the quality.
+
+AIIC has certain quality standards for conference interpreting that all members must meet. Karla  \citet[155]{DéjeanleFéal1990} said about the quality standards in AIIC: “What clients hear through headphone interpreting should have the same effect on them as on other listeners who listen to the original speaker. The interpreting should have the same cognitive content and should be expressed clearly and exactly in the same type of language. The quality of language production and presentation should be at least at the same level as by the original speaker, or better, considering that the interpreter is a professional speaker, which is not the case for many speakers, who sometimes even have to speak in a language that is not their mother tongue. Our main goal is to satisfy the audience.”
+
+Andrzej Kopczyński (1994: 87–88) thinks there are two ways of looking at quality – a linguistic one and a pragmatic one. The linguistic point of view focuses on accuracy of the content and form. The pragmatic point of view depends on the context and is considerably influenced by several variables (e.g., speaker’s goals in the communication, speaker’s attitude, the form of the message, interpreter’s competence, illocutionary force of the message etc.).
+
+According to Daniel \citet[37]{Gile2009}, the satisfactory quality expected by someone engaged in the communication does not always go hand in hand with absolute fidelity to the original, linguistic acceptability or the terminology used. The sender and the receiver are experts and professionals in the given communication situation, while the interpreter might not be. And yet, their performance can be considered satisfactory, if they can fulfil the communication goal of the speaker. But at the same time, it does not always have to be the interpreter’s fault if the communication goal is not reached. The problem might be on the side of the receiver. Nevertheless, it is mostly the receiver who evaluates the interpreter’s performance, however subjective their criteria might be.
+
+Miriam \citet[128]{ShlesingerEtAl1997} writes that the quality of an interpreter's performance should be judged by three factors: intertextuality, intratextuality and instrumentality. Intertextuality is the comparison of the original and the new message based on their similarities and differences. Intratextuality deals only with the “product” and its acoustic, logical and linguistic characteristics. And instrumentality focuses on the impact of the speaker’s speech and its usefulness. The interpreter has to adjust their speech to the type of the event, the type of text, the situation and the audience.
+
+Errors are an indicator of the quality of interpreting. \citet[68]{Kopczyński1980} says that it is important to define what errors and how many of them can occur, so that the interpreting could be still considered acceptable. The borderline can be very subjective. The theoretical handbooks of interpreting say that an interpreter should not make any errors. This situation is considered ideal, but it is difficult to achieve in real life. Ángela Collados Aís confirms this (2007: 196) and agrees with other scholars that completely flawless interpreting is inconceivable. Therefore, it is important that the interpretation is acceptable in terms of context and pragmatics and that the interpreter achieves the goals of the given communication situation.
+
+\subsection{Qualitative analysis model}\label{sec:kloudova:3.3}
+
+In our study we focus on quality of interpreting in the sense of transferring the content of the original speech. The basis of our analysis is represented by the taxonomy of translation\footnote{{According to \citet{Barik1971} we regularly employ the terms} {\textit{translation}} {or} {\textit{to translate}} {instead of} {\textit{interpretation}} {or} {\textit{to interpret} }{with the understanding that they refer to} {\textit{oral}} {translation (= interpretation), not to} {\textit{written}} {translation.}} departures designed by \citet{Barik1971} describing omissions, additions, and substitutions in simultaneous interpreting. If the substitutions are at considerable variance with the original version, we may speak of semantic errors \citep[199]{Barik1971}. The reason we chose Barik’s model is related to the fact that it focuses on translation departures at the semantic level, which is the goal of our research. Previous research on the quality assessment of SI into Czech has demonstrated its suitability and applicability (cf. \citealt{Winklerová2019}).
+
+For the purposes of our analysis, we extend Barik’s model with additional factors such as adaptations and extensions, especially concerning grammatical errors and formal defects \citep{Kopczyński1980}. A similar methodology for the analysis of chuchotage (whispered interpreting) was chosen by Winklerová in her diploma thesis at the Institute of Translation Studies (Charles University, Prague) in 2019.
+
+Similarly to Barik’s work, our analysis does not reflect on other critical aspects of interpretation such as latency or other criteria commonly used in interpretation assessment such as pleasant voice or native accent (\citealt{Bühler1986}, \citealt{Kurz1993}, \citealt{PöchhackerZwischenberger2010}) – our aim is to concentrate purely on the content of the original and translated speech.
+
+In \tabref{tab:kloudova:2} we describe the qualitative analysis model in more detail. As mentioned above, our analysis model has been inspired by Winklerová (diploma thesis written in Czech, 2019: 69). The categories 1. omissions, 2. additions and 3. substitutions and errors follow Barik’s translation departures scheme (\citealt{Barik1971}: 200–207), whereas 4. formal errors and 5. grammatical errors represent categories introduced by \citet{Kopczyński1980}.
+
+However, we slightly adapt these typologies for our purposes by dividing the first three semantics-based categories into three levels according to their severity for the target text, i.e., the extent to which they affect the final content of the interpreted message as a whole.\footnote{{In his original typology, Barik also divides the departures and errors into four (1. omissions and 2. additions) to five (3. substitutions and errors) categories (some involving subcategories), but he also analyses the possible causes and other factors of the errors described.}} We also change the coding scheme to be able to clearly refer to each category by its initial letter (omissions: O, additions: A, substitutions end errors: S, grammatical errors: G, formal errors: F).
+
+Our model for the qualitative analysis summarizes the main types of departures and errors of the interpretation. We are aware of the fact that the proposed typology had to be restricted, so that some departures and errors are assigned to the same category even though their nature is different. However, a too detailed categorization system would not be appropriate because of poor clarity and the near impossibility of dividing the items into (only theoretically existing) ‘correct’ types of shifts. We therefore decided on a compromise: a sufficient division of the categories according to the main criterion, which is the severity in terms of how the content of the whole is translated (a similar problem in translation is being approached by Multidimensional Quality Metrics, \citealt{Burchardt2013}).
+
+However, the form, i.e., the way the target text is formulated, is also an inherent part of the transfer of the original content. Therefore, we decided to include the evaluation of formal and grammatical errors in our analysis. Formal errors are associated with both the spoken language (e.g., false starts or unfinished words) and the translation of the text itself (e.g., interference). These shortcomings can also lead to distortion of the content. Grammatical errors include, for example, deficiencies in morphology (inflection) or syntax (word order, information structure / functional sentence perspective).
+
+The evaluation was carried out by two translation theoreticians (co-authors of this chapter) who are also active translators / interpreters. In cases of doubt, they discussed together trying to reach a consensus.
+
+\begin{table}
+\small
+\begin{tabularx}{\textwidth}{>{\raggedright}p{22mm}lQ}
+\lsptoprule
+{Category} & {Code} & {Description of the categories and their subcategories}\\
+\midrule
+1. \textit{Omissions}: items in the original which are left out of the translation & O & \textit{O1}: O of a single word or short phrase, irrelevant to the meaning of the whole (skipping O), acceptable in SI
+
+\textit{O2}: slightly affects the meaning of the whole (disrupts logical construction of the text), missing names, numbers, more serious than O1 (disjointed speech)
+
+\textit{O3}: significantly affects the meaning of the whole, altered meaning of a sentence: regrouping material from different constructions, more serious than O1 and O2\\
+\midrule
+2. \textit{Additions}: material which is added compared to the original message & A & \textit{A1}: irrelevant to the meaning of the whole (qualifier or elaboration A)
+
+\textit{A2}: slightly affects the meaning of the whole (disrupts logical construction of the text: new meaning or relationship), explicitation (adding a connective), more serious than A1
+
+\textit{A3}: significantly affects the meaning of the whole, accompanies rephrasing, misinterpretation, more serious than A1 and A2\\
+% \tablevspace
+\midrule
+3.~\textit{Substitutions and errors}: material which is substituted by the translator for something said by the speaker (no added or omitted information) & S & \textit{S1}: mild semantic error, a single lexical item (irrelevant to the meaning of the whole), involving also functional departures (generalization and concretization)
+
+\textit{S2}: substantial semantic error, slightly affects the meaning of the whole, wrong numbers (disrupts logical construction of the text)
+
+\textit{S3}: gross semantic error, significantly affects the meaning of the whole, considerable difference in meaning, nonsense, opposite meaning, meaningless and confused translation\\
+% \tablevspace
+\midrule
+4. \textit{Formal errors} & F & false starts, hesitation, stuttering, unfinished words/sentences, interferences, repetition of a word or longer segment in the same form\\
+% \tablevspace
+\midrule
+5. \textit{Grammatical errors} & G & incorrect inflection, incorrect word order including functional sentence perspective\\
+\lspbottomrule
+\end{tabularx}
+
+\caption{Model for the analysis.}
+\label{tab:kloudova:2}
+\end{table}
+
+\section{Analysis}\label{sec:kloudova:4}
+
+In this subsection we describe the analysis of two audit speeches, terminologically very demanding monologue presentations of 10:31 and 11:27 minutes in length, delivered by non-native speakers of English. Their topic is audit in Austria (Audit speech 1) and in the Netherlands (Audit speech 2). In both audit speeches we examined each segment of the transcribed source and both interpretations (A and B) and the output from the machine translation system (C) for possible omissions (O), additions (A), substitutions and errors (S), grammatical (G) and formal errors (F).
+
+\subsection{Audit speech 1}\label{sec:kloudova:4.1}
+
+The topic of the audit speech 1 (10:31 minutes long) is Data Analysis with the Municipality Monitoring Tool (Austria).
+
+The following \tabref{tab:kloudova:3} shows the number of words, characters and segments of transcribed speeches (original and interpretations).
+
+\begin{table}
+\begin{tabularx}{\textwidth}{lrYYY}
+\lsptoprule
+ & source EN & transcript A (professional interpreter) & transcript B (trainee interpreter) & transcript C (ASST)\\
+\midrule
+words & 1,625 & 1,066 & 710 & 1,133\\
+characters & 8,981 & 6,677 & 4,488 & 7,068\\
+segments & 87 & 64 & 67 & 74\\
+\lspbottomrule
+\end{tabularx}
+\caption{The number of words, characters and segments in the transcripts (Audit speech 1, Austria).}
+\label{tab:kloudova:3}
+\end{table}
+
+The aim of the analysis was to compare an English original with two interpretations and one (real-time) translation into Czech (two human interpretations and one ASST). We can immediately see that there is less volume of text in the human interpretations and that the two interpretations are shorter than the original, also perceptible in the numbers: the English original has 87 segments, interpretation A has 64 segments and interpretation B has 67 segments; the ASST model is more dense, even literal, and does not use interpreting strategies (e.g. analysis and filtering of information) such as human SI, which is not an advantage in terms of quality because the interpreting techniques are used for a reason (to avoid cognitive overload in listeners).
+
+In the following \tabref{tab:kloudova:4}, the interpretation with the highest number of departures is indicated in italics.
+
+\begin{table}
+
+\begin{tabularx}{\textwidth}{lrrY}
+\lsptoprule
+ & { {A}}  {Professional interpreter} & { {B}}  {Trainee interpreters} & { {C}}  {ASST}\\
+ \midrule
+ \textbf{O1} & 12 & \textbf{22} & 2\\
+ \textbf{O2} & 3 & \textbf{13} & 2\\
+ \textbf{O3} & 0 & \textbf{1} & \textbf{1}\\
+ \tablevspace
+ \textbf{A1} & \textbf{1} & \textbf{1} & 0\\
+ \textbf{A2} & 0 & 0 & 0\\
+ \textbf{A3} & 0 & 0 & 0\\
+ \tablevspace
+ \textbf{S1} & 3 & \textbf{15} & 5\\
+ \textbf{S2} & \textbf{10} & 2 & 9\\
+ \textbf{S3} & 5 & 0 & \textbf{6}\\
+ \tablevspace
+ \textbf{F} & \textbf{52} & 7 & 34\\
+ \textbf{G} & 14 & 2 & \textbf{24}\\
+\lspbottomrule
+\end{tabularx}
+\caption{The number of translation departures detected in the interpretations of Audit speech 1.}
+\label{tab:kloudova:4}
+\end{table}
+
+The lowest incidence was in the category “additions”, only one (A1), by both interpreters A and B. Both interpreters chose the right strategy. They did not change the meaning of the segment. On the contrary, they tried to make it easier to understand for the audience and used explicitation. The ASST system as a machine is not capable of pragmatic reasoning, hence we did not observe any addition in any segment.
+
+In the category “substitutions”, we can see that the total number of departures is almost equal for all renditions (Interpreter A 18, Interpreter B 17, ASST 20), nevertheless, the distribution of departures into the subcategories is different: the student interpreter has the highest number of departures in the subcategory S1 (15). It appears that those departures can be in most cases considered as a well-chosen strategy that was based on good understanding of the original and good active analysis of the original speech; the professional interpreter has 10 departures in the second subcategory (S2) and 5 in the third one (S3); the ASST system has 9 departures in the second one (S2) and 6 in the third one (S3) – those departures are (relatively) serious errors that can distort the message to a great extent. Here, in most cases, it is a matter of translating the original structure too literally and not recognizing which word types are represented in the given syntactic structures. This results in errors of meaning – syntactically correct in the target language, but semantically meaningless (\textit{a brief overview about our big data tool} translated as \textit{stručný přehled o našem velkém datovém nástroji}, which can be glossed as ‘big tool for data’, instead of \textit{stručný přehled o nástroji, který používáme na analýzu velkých dat}). Some departures of this type are repeated many times and we had to count every occurrence (\textit{use the data of the Statistics of Austria} translated as \textit{využijeme data Statistického Rakouska}, meaning ‘the data of the statistical Austria’, instead of \textit{využijeme data Rakouského statistického úřadu}).
+
+In the category of omissions,\footnote{{We emphasize again that the category labelled “omissions” bears no negative connotations here.}} there are more departures in the student interpretation: 22 in the first subcategory vs. 12 by the professional, 13 in the second subcategory vs. 3 and 1 in the last one vs. 0. The first subcategory monitors the omissions of insertions, small comments, secondary information – i.e., utterances the omission of which will not affect the meaning of the interpreted speech. In the second subcategory (O2), the student interpreter tends to leave out exact names and numbers, but retains the overall information – for example, by rounding the numbers, which is an acceptable strategy. In contrast, the ASST system has, as expected, a negligible number of omissions, 5 in total (2 in the first subcategory, 2 in the second one and 1 in the third one).
+
+Grammatical (G) and formal (F) errors were surprisingly predominant in the professional interpretation: there were 52 formal and 14 grammatical errors, which is a relatively high number, considering that the student interpretation had only 7 and 2 of them. The ASST system committed 34 formal and 24 grammatical errors, deficiencies at the formal level are especially interferences which can be seen as related to an overly literal translation (the same reason we observed with the professional interpreter); errors at the grammatical level are assessed mainly as incorrect word order (again due to the literalness, the same phenomenon also occurred with the professional interpreter).
+
+Below we present the method of analysis of the original and its interpreting – how the transcribed segments were categorized and commented. In 1, 2, 3, 4, 5, there are the English original sentences, then the professional interpretation (a. i), the student interpretation (b. i) and the ASST transcript (c. i), including the applied categorization of departures (ii). For the sake of clarity, we add our commentary after the evaluations, explaining what departures / deficiencies occurred (iii). 
+
+%In case there were more than one (sub)category in a segment, we used red and blue colouring.
+
+% \begin{sidewaystable}
+% \footnotesize
+% \begin{tabularx}{\textwidth}{QQQQQQQQQQQ}
+% \lsptoprule
+%  & {A} & {B} & {C} & {D} & {E} & {F} & {G} & {H} & {I} & {J}\\
+% & {SOURCE EN} & {INTERPRETER A (Professional)} & {(Sub)Category} & {Comment (Professional)} & {INTERPRETER B (Student)} & {(Sub)Category} & {Comment (Student)} & {ASST} & {(Sub)Category} & {Comment (ASST)}\\
+% {1} & In the second step we assess the municipalities with regard to their significance for the audit activities of the Austrian current Austrian Court of Audit. & V druhým hodnotíme ty municipality ohledně relevantnosti pro ten audit. & G, F & {There are two categories in this segment. Interpreter A used an incorrect ending in the word “druhým”, the correct ending is “druhém”. The interpreter overuses demonstrative pronouns in the whole speech; in this segment, the pronoun “ty” is used, but could be omitted.} & Ve druhém kroku jsme dané obce ohodnotili podle aktivit, které se tam provádějí. & S1 & {In this segment, interpreter B mentioned only activities in general, leaving out that they were activities of the Court of Audit. This was a good strategy, because the omission did not change the message.} & Ve druhém kroku hodnotíme obce s ohledem na jejich význam pro auditní činnost rakouského účetního dvora. &  & {This passage corresponds to the original, no translation departure.}\\
+% {2} & The ranking is always the interesting part, the most interesting part of the whole story, because we can compare any municipalities. & Samozřejmě to seřazení do řebříčku je ta nejzajímavější část, protože pak si ty municipality můžeme srovnat. & G, F & {Again, there are two deficiencies on the formal and grammatical level: a slip of tongue (it should be “žebříček”, not “řebříček”), bad choice of demonstrative pronouns, the pronoun “to” should be omitted and instead of “ty”, it would be better to use the expression “daných”.} &  & O1 & {Interpreter B omits this passage, but it is clear from the context what is meant, no relevant information is missing. We consider this to be an acceptable strategy.} & Pořadí je vždy ta zajímavá část, ta nejzajímavější část celého příběhu, protože můžete porovnat obce, obce. & F, G & {Again, there are two categories in this segment. On the formal level, the same word was repeated twice (“obce”). ASST copies the structure of the original, interpretation is literal, incorrect word order including functional sentence perspective.}\\
+% {3} & So, from the existing data we think that our sell well indicators, which I will explain later, and we try to make a indicator model and this monitoring is based on a model which is comprised of indicators that are compiled as assessment indicators, broken down with themes. & Tady jsme vyfiltrovali několik indikátorů, to vysvětlím vzápětí, a snažili jsme se tedy vytvořit model pro ty indikátory a tady ten model, vychází z ukazovatelí, kterou které vycházejí podle jednotlivých témat. & G, F S3 & {We have identified three (sub)categories in this segment. A grammatical error in the word “ukazovatelí”, the correct form is “ukazovatelů”. On the formal level, the same word was repeated twice (“kterou které”), but we have to admit that interpreter A corrected their incorrect relative pronoun form “kterou” to the apropriate one “které”. We, still, used the mark S3, because the segment is unintelligible, there is no analysis, the message is lost and the interpreter only repeats the original words.} & Snažíme se vytvořit indikační model. Toto pozorování se zakládá na modelu, který je složen z indikátorů, které hodnotí daný subjekt. & S1 & {The salami technique, i.e. segmentation of a long sentence to shorter sections, is well used in this segment. The omission of the insertion about a later explanation of the model does not distort the message and is a good example of a filtering strategy.} & Z existujících údajů jsme tedy vyfiltrovali několik ukazatelů, které vysvětlím později, a pokusili jsme se vytvořit model ukazatelů a toto sledování je založeno na modelu, který je složen z ukazatelů, které jsou sestavovány jako ukazatele hodnocení rozdělené podle témat a… & G, S3, F & {We have identified three (sub)categories in this segment. A grammatical error consists in incorrect word order including functional sentence perspective. We, still, used the mark S3, because the segment is unintelligible, there is no analysis, the message is lost and the interpreter only repeats the original words. There is an error on the formal level, because ASST did not finish the sentence.}\\
+% {4} & And yes we take into account other accounts, the miscellaneous accounts, the representation expenses and the analysis of special accounts. & A tady bereme v úvahu různé účty, osobní výdavky, výdaje a analýzy specifických… & F, G & {An inappropriate choice of the term “výdavky”, the correct term is “výdaje” (G). There is an error on the formal level, because interpreter A did not finish the sentence.} & Zde sledujeme různé související výdaje. & S1 & {Interpreter B used the general term “výdaje” instead of listing the individual items. This is a case of generalization, which is a well-chosen strategy, the message was not distorted.} & A zde bereme v úvahu ostatní účty, různé účty, výdaje na reprezentaci a analýzu zvláštních účtů. & {F} & {There is an error on the formal level, because ASST repeated the same word twice (“účty”).}\\
+% {5} & And the second one gives us the short-term perspective. & a druhý model nabízí krátkodobý pohled na finanční zdraví. & P1 & {Interpreter A chose to specify the term perspective and added the phrase “na finanční zdraví”. Thit is a well-chosen strategy, considering the context; the message of the segment was not distorted.} & Druhá část nám dává krátkodobou perspektivu. &  & {This passage corresponds to the original, no translation departure.} & Druhá nám dává krátkodobou perspektivu. &  & {This passage corresponds to the original, no translation departure.}\\
+% \lspbottomrule
+% \end{tabularx}
+%
+% \caption{Example of the annotation interface for the analysis with (sub)categories of translation departures and errors identified.}
+% \label{tab:kloudova:5}
+% \end{table}
+
+% \begin{table}
+%
+% \begin{tabularx}{\textwidth}{XXXXXXXXXXX}
+% \lsptoprule
+%
+%   {A}
+%   {B}
+%   {C}
+%   {D}
+%   {E}
+%   {F}
+%   {G}
+%   {H}
+%   {I}
+%   {J}
+%
+%
+%
+%   {SOURCE EN}
+%   {INTERPRETER A (Professional)}
+%   {(Sub)Category}
+%   {Comment (Professional)}
+%   {INTERPRETER B (Student)}
+%   {(Sub)Category}
+%   {Comment (Student)}
+%   {ASST}
+%   {(Sub)Category}
+%   {Comment (ASST)}
+
+
+% {1}
+
+\ \ \\
+Example of the annotation interface for the analysis with (sub)categories of translation departures and errors identified.
+
+\ea In the second step we assess the municipalities with regard to their significance for the audit activities of the Austrian current Austrian Court of Audit.
+  \ea 
+    \ea  
+        \ex V druhým hodnotíme ty municipality ohledně relevantnosti pro ten audit.
+        \ex G, F
+        \ex  {There are two categories in this segment. Interpreter A used an incorrect ending in the word “druhým”, the correct ending is “druhém”. The interpreter overuses demonstrative pronouns in the whole speech; in this segment, the pronoun “ty” is used, but could be omitted.}
+    \z
+  \ex
+    \ea Ve druhém kroku jsme dané obce ohodnotili podle aktivit, které se tam provádějí.
+    \ex  S1
+    \ex  {In this segment, interpreter B mentioned only activities in general, leaving out that they were activities of the Court of Audit. This was a good strategy, because the omission did not change the message.}
+    \z
+  \ex
+    \ea  Ve druhém kroku hodnotíme obce s ohledem na jejich význam pro auditní činnost rakouského účetního dvora.
+    \ex ~
+    \ex  {This passage corresponds to the original, no translation departure.}
+    \z
+  \z
+\z
+
+% {2}
+\ea
+  \ea
+    \ea  The ranking is always the interesting part, the most interesting part of the whole story, because we can compare any municipalities.
+    \ex  Samozřejmě to seřazení do řebříčku je ta nejzajímavější část, protože pak si ty municipality můžeme srovnat.
+    \ex  G, F
+    \ex  {Again, there are two deficiencies on the formal and grammatical level: a slip of tongue (it should be “žebříček”, not “řebříček”), bad choice of demonstrative pronouns, the pronoun “to” should be omitted and instead of “ty”, it would be better to use the expression “daných”.}
+    \z
+  \ex
+    \ea
+    \ex O1
+    \ex  {Interpreter B omits this passage, but it is clear from the context what is meant, no relevant information is missing. We consider this to be an acceptable strategy.}
+    \z
+  \ex
+    \ea  Pořadí je vždy ta zajímavá část, ta nejzajímavější část celého příběhu, protože můžete porovnat obce, obce.
+    \ex  F, G
+    \ex  {Again, there are two categories in this segment. On the formal level, the same word was repeated twice (“obce”). ASST copies the structure of the original, interpretation is literal, incorrect word order including functional sentence perspective.}
+    \z
+  \z
+\z
+
+% {3}
+\ea
+  \ea
+    \ea  So, from the existing data we think that our sell well indicators, which I will explain later, and we try to make a indicator model and this monitoring is based on a model which is comprised of indicators that are compiled as assessment indicators, broken down with themes.
+    \ex  Tady jsme vyfiltrovali několik indikátorů, to vysvětlím vzápětí, a snažili jsme se tedy vytvořit model pro ty indikátory a tady ten model, vychází z ukazovatelí, kterou které vycházejí podle jednotlivých témat.
+    \ex  G, F S3
+    \ex  {We have identified three (sub)categories in this segment. A grammatical error in the word “ukazovatelí”, the correct form is “ukazovatelů”. On the formal level, the same word was repeated twice (“kterou které”), but we have to admit that interpreter A corrected their incorrect relative pronoun form “kterou” to the apropriate one “které”. We, still, used the mark S3, because the segment is unintelligible, there is no analysis, the message is lost and the interpreter only repeats the original words.}
+    \z
+  \ex
+    \ea Snažíme se vytvořit indikační model. Toto pozorování se zakládá na modelu, který je složen z indikátorů, které hodnotí daný subjekt.
+    \ex  S1
+    \ex  {The salami technique, i.e. segmentation of a long sentence to shorter sections, is well used in this segment. The omission of the insertion about a later explanation of the model does not distort the message and is a good example of a filtering strategy.}
+    \z
+  \ex
+    \ea  Z existujících údajů jsme tedy vyfiltrovali několik ukazatelů, které vysvětlím později, a pokusili jsme se vytvořit model ukazatelů a toto sledování je založeno na modelu, který je složen z ukazatelů, které jsou sestavovány jako ukazatele hodnocení rozdělené podle témat a…
+    \ex  G, S3, F
+    \ex  {We have identified three (sub)categories in this segment. A grammatical error consists in incorrect word order including functional sentence perspective. We, still, used the mark S3, because the segment is unintelligible, there is no analysis, the message is lost and the interpreter only repeats the original words. There is an error on the formal level, because ASST did not finish the sentence.}
+    \z
+  \z
+\z
+
+
+
+% {4}
+\ea
+  \ea
+    \ea  And yes we take into account other accounts, the miscellaneous accounts, the representation expenses and the analysis of special accounts.
+    \ex  A tady bereme v úvahu různé účty, osobní výdavky, výdaje a analýzy specifických…
+    \ex  F, G
+    \ex  {An inappropriate choice of the term “výdavky”, the correct term is “výdaje” (G). There is an error on the formal level, because interpreter A did not finish the sentence.}
+    \z
+  \ex
+    \ea  Zde sledujeme různé související výdaje.
+    \ex  S1
+    \ex  {Interpreter B used the general term “výdaje” instead of listing the individual items. This is a case of generalization, which is a well-chosen strategy, the message was not distorted.}
+    \z
+  \ex
+    \ea  A zde bereme v úvahu ostatní účty, různé účty, výdaje na reprezentaci a analýzu zvláštních účtů.
+    \ex  {F}
+    \ex  {There is an error on the formal level, because ASST repeated the same word twice (“účty”).}
+    \z
+  \z
+\z
+
+% {5}
+\ea
+  \ea
+    \ea  And the second one gives us the short-term perspective.
+    \ex  a druhý model nabízí krátkodobý pohled na finanční zdraví.
+    \ex  P1
+    \ex  {Interpreter A chose to specify the term perspective and added the phrase “na finanční zdraví”. Thit is a well-chosen strategy, considering the context; the message of the segment was not distorted.}
+    \z
+  \ex
+    \ea
+    \ex  Druhá část nám dává krátkodobou perspektivu.
+    \ex  {This passage corresponds to the original, no translation departure.}
+    \z
+  \ex
+    \ea
+    \ex  Druhá nám dává krátkodobou perspektivu.
+    \ex  {This passage corresponds to the original, no translation departure.}
+    \z
+  \z
+
+
+  %
+\z% \lspbottomrule
+% \end{tabularx}
+%
+% \caption{Example of the annotation interface for the analysis with (sub)categories of translation departures and errors identified.}
+% \label{tab:kloudova:5}
+% \end{table}
+%
+
+
+\subsection{Audit speech 2}\label{sec:kloudova:4.2}
+
+Audit speech 2 (11:27 minutes long) concerns the Open Data in the Netherlands. For clarity, the number of words, characters and segments in the transcripts is given in the following \tabref{tab:kloudova:6}:
+
+\begin{table}
+\begin{tabularx}{\textwidth}{lrYYY}
+\lsptoprule
+ & source EN & transcript A (professional interpreter) & transcript B (trainee interpreter) & transcript C (ASST)\\
+\midrule
+words & 1,582 & 1,111 & 905 & 1,265\\
+characters & 9,294 & 7,196 & 5,701 & 8,381\\
+segments & 112 & 65 & 72 & 95\\
+\lspbottomrule
+\end{tabularx}
+
+\caption{The number of words, characters and segments in the transcripts A, B, and C (Audit speech 2, Dutch).}
+\label{tab:kloudova:6}
+\end{table}
+
+For the analysis of Audit speech 2, we compared 112 segments (source in English) with 65 (interpretation A in Czech), 72 (interpretation B in Czech), or 95 (transcript C, ASST) segments. The numbers alone show that there has been a reduction of the original textual volume during the interpretation (especially A and B), and thus various types of omissions (besides the usual text condensation) are to be expected in the interpretations. However, we expect that other (sub)categories of translation departures will also be represented. As for transcript C, we can see that no such reduction of textual material has occurred, as the ASST system is very literal and does not use strategies such as human SI.
+
+The following \tabref{tab:kloudova:7} shows the number of translation departures detected in the three analyzed transcripts of Audit speech 2. Items in italics indicate a larger number of given translation departures in A, B, or C transcript.
+
+\begin{table}
+\begin{tabularx}{\textwidth}{lrrY}
+\lsptoprule
+ & { {A}} {professional interpreter} & { {B}} {trainee interpreters} & { {C}} {ASST}\\
+ \midrule
+ {O1} & 7 &  {13} & 1\\
+ {O2} & 8 &  {18} & 0\\
+ {O3} &  {3} & 0 & 0\\
+\tablevspace
+ {A1} &  {1} & 0 & 0\\
+ {A2} & 0 & 0 & 0\\
+ {A3} & 0 & 0 & 0\\
+\tablevspace
+ {S1} & 7 & 13 & {20}\\
+ {S2} & {13} & 4 & 3\\
+ {S3} & {6} & 1 & 0\\
+\tablevspace
+ {F} & {42} & 18 & 16\\
+ {G} & {12} & 0 & 5\\
+\lspbottomrule
+\end{tabularx}
+\caption{The number of translation departures detected in the interpretations of Audit speech 2.}
+\label{tab:kloudova:7}
+\end{table}
+
+The \tabref{tab:kloudova:7} above presents the distribution of each translation departure in the performance of the professional (A), the trainee interpreter (B), and the ASST system (C). In the categories of omissions and substitutions and errors, in which we distinguish the severity of departures (scale 1 to 3), we can notice that in the least severe subcategory (O1, S1) the student has more departures (13 versus 7 in both cases). In comparison to ASST, the category O1 in ASST is negligible (1) and refers to one segment that is omitted in all three transcripts. In contrast, we see a large number in the S1 category for ASST (20), which is much higher than for human SI. Here, in most cases, it is a matter of translating the original structure too literally and not recognizing which word types are represented in the given syntactic structures. As in the previous speech, this results in errors of meaning – syntactically correct in the target language, but semantically meaningless. That is also related to the use of unusual word combinations instead of familiar collocations (\textit{otevřené údaje} instead of \textit{otevřená data}). This particular error is repeated many times (in parallel with the correct collocation); we had to count every occurrence, though.
+
+In the second level of severity, the student has more departures in the O2 category (18 versus 8), but fewer in the S2 category (4 versus 13) than the professional interpreter. What is very surprising, however, are the O3 and S3 categories, in which the student has fewer departures than the professional interpreter (0 versus 3 and 1 versus 6, respectively). ASST scores with 0 departures in O2, O3, and S3, and with 3 departures in the S2 category; ​​again, it has to do with a needlessly literal translation, for example: \textit{innovative entrepreneurs can turn open data into new applications} (source) translated as \textit{mohou inovativní podnikatelé z otevřených dat udělat nové aplikace}.
+
+From the category of additions, we only recorded the least serious A1 grade, namely only one case in the professional interpreting.
+
+The distribution of formal (F) and grammatical (G) errors is very noteworthy. In both categories, the professional interpreter has significantly more errors than the student: we recorded 18 formal errors in the student performance, whereas there are 42 errors in the professional performance (that is 24 more). The student made no grammatical errors, but the professional interpreter made a total of 12 errors in this category. As for ASST, 16 errors in F mean especially interferences which again can be seen as related to an overly literal translation; the G category includes erroneous plural endings of the neuter gender.
+
+Below, there is a sample of the annotation interface where we performed the analysis and assigned the (sub)categories of translation departures and errors to the text material.
+%(\tabref{tab:kloudova:8}). 
+The description of the annotation interface is the same as the text describing examples in Audit Speech 1.
+%\tabref{tab:kloudova:5}.
+
+% \begin{table}
+%
+% \begin{tabularx}{\textwidth}{XXXXXXXXXXX}
+%  & \textit{A} & \textit{B} & \textit{C} & \textit{D} & \textit{E} & \textit{F} & \textit{G} & \textit{H} & \textit{I} & \textit{J}\\
+% \lsptoprule
+%
+% & \textit{SOURCE EN} & \textit{INTERPRETER A (Professional)} & \textit{(Sub)Category} & \textit{Comment (Professional)} & \textit{INTERPRETER B (Student)} & \textit{(Sub)Category} & \textit{Comment (Student)} & \textit{ASST} & \textit{(Sub)Category} & \textit{Comment (ASST)}\\
+% \textit{1} & And here the United Kingdom and the United States are setting the pace. & a tady ve Spojeném království a v Nizozemí je to důležité. & S3 & \textit{Interpreter A translates “the United States” as “Nizozemí” (= in Czech “the Netherlands”, in fact). The overall meaning of this section is greatly affected.} &  & V1 & \textit{Interpreter B omits this passage, but it is clear from the context what is meant, no relevant information is missing. We consider this to be an acceptable strategy.} & A tady Spojené království a Spojené státy udávají tempo případu. & S1 & \textit{ASST translates “udávají tempo případu”, however, the usual collocation is just “udávají tempo” (= are setting the pace).}\\
+% \textit{2} & They see open data, em are clearly not a goal but a means to become transparent. & A veřejné data nejsou cílem, ale je to opravdu prostředek k dosažení transparentnosti. & F & \textit{Interpreter A uses an ungrammatical ending for the plural of the neuter gender: “veřejné”, correct form in this case: “veřejná”. The overall meaning of this section is not affected.} & Otevřená data jsou jedna z největších příležitostí, jak být transparentní. & S1 & \textit{Interpreter B adds a bit of emphasis, stating that open data is “one of the biggest opportunities” (= in Czech “jedna z největších příležitostí”) to be transparent. The overall meaning of this section is only slightly affected.} & A vidí, že otevřená data zjevně nejsou cílem, ale prostředkem, jak se stát transparentními. &  & \textit{This passage corresponds to the original, no translation departure.}\\
+% \textit{3} & An ini initiative to encourage government to be as open as possible. & a snažíme se být co nejtransparentnějších. & S3, F & \textit{Two (sub)categories applied in this section. The misunderstanding from the previous segment continues, intensified by the verb “snažíme se” (= “we try”) (S3). Formal error in the form “nejtransparentnějších”, correct form should be “nejtransparentnější” (F).} & A jsou tedy zde iniciativy, aby vlády byly co nejotevřenější. &  & \textit{This passage corresponds to the original, no translation departure.} & což je iniciativa, která má povzbudit vlády, aby byly co nejotevřenější. &  & \textit{This passage corresponds to the original, no translation departure.}\\
+% \textit{4} & And the Dutch government has open data ambitions and policies. & A nizozemská vláda má zákony, & S2 & \textit{Interpreter A did not understand this segment and only captured and translated a part of the content that did not correspond to the original statement.} & A nizozemská vláda má velké ambice v tomto odvětví. &  & \textit{This passage corresponds to the original, no translation departure.} & A nizozemská vláda má otevřené datové ambice a politiky, & S1, F & \textit{ASST misinterpreted the structure “open data ambitions” and thought the first two words were adjectives. The correct translation is e.g. “má ambice v oblasti otevřených dat”. The word “politiky” is used in plural (= politics).}\\
+% \textit{5} & But the actual implementation is still grass roots and it’s in early stages. & ale v této oblasti, ale v praxi ještě pokulhává. & F & \textit{Interpreter A resorts to repeating the same thing and overgeneralizing.} &  & V2 & \textit{Interpreter B omits this segment which slightly affects the meaning of this passage.} & ale vlastní implementace je stále lidová a je v počáteční fázi. & S2 & \textit{ASST uses the word “lidová” (= plebeian, popular). “Zcela základní” or “elementární” (= elementary) would have been better suited. This misinterpretation slightly affects the meaning of this passage.}\\
+% \lspbottomrule
+% \end{tabularx}
+%
+% \caption{Example of the annotation interface for the analysis with (sub)categories of translation departures and errors identified.}
+% \label{tab:kloudova:8}
+% \end{table}
+
+
+% {1}
+\ \ \\
+Example of the annotation interface for the analysis with (sub)categories of translation departures and errors identified.
+\ea 
+  \ea
+    \ea   And here the United Kingdom and the United States are setting the pace.
+    \ex   a tady ve Spojeném království a v Nizozemí je to důležité.
+    \ex   S3
+    \ex   \textit{Interpreter A translates “the United States” as “Nizozemí” (= in Czech “the Netherlands”, in fact). The overall meaning of this section is greatly affected.}
+    \z
+  \ex
+    \ea
+    \ex   V1
+    \ex   \textit{Interpreter B omits this passage, but it is clear from the context what is meant, no relevant information is missing. We consider this to be an acceptable strategy.}
+    \z
+  \ex
+    \ea   A tady Spojené království a Spojené státy udávají tempo případu.
+    \ex   S1
+    \ex   \textit{ASST translates “udávají tempo případu”, however, the usual collocation is just “udávají tempo” (= are setting the pace).}
+    \z
+  \z
+\z
+
+% {2}
+\ea
+  \ea
+    \ea   They see open data, em are clearly not a goal but a means to become transparent.
+    \ex   A veřejné data nejsou cílem, ale je to opravdu prostředek k dosažení transparentnosti.
+    \ex   F
+    \ex   \textit{Interpreter A uses an ungrammatical ending for the plural of the neuter gender: “veřejné”, correct form in this case: “veřejná”. The overall meaning of this section is not affected.}
+    \z
+  \ex
+    \ea   Otevřená data jsou jedna z největších příležitostí, jak být transparentní.
+    \ex   S1
+    \ex   \textit{Interpreter B adds a bit of emphasis, stating that open data is “one of the biggest opportunities” (= in Czech “jedna z největších příležitostí”) to be transparent. The overall meaning of this section is only slightly affected.}
+    \z
+  \ex
+    \ea   A vidí, že otevřená data zjevně nejsou cílem, ale prostředkem, jak se stát transparentními.
+    \ex
+    \ex   \textit{This passage corresponds to the original, no translation departure.}
+    \z
+  \z
+\z
+
+% {3}
+\ea
+  \ea
+    \ea   An ini initiative to encourage government to be as open as possible.
+    \ex   a snažíme se být co nejtransparentnějších.
+    \ex   S3, F
+    \ex   \textit{Two (sub)categories applied in this section. The misunderstanding from the previous segment continues, intensified by the verb “snažíme se” (= “we try”) (S3). Formal error in the form “nejtransparentnějších”, correct form should be “nejtransparentnější” (F).}
+    \z
+  \ex
+    \ea   A jsou tedy zde iniciativy, aby vlády byly co nejotevřenější.
+    \ex
+    \ex   \textit{This passage corresponds to the original, no translation departure.}
+    \z
+  \ex
+    \ea   což je iniciativa, která má povzbudit vlády, aby byly co nejotevřenější.
+    \ex
+    \ex   \textit{This passage corresponds to the original, no translation departure.}
+    \z
+  \z
+\z
+
+% {4}
+\ea
+  \ea
+    \ea   And the Dutch government has open data ambitions and policies.
+    \ex   A nizozemská vláda má zákony,
+    \ex   S2
+    \ex   \textit{Interpreter A did not understand this segment and only captured and translated a part of the content that did not correspond to the original statement.}
+    \z
+  \ex
+    \ea   A nizozemská vláda má velké ambice v tomto odvětví.
+    \ex
+    \ex   \textit{This passage corresponds to the original, no translation departure.}
+    \z
+  \ex
+    \ea   A nizozemská vláda má otevřené datové ambice a politiky,
+    \ex   S1, F
+    \ex   \textit{ASST misinterpreted the structure “open data ambitions” and thought the first two words were adjectives. The correct translation is e.g. “má ambice v oblasti otevřených dat”. The word “politiky” is used in plural (= politics).}
+    \z
+  \z
+\z
+
+% {5}
+\ea
+  \ea
+    \ea   But the actual implementation is still grass roots and it’s in early stages.
+    \ex   ale v této oblasti, ale v praxi ještě pokulhává.
+    \ex   F
+    \ex   \textit{Interpreter A resorts to repeating the same thing and overgeneralizing.}
+    \z
+  \ex
+    \ea
+    \ex
+    \ex   V2
+    \z    \textit{Interpreter B omits this segment which slightly affects the meaning of this passage.}
+  \ex
+    \ea   ale vlastní implementace je stále lidová a je v počáteční fázi.
+    \ex   S2
+    \ex   \textit{ASST uses the word “lidová” (= plebeian, popular). “Zcela základní” or “elementární” (= elementary) would have been better suited. This misinterpretation slightly affects the meaning of this passage.}
+    \z
+  \z
+\z
+
+\subsection{Evaluation of the analysis}\label{sec:kloudova:4.3}
+
+The following \tabref{tab:kloudova:9} summarizes both the professional’s and trainees’ performance in comparison with the ASST scores showing the number of translation departures in each category, for both analyzed speeches. All (sub)categories from our adopted analysis model with exceptions of A2 and A3 were present in the interpretations. Items in italics indicate the largest number in a given category in both speeches among the three transcripts analyzed.
+
+The category O1 (omissions that are not essential for the meaning of the whole) is most represented in students’ interpreting: there are 35 omissions in total in students’ interpreting vs. 19 in professional interpreting. However, the ASST model made only 3 omissions defined as O1. As for the more serious omissions, students made 31 departures in the subcategory O2 (the professional interpreter scored 11 in the same subcategory). However, perhaps unexpected is the finding that in the subcategory O3 the professional interpreter scored 3, whereas students made 1 departure. On the other hand, it was to be expected that the ASST model made fewer omissions, which was confirmed (2 for O2, 1 for O3).
+
+We can observe a very similar tendency as in the O1 subcategory also in the S1 subcategory of substitutions and errors: 28 occurrences in students’ interpreting, whereas the professional interpreter made only 10 as S1 defined departures. But what could be seen as surprising are much higher numbers in the other two subcategories of substitutions and errors: S2 with 23 and S3 with 11 in professional interpreting, whereas in the students’ interpretation there are only 6 and 1 occurrences, respectively, which are negligible amounts. The ASST model made 25 departures in S1 subcategory, 12 in S2, and 6 in S3 – it is therefore on the borderline between the results of the two human interpretations.
+
+The analysis shows that the students made a large number of less serious departures (O1, O2, S1) in comparison with the professional interpreter, but they use them effectively, which allows them to avoid the more serious ones; the professional interpreter, on the other hand, made many of the more serious ones, which makes their interpreting of poorer quality. In conclusion, it should be noted that both evaluations of students’ interpreting show that their interpreting is controlled and that they apply interpreting strategies consciously.
+
+As for the A category (additions), only subcategory A1 occurred in the interpretations, twice in the professional performance and once in the students’ interpretations. Addition can be considered a pragmatic category aimed at facilitating listeners’ understanding, so it is logical that the ASST model did not commit it even once.
+
+Surprisingly, the professional interpreter makes a large number of errors on the formal level (unfinished sentences, slips of tongue, incoherent and long sentences) and on the grammatical level, which spoils the overall impression of the interpreting (F 94, G 26). On the other hand, in students’ interpreting we found far fewer occurrences in these subcategories (F 25, G 2). As for the performance of our ASST model, there are 50 occurrences in F and 29 occurrences in G (only 3 more than in the professional performance), many of which are actually repetitions of the same error.
+
+Our analysis leads us to the conclusion that we were right in distinguishing not only the quantity, but also the severity scale. The more frequent occurrences in O1, A1, and S1 could be seen as functional translation departures that help both the interpreters and the clients to follow the basic semantic line of the original message.
+
+Finally, we would like to comment on the number of interpreting segments. In \tabref{tab:kloudova:3} and \tabref{tab:kloudova:6} we have already mentioned that the students’ interpreting has a higher number of segments than the professional interpreting (and lower than the original) in both speeches, despite the fact we found more omissions in the student interpreting (professional interpreter had 33 omissions, students 67). This is because the students, perhaps consciously, use the salami technique, i.e., they break down the long endless sentences into shorter and simpler utterances. Nevertheless, the highest number of segments was produced by the ASST model in both speeches. Obviously, the model translates the text literally and does not – with only minor exceptions – omit important information (the total number of omissions 6), which is an appropriate strategy for written translation (of written texts), but for live transcript translation, i.e., speech translation, this completeness can be considered counterproductive as it overwhelms the recipient (subtitles are read more slowly than speech is listened to).
+
+\begin{table}
+
+\fittable{
+\begin{tabular}{l@{}rrr rrr rrr}
+\lsptoprule
+ & \multicolumn{3}{c}{{
+ {A}}  {Professional interpreter}} & \multicolumn{3}{c}{{  {B}} {Trainee interpreters}} & \multicolumn{3}{c}{{  {C}} {ASST}}\\
+\cmidrule(lr){2-4}\cmidrule(lr){5-7}\cmidrule(lr){8-10}
+ & Speech 1 & Speech 2 & Total & Speech 1 & Speech 2 & Total & Speech 1 & Speech 2 & Total\\
+\midrule
+ {O1} & 12 & 7 & 19 & 22 & 13 &  {35} & 2 & 1 & 3\\
+ {O2} & 3 & 8 & 11 & 13 & 18 &  {31} & 2 & 0 & 2\\
+ {O3} & 0 & 3 &  {3} & 1 & 0 & 1 & 1 & 0 & 1\\
+ \tablevspace
+ {A1} & 1 & 1 &  {2} & 1 & 0 & 1 & 0 & 0 & 0\\
+ {A2} & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0\\
+ {A3} & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0\\
+ \tablevspace
+ {S1} & 3 & 7 & 10 & 15 & 13 &  {28} & 5 & 20 & 25\\
+ {S2} & 10 & 13 &  {23} & 2 & 4 & 6 & 9 & 3 & 12\\
+ {S3} & 5 & 6 &  {11} & 0 & 1 & 1 & 6 & 0 & 6\\
+ \tablevspace
+ {F} & 52 & 42 &  {94} & 7 & 18 & 25 & 34 & 16 & 50\\
+ {G} & 14 & 12 & 26 & 2 & 0 & 2 & 24 & 5 &  {29}\\
+\lspbottomrule
+\end{tabular}
+}
+\caption{The number of translation departures in both speeches interpreted by a professional (A), by trainee interpreters (B), and by ASST model (C).}
+\label{tab:kloudova:9}
+\end{table}
+
+We could see from all our analyses, interpreting is a complex task that requires not only linguistic expertise but also cultural sensitivity, pragmatic thinking, and quick decision-making ability. In general, professional interpreters and trainee interpreters tend to differ in their level of experience and ability to convey messages accurately and efficiently. Compared to human interpretation, whose output is the spoken word, the ASST model creates a translated transcription of the original.
+
+To sum up our findings, our analysis revealed that the professional interpreter tended to copy the linguistic structure of the original message, resulting in an overuse of demonstrative pronouns and a lack of coherence. This led to a very redundant and ineffective language that was difficult for the audience to follow. Moreover, the interpreter was prone to interferences, which further compromized the accuracy of the interpretation. This led to confusion and misinterpretation of important information, which had a negative impact on the overall quality of the interpretation.
+
+On the other hand, the trainee interpreters demonstrated a good understanding of the original message. They were able to filter the (relevant) information correctly and make functional generalizations and omissions to convey the intended meaning more efficiently. The trainee interpreters also completed their sentences, which helped maintain the coherence of the interpretation.
+
+Nevertheless, to generalize the results of the analysis, we would obviously need a larger sample of interpreters. In our case, the professional interpreter appeared to lag behind the students.
+
+To sum up, our findings suggest that while experience is important, the ability to analyse the original message and convey it accurately and efficiently is essential in interpreting. For individuals who do not understand the source language, relying on the services of a professional interpreter can be a necessary and even pleasant experience. However, the quality of the interpretation depends greatly on the interpreter’s proficiency and level of experience. Both the professional and trainee interpreters may benefit from further training to improve their skills in these areas.
+
+Regarding the ASST model, our analysis showed that the transfer of information is complete, almost literal: for long and complex sentences, it tends to copy the linguistic structure of the original message, which leads to redundant expressions that are incomprehensible and confusing in some passages for readers and would likely be incomprehensible for listeners if the output was actually spoken. Simple sentences are translated adequately. However, the ASST model is not able to use appropriate strategies, e.g. filtering of redundant information, corrections of slips of the tongue, etc. It converts lexical resources regardless of the context, mostly choosing the first dictionary meaning, which does not always work in a given sentence. Metaphors and established connections are translated literally, so the particular part of the translation does not make sense.
+
+In our analysis, we have highlighted in particular those translation departures that can be perceived as inappropriate, but we would like to mention that the overall quality of the ASST outputs varies. \citet[160]{KocmiEtAl2021} mention in this vein that automated systems are prone to “catastrophic errors”.
+
+\section{Discussion and future work}\label{sec:kloudova:5}
+
+The production of human SI is a complex and multifaceted task that requires careful consideration of various criteria. In our study, we explored the differences between human SI and ASST and, specifically, we examined whether all relevant information was adequately interpreted and what strategies the interpreters used, we also assessed the linguistic competence of all three interpreters.
+
+One of the challenges in measuring the similarity between human SI and ASST is the focus of automatic metrics on literal match, which is not always relevant for interpreting. Unlike translation, interpreting involves a more significant amount of interpreting strategies and pragmatic adaptation to the context and audience, which results in a greater variety of interpretations for a given source message.
+
+We are aware of the fact that by including a diverse group of interpreters and assessors, we will be able to obtain a more comprehensive understanding of the quality of human SI in the future. In addition, we suggest that future studies include more speeches interpreted by both student and professional interpreters to increase the diversity of interpretations and assessors and to get more linguistic material that could be analyzed to identify specific linguistic solutions and interpreting strategies. The ASST system could then learn from such a corpus. This will allow us to obtain more comparable results and identify the factors that contribute to high-quality content in human SI.
+
+The sound quality of the original speech is one of the input factors that affect interpreting performance, so the quality of the interpretation also depends on the sound quality of the original. Our analysis showed that the ASST system also needs the original speech to have good sound quality, as it does not work with context and confuses sound-alike words (the ASST system confused the word \textit{class} with the word \textit{glass} and used the term \textit{sklo}, i.e., \textit{glass}, instead of \textit{type}. EN original: \textit{And we try to compare the municipalities with the} class \textit{of municipalities with the same size.} – ASST system: \textit{A snažíme se srovnávat obce se} sklem \textit{obcí se stejnou velikostí.})
+
+The ASST system is very literal and does not recognize metaphor or idioms, so there are quite serious content errors in its interpretation, because the interpretation is unintelligible to the listener and the sentences often do not make sense. (Instead of \textit{it’s your turn}, the system ASST translated \textit{it’s your floor(ing)}: EN original: \textit{Mister Maybeurle,} the floor is yours\textit{. Thank you.} – ASST system: \textit{Pane Mayberle,} podlaha \textit{je vaše. Děkuji.})
+
+Furthermore, the ASST system processes grammatical structures and collocations “as they are”, so that unusual phrases arise in the target language, for example: EN original: \textit{Ministry of Defence and Ministry of Security and Justice} had spent no time or money \textit{on publication of public data}. – ASST system: \textit{A ministerstvo obrany a ministerstvo bezpečnosti a spravedlnosti} nestrávily (lit. have not digested; sic!) čas ani peníze \textit{na zveřejňování otevřených údajů.}
+
+Another area for future research is a deeper and broader exploration of the differences in types of translation departures in human SI and ASST. This will enable us to identify the areas where ASST falls short and develop strategies to improve the accuracy and effectiveness of “machine SI”. In other words, one of the open questions that could be answered in the future is if the integration of linguistic nuances and human-like strategies can amplify the usefulness of ASST.
+
+Finally, we also need to consider the definition of a professional interpreter. While this term is often used to describe individuals with significant experience and training in interpreting, the criteria for defining a professional interpreter may vary depending on the context and requirements of the interpreting task. The scale of experience (number of years of experience) is somewhat misleading, it is not clear how often and how many hours the interpreter actually interprets and what is their exposure to the specific topic of the given task. The fact that the interpreter has many years of experience also means that he studied many years ago, when the learning of interpreting did not allow for frequent contact with native speakers or foreign internships as is the case today. Nowadays, students enrolled in interpreting programmes at the Prague Institute of Translation Studies (Charles University) benefit from a wealth of opportunities to speak and learn English, resulting in outstanding proficiency levels. Throughout their academic journey, they dedicate numerous hours to interpretation exercises (in most study plans today there are mandatory self-study seminars), amassing a depth of experience that far surpasses what was typical just two decades ago.
+
+Considering all this, our study highlights the importance of evaluating human SI and ASST, too, based on a variety of criteria and using diverse assessors to obtain a more comprehensive understanding of its quality. Of course, different conditions apply to written translation (of written texts) than to live transcript translation, i.e., speech translation, because listening to the spoken word and reading written text are different cognitive processes. However, by addressing the challenges in measuring the similarity between human SI and ASST, we can develop strategies to improve the accuracy and effectiveness of ASST or even automated interpreting in the future.
+
+\section{Research limitations}\label{sec:kloudova:6}
+
+This study has several limitations that should be acknowledged.
+
+It is clear from the model we have chosen that the assessment of some errors and segments must have been subjective, which is also acknowledged by \citet{Barik1971} in his experiment. We emphasise that not all enumerated translation departures can always be classified as errors. They may be conscious departures that the interpreter decided to make as part of his/her interpreting strategy. Therefore, in the empirical part of our research we also highlighted the interpreting strategies the interpreters used to cope with the original speech. Furthermore, we are aware that there may have been inaccurate or overly subjective judgements made by the evaluators in the analysis.
+
+The interpreters did not have the slides or the entire speech, only the topic and key words in advance. In the real world, it also happens that the interpreters do not get support/reference materials in advance, not even the words. They receive just the topic of the speech. We are aware of the fact that this may be considered contrary to good practice in professional settings: codes of ethics and recommended workflows require clients to provide professional interpreters with support/reference materials in advance. However, we wanted to simulate the usual course of interpreting in this respect, so the interpreters had to work under particularly harsh conditions.
+
+Another point concerning the limits of our research is the fact that two interpretations by only one professional interpreter puts into question the representativeness of the research.
+
+As mentioned in our study, quality in SI is measured in a very different manner (effect on listener, pragmatics, communication goal, acoustic features, impact, usefulness, adjustment to type of event) when compared to the present study.
+
+Grammatical (G) and formal (F) errors were surprisingly predominant in the professional interpretation: this finding shows that the interpreter was not a “professional” one in the end. In the same vein, the condensation strategy (observed with trainee interpreters but lacking with the “professional” one) is yet another sign of this fact. If an interpreter claims to be professional, it doesn’t necessarily mean anything. This issue needs to be addressed in the future. Furthermore, the translation system can’t, by definition, produce “formal” errors as established here, so comparability of results in the present research design must be viewed with this in mind.
+
+\section{Conclusion}
+
+In this study, we compared the performance of a professional interpreter and two trainee interpreters with ASST outputs. As for the comparison of a professional interpreter and trainee interpreters, our findings suggest that, while experience is important in interpreting, analysis of the original speech is essential for delivering an effective interpretation. After comparing human SI and ASST, we confirm the expected difference in the nature of departures and errors. ASST struggles with difficult sound, pronunciation or syntactic conditions, leading to unnatural errors. At the same time, the processing capacity is technically higher than that of humans – given the limited task of translating words, not delving into the actual meaning of the message – and ASST is thus able to provide more detailed and literal translation. Looking at errors and translation departures only, ASST seems to perform better (fewer errors, and/or repeated errors where multiple instances “could be fixed at once”), but we are aware of the fact that the detailed and more literal output may not be better for the end user.
+
+In conclusion, our study examined one of the aspects of quality in interpreting for SI as well as in real-time machine translation using Barik’s and Kopczyński’s taxonomy. This taxonomy of translation departures we used in our analysis is very strict, so that all the interpreting performances analyzed in our experiment appear to fall short of providing a correct rendering according to the assigned scores. However, it should be emphasized that the deficiencies marked in subcategories S1 and O1 are to be considered as conscious and adequate strategies from the interpreter’s point of view, so the interpreter made the right decision to commit these departures. Our results revealed that human SI can be of poor quality, as indicated by numerous disadvantages. However, we also admit that various strategies can be employed to ensure that the interpretation meets the client’s expectations, but the client’s satisfaction was not the subject of our research.
+
+Similarly, the difference in the time interpreters have for interpreting and the time we have as evaluators for evaluating was not the subject of our research. While we assessed the interpreting after the performance in sufficient (“infinite”) time, interpreters typically have only a limited time to convey the message. Due to the time constraint, they are under more pressure, which of course can affect their decision-making process and can lead to departures and inaccuracies in the interpretation. These deficiencies can then be revealed only by careful analysis over a sufficient amount of time. Interpreting, unlike translation, is not primarily based on linguistic competence and the ability to stylize the text. The average listener (who is not a language expert) tolerates exaggerations, stylistic flaws or grammatical errors, moreover, he or she often does not even notice these deficiencies. If the transcripts were evaluated by multiple evaluators, primarily untrained laypersons without a background in linguistics, most of the errors in categories F and G would not be marked at all.
+
+To address these issues, further research is needed to expand the methods for assessing the quality of human interpretation in comparison with real time machine translation. By evaluating interpreting in a variety of contexts and with a larger sample of assessing subjects and along more criteria, we can gain a more comprehensive understanding of the factors that contribute to high-quality interpreting and develop strategies to improve the accuracy and effectiveness of human interpretation and real time machine translation.
+
+\section*{Acknowledgements}
+
+The research was supported by the grant 19-26934X (NEUREM3) of the Czech Science Foundation and by the grant Cooperatio Linguistics of the Charles University, Prague.
+
+\section*{Abbreviations}
+
+\begin{tabularx}{\textwidth}{lQ}
+ASR & automatic speech recognition\\
+ASST & automatic simultaneous speech translation\\
+RSI & remote simultaneous interpreting\\
+SI & simultaneous interpreting\\
+ÚFAL & Ústav formální a aplikované lingvistiky Matematicko-fyzikální fakulty Univerzity Karlovy (Institute of Formal and Applied Linguistics, Faculty of Mathematics and Physics, Charles University)\\
+ÚTRL & Ústav translatologie Filozofické fakulty Univerzity Karlovy (Institute of Translation Studies, Faculty of Arts, Charles University)\\
+\end{tabularx}
+\sloppy\printbibliography[heading=subbibliography,notkeyword=this]
+\end{document}
